@@ -35,10 +35,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-<<<<<<< HEAD
-BucketGameJam/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudioL.dll
-BucketGameJam/fmod_editor.log
-=======
 *.dll
 BucketGameJam/Assets/Plugins/FMOD.meta
 BucketGameJam/Assets/Plugins.meta
@@ -50,4 +46,7 @@ BucketGameJam/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudioL.dll.meta
 BucketGameJam/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist
 BucketGameJam/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist
 BucketGameJam/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/Info.plist
->>>>>>> parent of e1d8450 (GitIgnore and mirror functionality)
+BucketGameJam/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist
+BucketGameJam/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist
+*.plist
+BucketGameJam/fmod_editor.log
