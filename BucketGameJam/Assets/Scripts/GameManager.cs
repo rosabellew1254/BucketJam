@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager gm;
-    public enum seeds { seed0, seed1, seed2, seed3, seed4, seed5, terminator}
-    public enum plants { plant0, plant1, plant2, plant3, plant4, plant5, terminator}
+    public enum plants { turnip, strawberry, eyePomegranite, mouthApple, terminator}
     public enum scenes { frontEnd, town, garden, shop, bedroom, terminator }
     public GameObject sproutPrefab;
 
@@ -13,7 +13,15 @@ public class GameManager : MonoBehaviour
     [Header("Menus")]
     public GameObject pMain;
 
+    public GameObject[] plantPrefabs;
+    public PlantsSO[] plantData;
     public GameObject mirrorReflection;
+    public Text date;
+
+    int curDay = 0;
+    int maxDays = 36;
+    int moneyRequiredToSaveSibling = 5000;
+    int competeMoneyGoal = 12000;
 
     private void Awake()
     {
@@ -55,5 +63,11 @@ public class GameManager : MonoBehaviour
     public void LoadScene(int _idx)
     {
         SceneManager.LoadScene(_idx);
+    }
+    
+    void AdvanceDay()
+    {
+        curDay++;
+        date.text = "Date: " + curDay;
     }
 }
