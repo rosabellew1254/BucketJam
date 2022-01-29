@@ -35,30 +35,4 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-
-# Mac stuff
-.DS_Store
-.bak
-.BAK
-
-### FMOD Unity Integration ###
-# Never ignore DLLs in the FMOD subfolder, so make sure that the FMOD-folder is in the correct path.
-!/BucketGameJam/[Aa]ssets/Plugins/FMOD/**/*.dll
-
-# Don't ignore images and gizmos used by FMOD in the Unity Editor
-!/BucketGameJam/[Aa}ssets/Gizmos/FMOD/*
-!/BucketGameJam/[Aa}ssets/Editor Default Resources/FMOD/*
-
-# Ignore the Cache-file since it is updated locally either way
-/BucketGameJam/[Aa]ssets/**/FMODStudioCache.asset
-/BucketGameJam/[Aa]ssets/**/FMODStudioCache.asset.meta
-/BucketGameJam/[Aa]ssets/Plugins/FMOD/Cache.meta
-/BucketGameJam/[Aa]ssets/Plugins/FMOD/Cache/Editor.meta
-
-# Log-files
-fmod.log
-fmod_editor.log
-
-# FMOD 1.10.x (Legacy)
-/BucketGameJam/Assets/FMODAssets/*
-/BucketGameJam/Assets/FMODStudioCache.meta
+BucketGameJam/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudioL.dll
