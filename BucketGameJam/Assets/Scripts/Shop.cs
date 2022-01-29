@@ -3,52 +3,48 @@ using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
+    GameManager gm;
     Inventory inventory;
 
     public Text txtSelected;
     public Text txtPriceSelected;
 
-    GameManager.seeds selectedSeed;
     GameManager.plants selectedPlant;
     int selectedPrice;
 
-    public int[] seedPurchaseCosts;
-    public int[] plantSalePrices;
+    bool isBuying;
 
     private void Start()
     {
+        gm = GameManager.gm;
         inventory = Inventory.inventory;
     }
 
-    public void SelectSeed(int _seedIndex)
-    {
-        selectedSeed = (GameManager.seeds)_seedIndex;
-        txtSelected.text = "Selected Seed: " + selectedSeed.ToString();
-        SelectPrice(seedPurchaseCosts[(int)selectedSeed]);
-    }
-
-    void SelectPlant(int _plantIndex)
+    public void SelectPlant(int _plantIndex)
     {
         selectedPlant = (GameManager.plants)_plantIndex;
-        txtSelected.text = "Selected Plant: " + selectedPlant.ToString();
-        SelectPrice(plantSalePrices[(int)selectedPlant]);
+        txtSelected.text = "Selected " + (isBuying ? "Seed: " : "Plant: ") + selectedPlant.ToString();
+        PlantsSO selectedPlantData = gm.plantData[_plantIndex];
+        selectedPrice = isBuying ? selectedPlantData.seedCost : selectedPlantData.sellPrice;
+        txtPriceSelected.text = "Price: " + selectedPrice;
     }
 
-    void SelectPrice(int _price)
+    public void SetIsBuying(bool _isBuying)
     {
-        selectedPrice = _price;
-        txtPriceSelected.text = "Price: " + selectedPrice;
+        isBuying = _isBuying;
     }
 
     public void BuySeed()
     {
         inventory.AdjustMoney(-selectedPrice);
-        inventory.AdjustSeedQuantity(selectedSeed, 1);
+        inventory.AdjustSeedQuantity(selectedPlant, 1);
     }
 
     public void SellPlant()
     {
         inventory.AdjustMoney(selectedPrice);
         inventory.AdjustPlantQuantity(selectedPlant, -1);
+        PlantsSO plantData = gm.plantData[(int)selectedPlant];
+        PlayerController.pc.AdjustSanity(plantData.sanity);
     }
 }

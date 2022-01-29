@@ -86,8 +86,9 @@ GameObject:
   - component: {fileID: 5854976051407474129}
   - component: {fileID: 2110162069172318153}
   - component: {fileID: 2229640351915635036}
+  - component: {fileID: 604723873666660418}
   m_Layer: 5
-  m_Name: Sprout
+  m_Name: EyePomegranate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,6 +153,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &604723873666660418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8001311136834740223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc519822e551cac4f82f60d7419b407a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seedCost: 200
+  sellPrice: 500
+  sanity: -10
+  turnsToGrow: 2
 --- !u!1 &8288580089080154688
 GameObject:
   m_ObjectHideFlags: 0

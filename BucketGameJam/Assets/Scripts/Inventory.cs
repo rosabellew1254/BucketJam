@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
     public static Inventory inventory;
+    public Text txtMoney;
 
     public int[] seeds;
     int[] plants;
@@ -11,18 +13,20 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         inventory = this;
-        seeds = new int[(int)GameManager.seeds.terminator];
+        seeds = new int[(int)GameManager.plants.terminator];
         plants = new int[(int)GameManager.plants.terminator];
+        AdjustMoney(200);
     }
 
     public void AdjustMoney(int _adjustAmount)
     {
         money += _adjustAmount;
+        txtMoney.text = "Money: " + money;
     }
 
-    public void AdjustSeedQuantity(GameManager.seeds _seed, int _adjustAmount)
+    public void AdjustSeedQuantity(GameManager.plants _plant, int _adjustAmount)
     {
-        seeds[(int)_seed] += _adjustAmount;
+        seeds[(int)_plant] += _adjustAmount;
     }
 
     public void AdjustPlantQuantity(GameManager.plants _plant, int _adjustAmount)
@@ -32,7 +36,6 @@ public class Inventory : MonoBehaviour
 
     public void ShowInventory()
     {
-        Debug.Log("You have " + money + " money.");
         for (int i = 0; i < seeds.Length; i++)
         {
             Debug.Log("You have " + seeds[i] + " seeds of type " + i);
@@ -55,7 +58,7 @@ public class Inventory : MonoBehaviour
         {
             for (int i = 0; i < seeds.Length; i++)
             {
-                AdjustSeedQuantity((GameManager.seeds)i, 1);
+                AdjustSeedQuantity((GameManager.plants)i, 1);
             }
         }
     }
