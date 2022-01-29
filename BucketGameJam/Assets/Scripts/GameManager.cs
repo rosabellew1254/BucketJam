@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
     public void AdvanceDay()
     {
         curDay++;
-        date.text = "Date: " + curDay;
+        date.text = "Date: " + curDay + "/36";
     }
 
     public void OpenInventory()

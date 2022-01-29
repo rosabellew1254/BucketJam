@@ -61,9 +61,10 @@ public class Ending : MonoBehaviour
     {
         GameManager.gm.curDay = 0;
         Inventory.inventory.money = 200;
-        GameManager.gm.date.text = "Date: " + GameManager.gm.curDay;
+        GameManager.gm.date.text = "Date: " + GameManager.gm.curDay + "/36";
         Inventory.inventory.seeds = new int[(int)GameManager.plants.terminator];
         Inventory.inventory.plants = new int[(int)GameManager.plants.terminator];
+        PlayerPrefs.SetInt("san", 25);
 
         GameManager.gm.LoadScene(0);
     }
