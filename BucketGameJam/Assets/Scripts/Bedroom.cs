@@ -19,9 +19,10 @@ public class Bedroom : MonoBehaviour
         //Show character's notes / thoughts
     }
 
-    public void Save()
+    public void Advance()
     {
-        //Save game
+        //Advance the month
+        GameManager.gm.AdvanceDay();
     }
 
 }
