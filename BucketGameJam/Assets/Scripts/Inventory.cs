@@ -4,7 +4,7 @@ public class Inventory : MonoBehaviour
 {
     public static Inventory inventory;
 
-    int[] seeds;
+    public int[] seeds;
     int[] plants;
     int money;
 
@@ -49,6 +49,14 @@ public class Inventory : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             ShowInventory();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            for (int i = 0; i < seeds.Length; i++)
+            {
+                AdjustSeedQuantity((GameManager.seeds)i, 1);
+            }
         }
     }
 }
