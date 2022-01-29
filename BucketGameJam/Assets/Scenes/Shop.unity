@@ -1364,6 +1364,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txtSelected: {fileID: 1976472024}
   txtPriceSelected: {fileID: 1102453717}
+  buttonSellPlants: {fileID: 1917372318}
+  buttonBuySeeds: {fileID: 1740322355}
+  sellPlantsMenu: {fileID: 5082254746762719564, guid: 8105a316befaf564fb7f53c6d562ba91, type: 3}
 --- !u!114 &1121768225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2279,7 +2282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1917372317
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2678,7 +2681,19 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3141226937638549761, guid: 225a3721b0de6434997d31abd2361b06, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3141226937638549761, guid: 225a3721b0de6434997d31abd2361b06, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3141226937638549761, guid: 225a3721b0de6434997d31abd2361b06, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4291366990060307087, guid: 225a3721b0de6434997d31abd2361b06, type: 3}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4291366990060307087, guid: 225a3721b0de6434997d31abd2361b06, type: 3}

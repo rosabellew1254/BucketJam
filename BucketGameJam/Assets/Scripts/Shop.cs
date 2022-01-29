@@ -8,16 +8,22 @@ public class Shop : MonoBehaviour
 
     public Text txtSelected;
     public Text txtPriceSelected;
+    public Button buttonSellPlants;
+    public Button buttonBuySeeds;
 
     GameManager.plants selectedPlant;
     int selectedPrice;
 
     bool isBuying;
+    public GameObject sellPlantsMenu;
 
     private void Start()
     {
         gm = GameManager.gm;
         inventory = Inventory.inventory;
+        ShowSellPlantsButton();
+        selectedPlant = GameManager.plants.terminator;
+        ShowBuySeedsButton();
     }
 
     public void SelectPlant(int _plantIndex)
@@ -27,6 +33,7 @@ public class Shop : MonoBehaviour
         PlantsSO selectedPlantData = gm.plantData[_plantIndex];
         selectedPrice = isBuying ? selectedPlantData.seedCost : selectedPlantData.sellPrice;
         txtPriceSelected.text = "Price: " + selectedPrice;
+        ShowBuySeedsButton();
     }
 
     public void SetIsBuying(bool _isBuying)
@@ -38,13 +45,28 @@ public class Shop : MonoBehaviour
     {
         inventory.AdjustMoney(-selectedPrice);
         inventory.AdjustSeedQuantity(selectedPlant, 1);
+        ShowBuySeedsButton();
     }
 
     public void SellPlant()
     {
-        inventory.AdjustMoney(selectedPrice);
-        inventory.AdjustPlantQuantity(selectedPlant, -1);
-        PlantsSO plantData = gm.plantData[(int)selectedPlant];
-        PlayerController.pc.AdjustSanity(plantData.sanity);
+        Instantiate(sellPlantsMenu);
+    }
+
+    public void ShowSellPlantsButton()
+    {
+        int totalPlants = 0;
+
+        for (int i = 0; i < (int)GameManager.plants.terminator; i++)
+        {
+            totalPlants += inventory.plants[i];
+        }
+
+        buttonSellPlants.gameObject.SetActive(totalPlants > 0);
+    }
+
+    void ShowBuySeedsButton()
+    {
+        buttonBuySeeds.gameObject.SetActive(selectedPlant != GameManager.plants.terminator && inventory.money >= selectedPrice);
     }
 }
