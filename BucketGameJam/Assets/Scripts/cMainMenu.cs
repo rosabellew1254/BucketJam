@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class cMainMenu : MonoBehaviour
 {
@@ -16,5 +18,17 @@ public class cMainMenu : MonoBehaviour
     void Update()
     {
         
+    }
+
+    // Loads the into the game's first scene
+    public void OnPlayGame()
+    {
+        gm.LoadScene(1);
+    }
+
+    // Method to exit the game
+    public void OnExitGame()
+    {
+        Application.Quit();
     }
 }
