@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     public Text date;
     public GameObject inventoryMenu;
 
+
+    public bool isSiblingAlive = true;
     public int curDay = 0;
     public int maxDays = 36;
     public int moneyRequiredToSaveSibling = 5000;
@@ -71,11 +73,38 @@ public class GameManager : MonoBehaviour
     public void AdvanceDay()
     {
         curDay++;
-        date.text = "Date: " + curDay;
+        date.text = "Date: " + curDay + "/36";
+        DayCheck();
     }
 
     public void OpenInventory()
     {
         Instantiate(inventoryMenu);
+    }
+
+    public void DayCheck()
+    {
+        if (isSiblingAlive == false)
+        {
+            Debug.Log("Your sibling is dead");
+        }
+        else if (curDay == 20)
+        {
+            if (Inventory.inventory.money >= GameManager.gm.moneyRequiredToSaveSibling)
+            {
+                isSiblingAlive = true;
+            }
+            else
+            {
+                isSiblingAlive = false;
+                Debug.Log("Your sibling has died");
+            }
+        }
+        else if (PlayerController.pc.curSanity < 0)
+        {
+            isSiblingAlive = false;
+            Debug.Log("Your sibling has died");
+        }
+        
     }
 }
