@@ -45,8 +45,6 @@ public class GardenUI : MonoBehaviour
 
     void UpdateDropdown()
     {
-        bool deletedSelected = false;
-
         for (int i = 0; i < inventory.seeds.Length; i++)
         {
             GameManager.plants currentSeed = (GameManager.plants)i;
@@ -67,10 +65,6 @@ public class GardenUI : MonoBehaviour
             }
             else if (dropDownValues.Contains(currentSeed))
             {
-                if (currentSeed == selectedSeed)
-                {
-                    deletedSelected = true;
-                }
                 int index = dropDownValues.IndexOf(currentSeed);
                 dropDownValues.Remove(currentSeed);
                 seedSelectDropdown.options.RemoveAt(index);
@@ -79,7 +73,7 @@ public class GardenUI : MonoBehaviour
 
         seedSelectDropdown.captionText.text = inventory.seeds[(int)selectedSeed] > 0 ? selectedSeed.ToString() : "";
 
-        if (deletedSelected && dropDownValues.Count > 0)
+        if (dropDownValues.Contains(selectedSeed) == false && dropDownValues.Count > 0)
         {
             SelectSeed(dropDownValues[0]);
         }

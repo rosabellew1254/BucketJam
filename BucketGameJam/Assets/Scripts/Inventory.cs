@@ -51,5 +51,10 @@ public class Inventory : MonoBehaviour
                 AdjustPlantQuantity((GameManager.plants)i, 2);
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            AdjustSeedQuantity(GameManager.plants.strawberry, 1);
+        }
     }
 }
