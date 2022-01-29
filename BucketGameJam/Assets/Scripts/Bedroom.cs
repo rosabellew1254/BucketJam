@@ -23,6 +23,11 @@ public class Bedroom : MonoBehaviour
     {
         //Advance the month
         GameManager.gm.AdvanceDay();
+
+        if (GameManager.gm.curDay == GameManager.gm.maxDays +1)
+        {
+            GameManager.gm.LoadScene(5);
+        }
     }
 
 }
