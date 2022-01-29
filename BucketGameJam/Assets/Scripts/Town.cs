@@ -12,11 +12,17 @@ public class Town : MonoBehaviour
     public Text nTownies;
     int san;
 
-    // Start is called before the first frame update
     void Start()
     {
         pc = PlayerController.pc;
         StartCoroutine(pcSetup());
+
+    }
+
+    IEnumerator pcSetup()
+    {
+        yield return new WaitUntil(() => pc.curSanSetup == true);
+        san = pc.curSanity;
         if (san < sanThreshold[0] && san >= sanThreshold[1])
         {
             evils[0].gameObject.SetActive(true);
@@ -29,13 +35,6 @@ public class Town : MonoBehaviour
         nTownies.text = townies.ToString();
     }
 
-    IEnumerator pcSetup()
-    {
-        yield return new WaitUntil(() => pc != null);
-        int san = pc.curSanity;
-    }
-
-    // Update is called once per frame
     void Update()
     {
 

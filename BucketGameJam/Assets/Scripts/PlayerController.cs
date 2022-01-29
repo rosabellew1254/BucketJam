@@ -6,10 +6,17 @@ public class PlayerController : MonoBehaviour
     public static PlayerController pc;
     public int curSanity;
     public Slider sliderSanity;
+    public bool curSanSetup;
 
     private void Start()
     {
         pc = this;
+        if (!PlayerPrefs.HasKey("san"))
+        {
+            PlayerPrefs.SetInt("san", 25);
+        }
+        curSanity = PlayerPrefs.GetInt("san");
+        curSanSetup = true;
     }
 
     public void AdjustSanity(int _adjustment)
