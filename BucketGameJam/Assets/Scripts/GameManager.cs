@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -6,6 +7,12 @@ public class GameManager : MonoBehaviour
     public static GameManager gm;
     public enum plants { turnip, strawberry, eyePomegranite, mouthApple, terminator}
     public enum scenes { frontEnd, town, garden, shop, bedroom, terminator }
+    public GameObject sproutPrefab;
+
+    [Space]
+    [Header("Menus")]
+    public GameObject pMain;
+
     public GameObject[] plantPrefabs;
     public PlantsSO[] plantData;
     public GameObject mirrorReflection;
@@ -29,6 +36,35 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    // Whatever scene is loaded, instantiates appropriate menu objects
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        switch(scene.buildIndex)
+        {
+            case 0:
+                Instantiate(pMain).GetComponent<cMainMenu>();
+                break;
+            case 1:
+                break;
+        }
+    }
+
+    // Method to load the scene
+    public void LoadScene(int _idx)
+    {
+        SceneManager.LoadScene(_idx);
+    }
+    
     void AdvanceDay()
     {
         curDay++;
