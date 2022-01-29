@@ -7,12 +7,9 @@ public class Mirror : MonoBehaviour
     
     public void ClickMirror()
     {
+        //fade object then destroy it
 
-    }
-
-    void Destroy()
-    {
-        
+        Object.Destroy(gameObject, 2f);
     }
 
 }

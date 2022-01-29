@@ -6,26 +6,18 @@ public class Bedroom : MonoBehaviour
 {
     public void Mirror()
     {
-
-    }
-
-    public void Window()
-    {
-
+        //Show reflection of player's current state
+        
     }
 
     public void Journal()
     {
-
+        //Show character's notes / thoughts
     }
 
     public void Save()
     {
-
+        //Save game
     }
 
-    public void Transition()
-    {
-
-    }
 }
