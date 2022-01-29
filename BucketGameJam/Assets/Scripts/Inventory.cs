@@ -34,31 +34,21 @@ public class Inventory : MonoBehaviour
         plants[(int)_plant] += _adjustAmount;
     }
 
-    public void ShowInventory()
-    {
-        for (int i = 0; i < seeds.Length; i++)
-        {
-            Debug.Log("You have " + seeds[i] + " seeds of type " + i);
-        }
-
-        for (int i = 0; i < plants.Length; i++)
-        {
-            Debug.Log("You have " + plants[i] + " plants of type " + i);
-        }
-    }
-
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ShowInventory();
-        }
-
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             for (int i = 0; i < seeds.Length; i++)
             {
                 AdjustSeedQuantity((GameManager.plants)i, 1);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            for (int i = 0; i < seeds.Length; i++)
+            {
+                AdjustPlantQuantity((GameManager.plants)i, 2);
             }
         }
     }
