@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [Space]
     [Header("Menus")]
     public GameObject pMain;
+    public GameObject generalHUD;
 
     public GameObject[] plantPrefabs;
     public PlantsSO[] plantData;
@@ -53,8 +54,10 @@ public class GameManager : MonoBehaviour
         {
             case 0:
                 Instantiate(pMain).GetComponent<cMainMenu>();
+                generalHUD.gameObject.SetActive(false);
                 break;
-            case 1:
+            default:
+                generalHUD.gameObject.SetActive(true);
                 break;
         }
     }

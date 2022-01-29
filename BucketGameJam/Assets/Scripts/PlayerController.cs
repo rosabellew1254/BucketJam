@@ -17,4 +17,14 @@ public class PlayerController : MonoBehaviour
         curSanity += _adjustment;
         sliderSanity.value = curSanity;
     }
+
+    public void OnOptions()
+    {
+        
+    }
+    
+    public void OnInventory()
+    {
+
+    }
 }
