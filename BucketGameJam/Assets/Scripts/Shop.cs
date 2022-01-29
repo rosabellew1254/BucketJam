@@ -51,9 +51,4 @@ public class Shop : MonoBehaviour
         inventory.AdjustMoney(selectedPrice);
         inventory.AdjustPlantQuantity(selectedPlant, -1);
     }
-
-    public void GoToTown()
-    {
-
-    }
 }
