@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController pc;
-    int curSanity;
+    public int curSanity;
     public Slider sliderSanity;
 
     private void Start()
