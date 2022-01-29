@@ -35,5 +35,15 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-BucketGameJam/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudioL.dll
-BucketGameJam/fmod_editor.log
+*.dll
+BucketGameJam/Assets/Plugins/FMOD.meta
+BucketGameJam/Assets/Plugins.meta
+BucketGameJam/Assets/Plugins/FMOD/platforms.meta
+BucketGameJam/Assets/Plugins/FMOD/platforms/win.meta
+BucketGameJam/Assets/Plugins/FMOD/platforms/win/lib.meta
+BucketGameJam/Assets/Plugins/FMOD/platforms/win/lib/x86_64.meta
+BucketGameJam/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudioL.dll.meta
+BucketGameJam/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset
+BucketGameJam/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset
+BucketGameJam/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset
+
