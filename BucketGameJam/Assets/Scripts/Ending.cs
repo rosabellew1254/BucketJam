@@ -1,18 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ending : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Text endNameText;
+    public Text endingFillerText;
 
-    // Update is called once per frame
-    void Update()
+
+    public string[] endName;
+    public string[] endFill;
+
+
+    private void Awake()
     {
-        
+        GameManager.gm.generalHUD.gameObject.SetActive(false);
+
+
     }
 }
