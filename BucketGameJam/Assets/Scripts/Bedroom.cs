@@ -10,7 +10,8 @@ public class Bedroom : MonoBehaviour
     public void Mirror()
     {
         //Show reflection of player's current state
-        
+        //mirrorReflection = GetComponent<GameManager>
+        mirrorReflection = Instantiate(GameManager.gm.mirrorReflection, gameObject.transform.position, Quaternion.identity, gameObject.transform);
     }
 
     public void Journal()
@@ -18,9 +19,10 @@ public class Bedroom : MonoBehaviour
         //Show character's notes / thoughts
     }
 
-    public void Save()
+    public void Advance()
     {
-        //Save game
+        //Advance the month
+        GameManager.gm.AdvanceDay();
     }
 
 }
