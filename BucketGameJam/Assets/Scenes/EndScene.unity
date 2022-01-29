@@ -390,10 +390,10 @@ MonoBehaviour:
   - Deserter Ending
   - Evil Ending
   endFill:
-  - 
-  - 
-  - 
-  - 
+  - 1
+  - 2
+  - 3
+  - 4
 --- !u!1 &625268929
 GameObject:
   m_ObjectHideFlags: 0

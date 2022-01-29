@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     public GameObject mirrorReflection;
     public Text date;
 
+
+    public bool isSiblingAlive = true;
     public int curDay = 0;
     public int maxDays = 36;
     public int moneyRequiredToSaveSibling = 5000;
