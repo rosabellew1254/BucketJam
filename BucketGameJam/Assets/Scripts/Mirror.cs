@@ -9,7 +9,7 @@ public class Mirror : MonoBehaviour
     {
         //fade object then destroy it
 
-        Object.Destroy(gameObject, 1f);
+        Object.Destroy(gameObject);
     }
 
 }
