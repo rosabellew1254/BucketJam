@@ -42,4 +42,17 @@ public class Garden : MonoBehaviour
         PlantsSO plantData = gm.plantData[(int)plants[_position]];
         return curGrowth[_position] >= plantData.turnsToGrow;
     }
+
+    public void Grow()
+    {
+        for (int i = 0; i < numHoles; i++)
+        {
+            if (plants[i] == GameManager.plants.terminator)
+            {
+                continue;
+            }
+
+            curGrowth[i]++;
+        }
+    }
 }

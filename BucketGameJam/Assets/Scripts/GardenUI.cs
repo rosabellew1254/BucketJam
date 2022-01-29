@@ -141,7 +141,7 @@ public class GardenUI : MonoBehaviour
         PlantsSO plantData = gm.plantData[(int)_type];
         Instantiate(gm.plantPrefabs[(int)selectedSeed], plantingSpots[_holeIndex]);
         growthProgress[_holeIndex].gameObject.SetActive(true);
-        growthProgress[_holeIndex].text = garden.curGrowth[_holeIndex] + "/" + plantData.turnsToGrow;
+        growthProgress[_holeIndex].text = Mathf.Min(garden.curGrowth[_holeIndex], plantData.turnsToGrow) + "/" + plantData.turnsToGrow;
     }
 
     public void ToggleRemoveSeedMode()

@@ -28,6 +28,8 @@ public class Bedroom : MonoBehaviour
         {
             GameManager.gm.LoadScene(5);
         }
+
+        Garden.garden.Grow();
     }
 
 }
