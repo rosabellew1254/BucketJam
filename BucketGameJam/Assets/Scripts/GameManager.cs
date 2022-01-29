@@ -74,10 +74,37 @@ public class GameManager : MonoBehaviour
     {
         curDay++;
         date.text = "Date: " + curDay + "/36";
+        DayCheck();
     }
 
     public void OpenInventory()
     {
         Instantiate(inventoryMenu);
+    }
+
+    public void DayCheck()
+    {
+        if (isSiblingAlive == false)
+        {
+            Debug.Log("Your sibling is dead");
+        }
+        else if (curDay == 20)
+        {
+            if (Inventory.inventory.money >= GameManager.gm.moneyRequiredToSaveSibling)
+            {
+                isSiblingAlive = true;
+            }
+            else
+            {
+                isSiblingAlive = false;
+                Debug.Log("Your sibling has died");
+            }
+        }
+        else if (PlayerController.pc.curSanity < 0)
+        {
+            isSiblingAlive = false;
+            Debug.Log("Your sibling has died");
+        }
+        
     }
 }

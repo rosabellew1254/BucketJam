@@ -18,30 +18,32 @@ public class Ending : MonoBehaviour
 
     private void Start()
     {
+        currentEnding = 0;
         //doublefaced = money goal + sibling healed
         //peaceful = sibling alive + full sanatiy 
         //deserted = sanity normal, sibling dies
         //evil = sibling dies, sanity 0
 
-        if (GameManager.gm.isSiblingAlive == true && Inventory.inventory.money >= GameManager.gm.competeMoneyGoal)
+        if (GameManager.gm.isSiblingAlive == true && Inventory.inventory.money < GameManager.gm.competeMoneyGoal)
         {
             //peaceful end
-            currentEnding = 1;
+            currentEnding = 0;
         }
-        else if (GameManager.gm.isSiblingAlive == true && Inventory.inventory.money <= GameManager.gm.competeMoneyGoal)
+        else if (GameManager.gm.isSiblingAlive == true && Inventory.inventory.money >= GameManager.gm.competeMoneyGoal)
         {
             //double end
-            currentEnding = 2;
+            currentEnding = 1;
         }
         else if (GameManager.gm.isSiblingAlive == false && Inventory.inventory.money < GameManager.gm.competeMoneyGoal )
         {
             //deserter end
-            currentEnding = 3;
+            currentEnding = 2;
         }
-        else if (GameManager.gm.isSiblingAlive == false && Inventory.inventory.money <= GameManager.gm.competeMoneyGoal)
+        else if (GameManager.gm.isSiblingAlive == false && Inventory.inventory.money >= GameManager.gm.competeMoneyGoal)
         {
             //evil end
-            currentEnding = 4;
+            currentEnding = 3;
+            Debug.Log(Inventory.inventory.money);
         }
         else
         {
@@ -65,6 +67,7 @@ public class Ending : MonoBehaviour
         Inventory.inventory.seeds = new int[(int)GameManager.plants.terminator];
         Inventory.inventory.plants = new int[(int)GameManager.plants.terminator];
         PlayerPrefs.SetInt("san", 25);
+        StartCoroutine("pcSetup");
 
         GameManager.gm.LoadScene(0);
     }

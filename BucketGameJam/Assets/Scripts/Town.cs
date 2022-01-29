@@ -19,7 +19,7 @@ public class Town : MonoBehaviour
 
     }
 
-    IEnumerator pcSetup()
+    public IEnumerator pcSetup()
     {
         yield return new WaitUntil(() => pc.curSanSetup == true);
         san = pc.curSanity;
