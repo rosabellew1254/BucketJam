@@ -7,7 +7,7 @@ public class Inventory : MonoBehaviour
     public Text txtMoney;
 
     public int[] seeds;
-    int[] plants;
+    public int[] plants;
     public int money;
 
     private void Start()
