@@ -36,3 +36,4 @@ sysinfo.txt
 *.apk
 *.unitypackage
 BucketGameJam/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudioL.dll
+BucketGameJam/fmod_editor.log
