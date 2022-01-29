@@ -45,6 +45,7 @@ public class Shop : MonoBehaviour
     {
         inventory.AdjustMoney(-selectedPrice);
         inventory.AdjustSeedQuantity(selectedPlant, 1);
+        ShowBuySeedsButton();
     }
 
     public void SellPlant()
@@ -66,6 +67,6 @@ public class Shop : MonoBehaviour
 
     void ShowBuySeedsButton()
     {
-        buttonBuySeeds.gameObject.SetActive(selectedPlant != GameManager.plants.terminator);
+        buttonBuySeeds.gameObject.SetActive(selectedPlant != GameManager.plants.terminator && inventory.money >= selectedPrice);
     }
 }

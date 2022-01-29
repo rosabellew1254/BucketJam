@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
     public static GameManager gm;
     public enum plants { turnip, strawberry, eyePomegranite, mouthApple, terminator}
     public enum scenes { frontEnd, town, garden, shop, bedroom, endScene, terminator }
-    public GameObject sproutPrefab;
 
     [Space]
     [Header("Menus")]
@@ -18,6 +17,7 @@ public class GameManager : MonoBehaviour
     public PlantsSO[] plantData;
     public GameObject mirrorReflection;
     public Text date;
+    public GameObject inventoryMenu;
 
     public int curDay = 0;
     public int maxDays = 36;
@@ -72,5 +72,10 @@ public class GameManager : MonoBehaviour
     {
         curDay++;
         date.text = "Date: " + curDay;
+    }
+
+    public void OpenInventory()
+    {
+        Instantiate(inventoryMenu);
     }
 }

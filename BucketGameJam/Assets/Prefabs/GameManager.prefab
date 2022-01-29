@@ -43,7 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29cf7f62dba345f40bb5722492d794bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curSanity: 0
   sliderSanity: {fileID: 2780233939534843083}
+  curSanSetup: 0
 --- !u!1 &1612022985
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +210,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1747109109920045872}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1167060740431088935}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OpenInventory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1167060740431088928
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,7 +271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c15b703ff7e00d47839604548480328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sproutPrefab: {fileID: 0}
   pMain: {fileID: 6589404896321480543, guid: f6acd9fb1f4db6645ab4bae6f980d1f9, type: 3}
   generalHUD: {fileID: 2848038302091044420}
   plantPrefabs:
@@ -272,6 +285,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3eced7a0a11078f45a5e4b99e87331ae, type: 2}
   mirrorReflection: {fileID: 5806371820011958536, guid: 2df4b2f96a1508b448be2eb8886f0f6c, type: 3}
   date: {fileID: 4094786444683663679}
+  inventoryMenu: {fileID: 9114729740475252644, guid: 240ebdf2c592e9444b4c20569d70aabf, type: 3}
+  curDay: 0
+  maxDays: 36
+  moneyRequiredToSaveSibling: 5000
+  competeMoneyGoal: 12000
 --- !u!1 &1167060740595847755
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,6 +335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txtMoney: {fileID: 588779373555496927}
   seeds: 
+  plants: 
 --- !u!1 &1676107622816780844
 GameObject:
   m_ObjectHideFlags: 0
