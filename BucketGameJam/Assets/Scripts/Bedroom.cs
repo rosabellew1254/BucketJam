@@ -6,7 +6,6 @@ public class Bedroom : MonoBehaviour
 {
     public GameObject mirrorReflection;
 
-
     public void Mirror()
     {
         //Show reflection of player's current state

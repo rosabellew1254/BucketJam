@@ -8,8 +8,11 @@ public class PlayerController : MonoBehaviour
     public Slider sliderSanity;
     public bool curSanSetup;
 
+    GameManager gm;
+
     private void Start()
     {
+        gm = GameManager.gm;
         pc = this;
         if (!PlayerPrefs.HasKey("san"))
         {
@@ -25,9 +28,9 @@ public class PlayerController : MonoBehaviour
         sliderSanity.value = curSanity;
     }
 
-    public void OnOptions()
+    public void OnMainMenu()
     {
-        
+        gm.LoadScene(0);
     }
     
     public void OnInventory()

@@ -182,6 +182,14 @@ PrefabInstance:
       propertyPath: pMain
       value: 
       objectReference: {fileID: 6589404896321480543, guid: f6acd9fb1f4db6645ab4bae6f980d1f9, type: 3}
+    - target: {fileID: 1950564989454573312, guid: 225a3721b0de6434997d31abd2361b06, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950564989454573312, guid: 225a3721b0de6434997d31abd2361b06, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 3141226937638549761, guid: 225a3721b0de6434997d31abd2361b06, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
