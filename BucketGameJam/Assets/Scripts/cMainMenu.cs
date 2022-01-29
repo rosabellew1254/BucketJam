@@ -23,7 +23,7 @@ public class cMainMenu : MonoBehaviour
     // Loads the into the game's first scene
     public void OnPlayGame()
     {
-        gm.LoadScene(1);
+        gm.LoadScene(4);
     }
 
     // Method to exit the game

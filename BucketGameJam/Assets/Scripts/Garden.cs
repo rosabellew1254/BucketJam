@@ -7,7 +7,7 @@ public class Garden : MonoBehaviour
     public static Garden garden;
     public GameManager.plants[] plants;
     public int[] curGrowth;
-    int numHoles = 15;
+    int numHoles = 8;
 
     private void Start()
     {
@@ -41,5 +41,18 @@ public class Garden : MonoBehaviour
 
         PlantsSO plantData = gm.plantData[(int)plants[_position]];
         return curGrowth[_position] >= plantData.turnsToGrow;
+    }
+
+    public void Grow()
+    {
+        for (int i = 0; i < numHoles; i++)
+        {
+            if (plants[i] == GameManager.plants.terminator)
+            {
+                continue;
+            }
+
+            curGrowth[i]++;
+        }
     }
 }

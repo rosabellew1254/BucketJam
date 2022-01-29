@@ -6,8 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gm;
     public enum plants { turnip, strawberry, eyePomegranite, mouthApple, terminator}
-    public enum scenes { frontEnd, town, garden, shop, bedroom, terminator }
-    public GameObject sproutPrefab;
+    public enum scenes { frontEnd, town, garden, shop, bedroom, endScene, terminator }
 
     [Space]
     [Header("Menus")]
@@ -18,11 +17,12 @@ public class GameManager : MonoBehaviour
     public PlantsSO[] plantData;
     public GameObject mirrorReflection;
     public Text date;
+    public GameObject inventoryMenu;
 
-    int curDay = 0;
-    int maxDays = 36;
-    int moneyRequiredToSaveSibling = 5000;
-    int competeMoneyGoal = 12000;
+    public int curDay = 0;
+    public int maxDays = 36;
+    public int moneyRequiredToSaveSibling = 5000;
+    public int competeMoneyGoal = 12000;
 
     private void Awake()
     {
@@ -72,5 +72,10 @@ public class GameManager : MonoBehaviour
     {
         curDay++;
         date.text = "Date: " + curDay;
+    }
+
+    public void OpenInventory()
+    {
+        Instantiate(inventoryMenu);
     }
 }
