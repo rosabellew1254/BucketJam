@@ -13,8 +13,19 @@ public class Ending : MonoBehaviour
     public string[] endFill;
 
 
-    private void Awake()
+    int currentEnding;
+
+
+    private void Start()
     {
+
+
+
+
+        //endNameText.text = endName[]
+
+
+
         GameManager.gm.generalHUD.gameObject.SetActive(false);
 
 

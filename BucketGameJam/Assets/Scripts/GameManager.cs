@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gm;
     public enum plants { turnip, strawberry, eyePomegranite, mouthApple, terminator}
-    public enum scenes { frontEnd, town, garden, shop, bedroom, terminator }
+    public enum scenes { frontEnd, town, garden, shop, bedroom, endScene, terminator }
     public GameObject sproutPrefab;
 
     [Space]
@@ -19,10 +19,10 @@ public class GameManager : MonoBehaviour
     public GameObject mirrorReflection;
     public Text date;
 
-    int curDay = 0;
-    int maxDays = 36;
-    int moneyRequiredToSaveSibling = 5000;
-    int competeMoneyGoal = 12000;
+    public int curDay = 0;
+    public int maxDays = 36;
+    public int moneyRequiredToSaveSibling = 5000;
+    public int competeMoneyGoal = 12000;
 
     private void Awake()
     {
