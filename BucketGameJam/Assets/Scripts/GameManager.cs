@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(_idx);
     }
     
-    void AdvanceDay()
+    public void AdvanceDay()
     {
         curDay++;
         date.text = "Date: " + curDay;
