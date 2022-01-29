@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 
     public enum scenes { frontEnd, town, garden, shop, bedroom, terminator }
 
+    public GameObject mirrorReflection;
+
     private void Awake()
     {
         if (gm != null)
