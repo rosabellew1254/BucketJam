@@ -92,6 +92,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            worldState = state.normal;
             Debug.Log("Passed Through Check for Sanity");
         }
     }
