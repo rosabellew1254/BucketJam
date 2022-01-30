@@ -88,6 +88,10 @@ public class GameManager : MonoBehaviour
 
     public void DayCheck()
     {
+        if (PlayerController.pc.curSanity < 20)
+        {
+            worldState = state.smallEvil;
+        }
         if (isSiblingAlive == false)
         {
             Debug.Log("Your sibling is dead");
@@ -106,9 +110,11 @@ public class GameManager : MonoBehaviour
         }
         else if (PlayerController.pc.curSanity < 0)
         {
+            worldState = state.largeEvil;
             isSiblingAlive = false;
             Debug.Log("Your sibling has died");
         }
+
         
     }
 }
