@@ -2743,11 +2743,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 580761033
-      Data2: 1255440936
-      Data3: -1162621816
-      Data4: -389359758
-    Path: event:/music/bad
+      Data1: -1119207143
+      Data2: 1230278343
+      Data3: 1632032933
+      Data4: 2140583950
+    Path: event:/bedroom
   Event: 
   PlayEvent: 1
   StopEvent: 2
