@@ -40,12 +40,16 @@ public class Journal : MonoBehaviour
     }
     public void LeftPageClick()
     {
+        
         currentpage = Mathf.Clamp(currentpage - 1, 0, Journalpages.Length - 1);
         displayPage(currentpage);
     }
     public void RightPageClick()
     {
-        currentpage = Mathf.Clamp(currentpage + 1, 0, Journalpages.Length - 1);
+        if (currentpage != GameManager.gm.curDay)
+        {
+            currentpage = Mathf.Clamp(currentpage + 1, 0, Journalpages.Length - 1);
+        }
         displayPage(currentpage);
     }
 
