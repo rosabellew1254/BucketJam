@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [Header("Menus")]
     public GameObject pMain;
     public GameObject generalHUD;
+    public GameObject pJournal;
 
     public GameObject[] plantPrefabs;
     public PlantsSO[] plantData;

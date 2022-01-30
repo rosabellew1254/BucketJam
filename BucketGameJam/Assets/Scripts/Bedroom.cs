@@ -6,6 +6,13 @@ public class Bedroom : MonoBehaviour
 {
     public GameObject mirrorReflection;
 
+    GameManager gm;
+
+    public void Start()
+    {
+        gm = GameManager.gm;
+    }
+
     public void Mirror()
     {
         //Show reflection of player's current state
@@ -15,7 +22,7 @@ public class Bedroom : MonoBehaviour
 
     public void Journal()
     {
-        //Show character's notes / thoughts
+        Instantiate(gm.pJournal).GetComponent<Journal>();
     }
 
     public void Advance()
@@ -31,4 +38,8 @@ public class Bedroom : MonoBehaviour
         Garden.garden.Grow();
     }
 
+    public void ChangeWindowState()
+    {
+
+    }
 }
