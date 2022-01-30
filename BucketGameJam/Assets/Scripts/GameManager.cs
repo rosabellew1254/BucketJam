@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     public GameObject[] plantPrefabs;
     public PlantsSO[] plantData;
     public GameObject mirrorReflection;
+    public GameObject sliderMask;
+    public GameObject sliderFill;
     public Text date;
     public GameObject inventoryMenu;
     public state worldState;
@@ -135,5 +137,13 @@ public class GameManager : MonoBehaviour
         }
 
         
+    }
+
+    public void SliderMasking()
+    {
+        sliderFill.transform.SetParent(sliderMask.transform.parent);
+        sliderFill.GetComponent<RectTransform>().sizeDelta = new Vector2(110f, 22f);
+        sliderFill.GetComponent<RectTransform>().localPosition = Vector2.zero;
+        sliderFill.transform.SetParent(sliderMask.transform);
     }
 }
