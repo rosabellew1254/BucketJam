@@ -396,7 +396,7 @@ MonoBehaviour:
   - 
   - 
   endPicture:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: db9a24e3a9df657479874277362ff75a, type: 3}
   - {fileID: 21300000, guid: d6c49ada069a86540b20bff5df2e6a35, type: 3}
   - {fileID: 21300000, guid: 5206c251aa129da4bb9dd15f173d0658, type: 3}
   - {fileID: 21300000, guid: 382aa9be780a3c644b3d973666b1eaa8, type: 3}
