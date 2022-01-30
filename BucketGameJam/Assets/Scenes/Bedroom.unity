@@ -2024,7 +2024,7 @@ MonoBehaviour:
       Data2: 1230278343
       Data3: 1632032933
       Data4: 2140583950
-    Path: event:/music/bedroom
+    Path: event:/bedroom
   Event: 
   PlayEvent: 1
   StopEvent: 2

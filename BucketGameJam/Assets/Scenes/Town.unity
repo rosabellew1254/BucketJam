@@ -1206,7 +1206,7 @@ MonoBehaviour:
       Data2: 1291410268
       Data3: 327296139
       Data4: -1354885296
-    Path: event:/music/good
+    Path: event:/good
   Event: 
   PlayEvent: 1
   StopEvent: 2
@@ -2429,6 +2429,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1167060740431088934, guid: 225a3721b0de6434997d31abd2361b06, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2125873394822537349, guid: 225a3721b0de6434997d31abd2361b06, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2125873394822537349, guid: 225a3721b0de6434997d31abd2361b06, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3141226937638549761, guid: 225a3721b0de6434997d31abd2361b06, type: 3}
