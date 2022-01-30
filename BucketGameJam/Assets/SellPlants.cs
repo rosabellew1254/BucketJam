@@ -81,9 +81,9 @@ public class SellPlants : MonoBehaviour
         for (int i = 0; i < (int)GameManager.plants.terminator; i++)
         {
             minusButtons[i].GetComponent<Image>().enabled = sellQuantity[i] > 0;
-            minusButtons[i].GetComponentInChildren<Text>().enabled = sellQuantity[i] > 0;
+            //minusButtons[i].GetComponentInChildren<Text>().enabled = sellQuantity[i] > 0;
             plusButtons[i].GetComponent<Image>().enabled = sellQuantity[i] < inventory.plants[i];
-            plusButtons[i].GetComponentInChildren<Text>().enabled = sellQuantity[i] < inventory.plants[i];
+            //plusButtons[i].GetComponentInChildren<Text>().enabled = sellQuantity[i] < inventory.plants[i];
         }
 
         confirmButton.gameObject.SetActive(totalSale > 0);
