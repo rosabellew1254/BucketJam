@@ -40,7 +40,7 @@ public class GardenUI : MonoBehaviour
         {
             if (garden.plants[i] != GameManager.plants.terminator)
             {
-                SpawnPlant(garden.plants[i], i, garden.curGrowth[i]);
+                SpawnPlant(garden.plants[i], i, garden.IsGrowing(i), garden.IsFullyGrown(i));
             }
         }
     }
@@ -115,8 +115,8 @@ public class GardenUI : MonoBehaviour
         {
             garden.PlantPlant(selectedSeed, _holeIndex);
             inventory.AdjustSeedQuantity(selectedSeed, -1);
+            SpawnPlant(selectedSeed, _holeIndex, false, false);
             UpdateDropdown();
-            SpawnPlant(selectedSeed, _holeIndex, 0);
         }
         else if (ChosenPlantType != GameManager.plants.terminator && garden.IsFullyGrown(_holeIndex)) //harvest fully grown plants
         {
@@ -132,36 +132,22 @@ public class GardenUI : MonoBehaviour
         growthProgress[_holeIndex].gameObject.SetActive(false);
     }
 
-    void SpawnPlant(GameManager.plants _type, int _holeIndex, int _growTurn) //
+    void SpawnPlant(GameManager.plants _type, int _holeIndex, bool _isGrowing, bool _isGrown) 
     {
         PlantsSO plantData = gm.plantData[(int)_type];
         GameObject goPlant = Instantiate(gm.plantPrefabs[(int)selectedSeed], plantingSpots[_holeIndex]);
         plantInSoil[_holeIndex] = goPlant;
-        if (_type == GameManager.plants.eyePomegranite || _type == GameManager.plants.mouthApple)
+        if (_isGrowing)
         {
-            for (int i = 0; i < goPlant.GetComponent<Plant>().goPhase.Length - 2; i++)
-            {
-                plantInSoil[_holeIndex].GetComponent<Plant>().goPhase[i].gameObject.SetActive(false);
-            }
-            if (goPlant != null)
-            {
-                plantInSoil[_holeIndex].GetComponent<Plant>().goPhase[_growTurn].gameObject.SetActive(true);
-            }
+            goPlant.GetComponent<Image>().sprite = goPlant.GetComponent<Plant>().sPhase[1];
         }
-        else if (_type == GameManager.plants.eyePomegranite || _type == GameManager.plants.mouthApple)
+        else if (_isGrown)
         {
-            for (int i = 0; i < goPlant.GetComponent<Plant>().goPhase.Length - 1; i++)
-            {
-                plantInSoil[_holeIndex].GetComponent<Plant>().goPhase[i].gameObject.SetActive(false);
-            }
-            if (goPlant != null)
-            {
-                plantInSoil[_holeIndex].GetComponent<Plant>().goPhase[_growTurn].gameObject.SetActive(true);
-            }
+            goPlant.GetComponent<Image>().sprite = goPlant.GetComponent<Plant>().sPhase[2];
         }
         else
         {
-            return;
+            goPlant.GetComponent<Image>().sprite = goPlant.GetComponent<Plant>().sPhase[0];
         }
 
         growthProgress[_holeIndex].gameObject.SetActive(true);
