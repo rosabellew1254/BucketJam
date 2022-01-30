@@ -626,10 +626,10 @@ MonoBehaviour:
   - {fileID: 452148860}
   - {fileID: 819559626}
   eldritch:
-  - {fileID: 291675419}
-  - {fileID: 156551094}
   - {fileID: 1071307127}
-  bushImage: {fileID: 0}
+  - {fileID: 156551094}
+  - {fileID: 291675419}
+  bushImage: {fileID: 897329714}
   bushStates:
   - {fileID: 21300000, guid: 22f068bf95fa281469e823d4070a7c8d, type: 3}
   - {fileID: 21300000, guid: 491c32a4345cf0b4883517c60e11599b, type: 3}
@@ -638,6 +638,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: baeb6c9988d9bcb41a51d0bdf2922bc2, type: 3}
   - {fileID: 21300000, guid: 7320646b43051014099a3251119beb50, type: 3}
   - {fileID: 21300000, guid: 464380a8f895fb4499197686fc89c2e2, type: 3}
+  randInt: 0
 --- !u!114 &596070995
 MonoBehaviour:
   m_ObjectHideFlags: 0
