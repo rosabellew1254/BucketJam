@@ -9,11 +9,34 @@ public class Journal : MonoBehaviour
     public int currentpage = 0;
     public Button TurnLeftPage;
     public Button TurnRightPage;
+
+    public Sprite[] bookState;
+    public Image journal;
+
+    PlayerController pc;
+
     public void Start()
     {
+        pc = PlayerController.pc;
+
         TurnLeftPage.gameObject.SetActive(false);
         displayPage(currentpage);
+
+        CurBookState();
     }
+
+    public void CurBookState()
+    {
+        if (pc.curSanity < 0)
+        {
+            journal.sprite = bookState[1];
+        }
+        else
+        {
+            journal.sprite = bookState[0];
+        }
+    }
+
     public void displayPage(int page)
     {
         if (Journalpages.Length>0)
