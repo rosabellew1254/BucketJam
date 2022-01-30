@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
         }
         curSanity = PlayerPrefs.GetInt("san");
         curSanSetup = true;
-        AdjustSanity(0);
+        AdjustSanity(curSanity);
     }
 
     public void AdjustSanity(int _adjustment)
