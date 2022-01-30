@@ -61,6 +61,7 @@ public class Ending : MonoBehaviour
 
     public void RestartGame()
     {
+        GameManager.gm.worldState = GameManager.state.normal;
         GameManager.gm.curDay = 0;
         Inventory.inventory.money = 200;
         GameManager.gm.date.text = "Date: " + GameManager.gm.curDay + "/36";
