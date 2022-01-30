@@ -7,10 +7,12 @@ public class Ending : MonoBehaviour
 {
     public Text endNameText;
     public Text endingFillerText;
+    public Image backgroundImage;
 
 
     public string[] endName;
     public string[] endFill;
+    public Sprite[] endPicture;
 
 
     int currentEnding = 0;
@@ -52,7 +54,7 @@ public class Ending : MonoBehaviour
 
         endNameText.text = endName[currentEnding];
         endingFillerText.text = endFill[currentEnding];
-
+        backgroundImage.sprite = endPicture[currentEnding];
 
         GameManager.gm.generalHUD.gameObject.SetActive(false);
 
