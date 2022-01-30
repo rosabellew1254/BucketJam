@@ -43,6 +43,11 @@ public class Garden : MonoBehaviour
         return curGrowth[_position] >= plantData.turnsToGrow;
     }
 
+    public bool IsGrowing(int _position)
+    {
+        return curGrowth[_position] > 0 && curGrowth[_position] < gm.plantData[(int)plants[_position]].turnsToGrow;
+    }
+
     public void Grow()
     {
         for (int i = 0; i < numHoles; i++)
