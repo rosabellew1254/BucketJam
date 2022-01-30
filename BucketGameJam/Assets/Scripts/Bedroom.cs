@@ -23,9 +23,7 @@ public class Bedroom : MonoBehaviour
         gm = GameManager.gm;
         pc = PlayerController.pc;
 
-        Debug.Log("welcome back");
         randomSighting();
-        Debug.Log(randInt);
         OutsideState();
     }
 
