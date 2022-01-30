@@ -8,6 +8,7 @@ public class Ending : MonoBehaviour
     public Text endNameText;
     public Text endingFillerText;
     public Image backgroundImage;
+    public Button hideTextButton;
 
 
     public string[] endName;
@@ -60,6 +61,13 @@ public class Ending : MonoBehaviour
 
 
     }
+
+    public void HideText()
+    {
+        endingFillerText.gameObject.SetActive(false);
+        hideTextButton.gameObject.SetActive(false);
+    }
+
 
     public void RestartGame()
     {

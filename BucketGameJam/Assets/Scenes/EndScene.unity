@@ -362,6 +362,7 @@ RectTransform:
   - {fileID: 1029421627}
   - {fileID: 625268930}
   - {fileID: 33164868}
+  - {fileID: 908006154}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -385,16 +386,32 @@ MonoBehaviour:
   endNameText: {fileID: 1029421628}
   endingFillerText: {fileID: 625268931}
   backgroundImage: {fileID: 1499670186}
+  hideTextButton: {fileID: 908006155}
   endName:
-  - Peaceful Ending
-  - Twofaced Ending
+  - '"Farming Fiend" Ending'
+  - '"Friend of Chtulhu" Ending'
   - '"It''s Too Late" Ending'
-  - Evil Ending
+  - '"Eldritch Abomination" Ending'
   endFill:
-  - 
-  - 
-  - 
-  - 
+  - "In the end, I managed to gather enough money to buy medicine for my sister.
+    She is doing well now, and the town seems happy. My crops are still flourishing
+    like crazy and the town loves them, but my sister says she\u2019s sick of turnips\u2026
+    Perhaps I should plant some carrots next season instead. "
+  - "In the end, I managed to gather enough money to save my sister. The journey
+    getting here was tough, and things are still pretty weird around here, but it
+    was worth it to see my sister smile again. However, I feel like something\u2019s
+    watching me everywhere I go, I\u2019m not sure what I should do about it\u2026 "
+  - "In the end, I was too late. I slacked off and did not come up with enough money
+    to save my sister\u2026 She rests in a grave I used the rest of my money to buy\u2026
+    I am glad she\u2019s not suffering any longer\u2026 I hope she\u2019s happy now
+    wherever  she is\u2026 "
+  - "In the end, the world as we know it is collapsing. At first a strange mist took
+    over the town and abnormal creatures began to inhabit earth. My body has changed
+    as well, I don\u2019t look like a human anymore. However, I also feel.. Powerful\u2026
+    so powerful. My sister and the people of the world may be dead or dying, but
+    I am in control now. I am rich and powerful and it was all worth it. I won't
+    stop planting the eldritch fruits until I have complete control. The world will
+    be mine, whether it dies or lives. "
   endPicture:
   - {fileID: 21300000, guid: db9a24e3a9df657479874277362ff75a, type: 3}
   - {fileID: 21300000, guid: d6c49ada069a86540b20bff5df2e6a35, type: 3}
@@ -589,6 +606,137 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &908006153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 908006154}
+  - component: {fileID: 908006157}
+  - component: {fileID: 908006156}
+  - component: {fileID: 908006155}
+  m_Layer: 5
+  m_Name: Hide Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &908006154
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908006153}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 436041560}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &908006155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908006153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1499670186}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 436041561}
+        m_TargetAssemblyTypeName: Ending, Assembly-CSharp
+        m_MethodName: HideText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &908006156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908006153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &908006157
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908006153}
+  m_CullTransparentMesh: 0
 --- !u!1 &1029421626
 GameObject:
   m_ObjectHideFlags: 0
