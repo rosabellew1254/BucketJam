@@ -135,7 +135,7 @@ public class GardenUI : MonoBehaviour
     void SpawnPlant(GameManager.plants _type, int _holeIndex, bool _isGrowing, bool _isGrown) 
     {
         PlantsSO plantData = gm.plantData[(int)_type];
-        GameObject goPlant = Instantiate(gm.plantPrefabs[(int)selectedSeed], plantingSpots[_holeIndex]);
+        GameObject goPlant = Instantiate(gm.plantPrefabs[(int)_type], plantingSpots[_holeIndex]);
         plantInSoil[_holeIndex] = goPlant;
         if (_isGrowing)
         {

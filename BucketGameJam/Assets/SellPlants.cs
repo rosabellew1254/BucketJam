@@ -56,8 +56,6 @@ public class SellPlants : MonoBehaviour
         PlantsSO plantData = gm.plantData[plantIndex];
         int adjustAmount = isMinus ? -_adjustAmount : _adjustAmount;
 
-        inventoryQuantity[plantIndex].text = (inventory.plants[plantIndex] - sellQuantity[plantIndex]).ToString();
-
         sellQuantity[plantIndex] += adjustAmount;
         textSellQuantity[plantIndex].text = sellQuantity[plantIndex].ToString();
 
@@ -72,6 +70,8 @@ public class SellPlants : MonoBehaviour
 
         totalSanity += plantData.sanity * adjustAmount;
         textTotalSanity.text = totalSanity.ToString();
+
+        inventoryQuantity[plantIndex].text = (inventory.plants[plantIndex] - sellQuantity[plantIndex]).ToString();
 
         ShowButtons();
     }
