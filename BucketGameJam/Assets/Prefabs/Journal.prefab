@@ -198,6 +198,10 @@ MonoBehaviour:
   - suh
   - meh
   - ah
+  currentpage: 0
+  MaxPage: 36
+  TurnLeftPage: {fileID: 7406143438553005641}
+  TurnRightPage: {fileID: 7406143438889649637}
 --- !u!1 &7406143437992899168
 GameObject:
   m_ObjectHideFlags: 0
