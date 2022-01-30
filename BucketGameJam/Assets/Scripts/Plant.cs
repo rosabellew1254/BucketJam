@@ -5,7 +5,7 @@ public class Plant : MonoBehaviour
 {
     public GameManager.plants type;
     PlantsSO data;
-    public GameObject[] goPhase;
+    public Sprite[] sPhase;
 
     private void Start()
     {
