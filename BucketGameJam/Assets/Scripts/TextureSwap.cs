@@ -11,13 +11,12 @@ public class TextureSwap : MonoBehaviour
     public Sprite[] secondPhase;
     public Sprite[] thirdPhase;
 
-    state tempWorldState;
+    int tempInt = 0;
 
     private void Start()
     {
-        tempWorldState = gm.worldState;
+        tempInt = 0;
     }
-
 
     void SwapTexture(int _index)
     {
@@ -55,14 +54,22 @@ public class TextureSwap : MonoBehaviour
         {
             SwapTexture(i);
         }
-        tempWorldState = gm.worldState;
+        gm.tempWorldState = gm.worldState;
     }
 
     void Update()
     {
-        if (tempWorldState != gm.worldState)
+        if (gm.tempWorldState != gm.worldState)
+        {
+            //ChangeEachSprite(gm.worldState);
+        }
+
+        if (tempInt == 0)
         {
             ChangeEachSprite(gm.worldState);
+            tempInt++;
         }
+
+
     }
 }
