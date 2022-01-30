@@ -7,9 +7,13 @@ public class Journal : MonoBehaviour
 {
     public string[] Journalpages;
     public int currentpage = 0;
+    public void Start()
+    {
+        displayPage(currentpage);
+    }
     public void displayPage(int page)
     {
-        gameObject.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = Journalpages[page];
+        gameObject.transform.Find("Pages").GetChild(0).GetComponent<Text>().text = Journalpages[page];
     }
     public void LeftPageClick()
     {
