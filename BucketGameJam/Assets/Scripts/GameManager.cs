@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
     public int maxDays = 36;
     public int moneyRequiredToSaveSibling = 5000;
     public int competeMoneyGoal = 12000;
+    public state tempWorldState;
+
 
     private void Awake()
     {
@@ -41,6 +43,8 @@ public class GameManager : MonoBehaviour
             gm = this;
         }
         worldState = state.normal;
+
+        tempWorldState = gm.worldState;
     }
 
     private void OnEnable()
@@ -73,6 +77,24 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(_idx);
     }
+
+    public void CheckSanity()
+    {
+        if (PlayerController.pc.curSanity < 20 && PlayerController.pc.curSanity > 0)
+        {
+            worldState = state.smallEvil;
+            Debug.Log("Set Small");
+        }
+        else if (PlayerController.pc.curSanity <= -1)
+        {
+            worldState = state.largeEvil;
+            Debug.Log("Set Large");
+        }
+        else
+        {
+            Debug.Log("Passed Through Check for Sanity");
+        }
+    }
     
     public void AdvanceDay()
     {
@@ -88,10 +110,7 @@ public class GameManager : MonoBehaviour
 
     public void DayCheck()
     {
-        if (PlayerController.pc.curSanity < 20)
-        {
-            worldState = state.smallEvil;
-        }
+        
         if (isSiblingAlive == false)
         {
             Debug.Log("Your sibling is dead");
@@ -110,7 +129,6 @@ public class GameManager : MonoBehaviour
         }
         else if (PlayerController.pc.curSanity < 0)
         {
-            worldState = state.largeEvil;
             isSiblingAlive = false;
             Debug.Log("Your sibling has died");
         }
