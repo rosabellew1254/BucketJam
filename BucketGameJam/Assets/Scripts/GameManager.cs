@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     public static GameManager gm;
     public enum plants { turnip, strawberry, eyePomegranite, mouthApple, terminator}
     public enum scenes { frontEnd, town, garden, shop, bedroom, endScene, terminator }
+    public enum state { normal, smallEvil, largeEvil, terminator }
+
 
     [Space]
     [Header("Menus")]
@@ -18,7 +20,7 @@ public class GameManager : MonoBehaviour
     public GameObject mirrorReflection;
     public Text date;
     public GameObject inventoryMenu;
-
+    public state worldState;
 
     public bool isSiblingAlive = true;
     public int curDay = 0;
@@ -37,6 +39,7 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             gm = this;
         }
+        worldState = state.normal;
     }
 
     private void OnEnable()
