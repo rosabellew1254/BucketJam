@@ -10,6 +10,7 @@ public class Shop : MonoBehaviour
     public Text txtPriceSelected;
     public Button buttonSellPlants;
     public Button buttonBuySeeds;
+    public string[] plantNames;
 
     GameManager.plants selectedPlant;
     int selectedPrice;
@@ -28,8 +29,9 @@ public class Shop : MonoBehaviour
 
     public void SelectPlant(int _plantIndex)
     {
+        
         selectedPlant = (GameManager.plants)_plantIndex;
-        txtSelected.text = "Selected " + (isBuying ? "Seed: " : "Plant: ") + selectedPlant.ToString();
+        txtSelected.text = "Selected " + (isBuying ? "Seed: " : "Plant: ") + plantNames[(int)selectedPlant];
         PlantsSO selectedPlantData = gm.plantData[_plantIndex];
         selectedPrice = isBuying ? selectedPlantData.seedCost : selectedPlantData.sellPrice;
         txtPriceSelected.text = "Price: " + selectedPrice;
