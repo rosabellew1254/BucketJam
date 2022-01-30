@@ -7,7 +7,7 @@ public class Garden : MonoBehaviour
     public static Garden garden;
     public GameManager.plants[] plants;
     public int[] curGrowth;
-    int numHoles = 8;
+    public int numHoles = 8;
 
     private void Start()
     {

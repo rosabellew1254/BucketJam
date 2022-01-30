@@ -1,18 +1,16 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Plant : MonoBehaviour
 {
     public GameManager.plants type;
     PlantsSO data;
-    public int curGrowth;
+    public GameObject[] goPhase;
 
     private void Start()
     {
         data = GameManager.gm.plantData[(int)type];
+
     }
 
-    public bool IsFullyGrown()
-    {
-        return curGrowth >= data.turnsToGrow;
-    }
 }
