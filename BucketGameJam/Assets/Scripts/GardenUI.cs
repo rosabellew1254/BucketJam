@@ -12,6 +12,7 @@ public class GardenUI : MonoBehaviour
     public Dropdown seedSelectDropdown;
     public Transform[] plantingSpots;
     public Text[] growthProgress;
+    GameObject[] plantInSoil;
     
     GameManager.plants selectedSeed;
     List<GameManager.plants> dropDownValues;
@@ -32,13 +33,14 @@ public class GardenUI : MonoBehaviour
         yield return new WaitUntil(() => Inventory.inventory != null && Inventory.inventory.seeds != null && Inventory.inventory.seeds.Length > 0);
         inventory = Inventory.inventory;
         garden = Garden.garden;
+        plantInSoil = new GameObject[garden.numHoles];
         UpdateDropdown();
 
         for (int i = 0; i < plantingSpots.Length; i++)
         {
             if (garden.plants[i] != GameManager.plants.terminator)
             {
-                SpawnPlant(garden.plants[i], i);
+                SpawnPlant(garden.plants[i], i, garden.curGrowth[i]);
             }
         }
     }
@@ -114,7 +116,7 @@ public class GardenUI : MonoBehaviour
             garden.PlantPlant(selectedSeed, _holeIndex);
             inventory.AdjustSeedQuantity(selectedSeed, -1);
             UpdateDropdown();
-            SpawnPlant(selectedSeed, _holeIndex);
+            SpawnPlant(selectedSeed, _holeIndex, 0);
         }
         else if (ChosenPlantType != GameManager.plants.terminator && garden.IsFullyGrown(_holeIndex)) //harvest fully grown plants
         {
@@ -130,12 +132,41 @@ public class GardenUI : MonoBehaviour
         growthProgress[_holeIndex].gameObject.SetActive(false);
     }
 
-    void SpawnPlant(GameManager.plants _type, int _holeIndex)
+    void SpawnPlant(GameManager.plants _type, int _holeIndex, int _growTurn) //
     {
         PlantsSO plantData = gm.plantData[(int)_type];
-        Instantiate(gm.plantPrefabs[(int)selectedSeed], plantingSpots[_holeIndex]);
+        GameObject goPlant = Instantiate(gm.plantPrefabs[(int)selectedSeed], plantingSpots[_holeIndex]);
+        plantInSoil[_holeIndex] = goPlant;
+        if (_type == GameManager.plants.eyePomegranite || _type == GameManager.plants.mouthApple)
+        {
+            for (int i = 0; i < goPlant.GetComponent<Plant>().goPhase.Length - 2; i++)
+            {
+                plantInSoil[_holeIndex].GetComponent<Plant>().goPhase[i].gameObject.SetActive(false);
+            }
+            if (goPlant != null)
+            {
+                plantInSoil[_holeIndex].GetComponent<Plant>().goPhase[_growTurn].gameObject.SetActive(true);
+            }
+        }
+        else if (_type == GameManager.plants.eyePomegranite || _type == GameManager.plants.mouthApple)
+        {
+            for (int i = 0; i < goPlant.GetComponent<Plant>().goPhase.Length - 1; i++)
+            {
+                plantInSoil[_holeIndex].GetComponent<Plant>().goPhase[i].gameObject.SetActive(false);
+            }
+            if (goPlant != null)
+            {
+                plantInSoil[_holeIndex].GetComponent<Plant>().goPhase[_growTurn].gameObject.SetActive(true);
+            }
+        }
+        else
+        {
+            return;
+        }
+
         growthProgress[_holeIndex].gameObject.SetActive(true);
         growthProgress[_holeIndex].text = Mathf.Min(garden.curGrowth[_holeIndex], plantData.turnsToGrow) + "/" + plantData.turnsToGrow;
+
     }
 
     public void ToggleRemoveSeedMode()
