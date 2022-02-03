@@ -666,7 +666,7 @@ MonoBehaviour:
   - Lol
   textHello:
   - Good day, my dear brother
-  - '*sips tea like a british*'
+  - '*sips tea*'
 --- !u!1 &5806371820580569393
 GameObject:
   m_ObjectHideFlags: 0
