@@ -134,15 +134,7 @@ public class Bedroom : MonoBehaviour
 
     public void Advance()
     {
-        //Advance the month
-        GameManager.gm.AdvanceDay();
-
-        if (GameManager.gm.curDay == GameManager.gm.maxDays +1)
-        {
-            GameManager.gm.LoadScene(5);
-        }
-
-        Garden.garden.Grow();
+        gm.ConfirmMessage(gm.AdvanceDay, "End the month?");
     }
 
     public void ChangeWindowState()
