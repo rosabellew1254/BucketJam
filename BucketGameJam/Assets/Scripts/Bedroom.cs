@@ -145,8 +145,8 @@ public class Bedroom : MonoBehaviour
         Garden.garden.Grow();
     }
 
-    public void ChangeWindowState()
+    public void SisterSpeak()
     {
-
+        mirrorReflection = Instantiate(GameManager.gm.mirrorReflection, gameObject.transform.position, Quaternion.identity, gameObject.transform);
     }
 }
