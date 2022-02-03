@@ -50,3 +50,7 @@ BucketGameJam/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset
 BucketGameJam/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset
 BucketGameJam/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset
 BucketGameJam/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset
+BucketGameJam/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist
+BucketGameJam/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist
+BucketGameJam/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/Info.plist
+BucketGameJam/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset

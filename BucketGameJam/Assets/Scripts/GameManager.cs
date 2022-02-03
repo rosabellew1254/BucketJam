@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -15,6 +16,8 @@ public class GameManager : MonoBehaviour
     public GameObject pMain;
     public GameObject generalHUD;
     public GameObject pJournal;
+    public GameObject inventoryMenu;
+    public GameObject confirmMessage;
 
     public GameObject[] plantPrefabs;
     public PlantsSO[] plantData;
@@ -22,7 +25,6 @@ public class GameManager : MonoBehaviour
     public GameObject sliderMask;
     public GameObject sliderFill;
     public Text date;
-    public GameObject inventoryMenu;
     public state worldState;
 
     public bool isSiblingAlive = true;
@@ -31,6 +33,8 @@ public class GameManager : MonoBehaviour
     public int moneyRequiredToSaveSibling = 5000;
     public int competeMoneyGoal = 12000;
     public state tempWorldState;
+
+    Action action;
 
 
     private void Awake()
@@ -106,6 +110,7 @@ public class GameManager : MonoBehaviour
         DayCheck();
     }
 
+
     public void OpenInventory()
     {
         Instantiate(inventoryMenu);
@@ -113,7 +118,6 @@ public class GameManager : MonoBehaviour
 
     public void DayCheck()
     {
-        
         if (isSiblingAlive == false)
         {
             Debug.Log("Your sibling is dead");
@@ -136,7 +140,14 @@ public class GameManager : MonoBehaviour
             Debug.Log("Your sibling has died");
         }
 
-        
+        if (curDay == maxDays + 1)
+        {
+            LoadScene(5);
+        }
+        else
+        {
+            Garden.garden.Grow();
+        }
     }
 
     public void SliderMasking()
@@ -145,5 +156,23 @@ public class GameManager : MonoBehaviour
         sliderFill.GetComponent<RectTransform>().sizeDelta = new Vector2(110f, 22f);
         sliderFill.GetComponent<RectTransform>().localPosition = Vector2.zero;
         sliderFill.transform.SetParent(sliderMask.transform);
+    }
+
+    public void ConfirmMessage(Action _action, string _message) 
+    {
+        action = _action;
+        confirmMessage.GetComponentInChildren<Text>().text = _message; 
+        confirmMessage.SetActive(true);
+    }
+
+    public void ConfirmMessageConfirm()
+    {
+        action();
+        confirmMessage.SetActive(false);
+    }
+
+    public void ConfirmMessageCancel()
+    {
+        confirmMessage.SetActive(false);
     }
 }
