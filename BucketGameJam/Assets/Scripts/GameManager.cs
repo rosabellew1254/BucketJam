@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public GameObject generalHUD;
     public GameObject pJournal;
 
+    public GameObject sister;
     public GameObject[] plantPrefabs;
     public PlantsSO[] plantData;
     public GameObject mirrorReflection;

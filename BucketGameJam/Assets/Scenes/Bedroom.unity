@@ -623,6 +623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mirrorReflection: {fileID: 0}
+  sister: {fileID: 0}
   sky:
   - {fileID: 452148860}
   - {fileID: 819559626}

@@ -375,6 +375,7 @@ MonoBehaviour:
   pMain: {fileID: 6589404896321480543, guid: f6acd9fb1f4db6645ab4bae6f980d1f9, type: 3}
   generalHUD: {fileID: 2848038302091044420}
   pJournal: {fileID: 7406143437519992371, guid: 14e1b1a7c5f112c40b7f61a437746052, type: 3}
+  sister: {fileID: 5806371820011958536, guid: 9fca02791f5fbba4993e07808fb0b0d3, type: 3}
   plantPrefabs:
   - {fileID: 8001311136834740223, guid: 67de4ae100128694c94c7c6034a7f778, type: 3}
   - {fileID: 8001311136834740223, guid: bc60811b41180014fae5364d3380310c, type: 3}

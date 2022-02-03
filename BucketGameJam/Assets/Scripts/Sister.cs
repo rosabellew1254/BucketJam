@@ -5,10 +5,12 @@ using UnityEngine.UI;
 
 public class Sister : MonoBehaviour
 {
-    Image textBox;
-    Text textBoxFill;
+    public Image textBox;
+    public Text textBoxFill;
 
-
+    [Space]
+    [Header("Dialogs")]
+    public string[] textDialog;
 
     //create funtions for button dialogs if there is going to be any of that
     //make an array for each set of converstations
@@ -18,6 +20,18 @@ public class Sister : MonoBehaviour
     public void TextDialog()
     {
 
+
+
+
+
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

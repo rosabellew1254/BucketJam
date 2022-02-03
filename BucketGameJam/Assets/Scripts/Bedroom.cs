@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Bedroom : MonoBehaviour
 {
     public GameObject mirrorReflection;
+    public GameObject sister;
     public GameObject[] sky;
     public GameObject[] eldritch;
     public Image bushImage;
@@ -147,6 +148,6 @@ public class Bedroom : MonoBehaviour
 
     public void SisterSpeak()
     {
-        mirrorReflection = Instantiate(GameManager.gm.mirrorReflection, gameObject.transform.position, Quaternion.identity, gameObject.transform);
+        sister = Instantiate(GameManager.gm.mirrorReflection, gameObject.transform.position, Quaternion.identity, gameObject.transform);
     }
 }
