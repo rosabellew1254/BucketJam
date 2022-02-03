@@ -1,5 +1,80 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2288756882841774755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1135423074905310797}
+  - component: {fileID: 6676498915923021798}
+  - component: {fileID: 8301760313234511360}
+  m_Layer: 5
+  m_Name: Sister
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1135423074905310797
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2288756882841774755}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5806371820011958539}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -530.5, y: -40.625}
+  m_SizeDelta: {x: 478, y: 994.25}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6676498915923021798
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2288756882841774755}
+  m_CullTransparentMesh: 0
+--- !u!114 &8301760313234511360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2288756882841774755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &5806371820011958536
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,10 +86,10 @@ GameObject:
   - component: {fileID: 5806371820011958539}
   - component: {fileID: 5806371820011958541}
   - component: {fileID: 5806371820011958538}
-  - component: {fileID: -4340386955488412625}
   - component: {fileID: 3232164395388966043}
+  - component: {fileID: 5201132491924110626}
   m_Layer: 5
-  m_Name: MirrorReflection 1
+  m_Name: SisterTalking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,6 +106,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1135423074905310797}
   - {fileID: 2240928094167181080}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -55,7 +131,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5806371820011958536}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -78,27 +154,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &-4340386955488412625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5806371820011958536}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a806691dbde89d4fb1ba912bdee0e94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  normalRefl: {fileID: 21300000, guid: 1e5d1c508bbb7bc46a0ce4a7bdf1f79c, type: 3}
-  smallEvilRefls:
-  - {fileID: 21300000, guid: 1c4ef457a0ba7d74c83f26cdeaf313c6, type: 3}
-  - {fileID: 21300000, guid: 3d9da842d45b0314d89e34a3cecf0811, type: 3}
-  - {fileID: 21300000, guid: a90c7af5278f84549895f81c61800396, type: 3}
-  bigEvilRefls:
-  - {fileID: 21300000, guid: feb11f3b9b7f642419fac255cb6ed6a3, type: 3}
-  - {fileID: 21300000, guid: 2edae1d112a8a6346ac1803251634cb8, type: 3}
-  - {fileID: 21300000, guid: c2c2854e16880884bb4ba9501a7e109e, type: 3}
 --- !u!114 &3232164395388966043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,9 +197,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -4340386955488412625}
+      - m_Target: {fileID: 5806371820011958536}
         m_TargetAssemblyTypeName: Mirror, Assembly-CSharp
-        m_MethodName: ClickMirror
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -154,6 +209,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5201132491924110626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5806371820011958536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43bb8fbd17a79d14385c4c4502331573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5806371820580569393
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,9 +299,18 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Reflection
-
-    Here'
+  m_Text: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+    no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+    dolor sit amet.
 --- !u!1 &8895154844979472495
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +323,7 @@ GameObject:
   - component: {fileID: 8647947863238126204}
   - component: {fileID: 2027899645223391360}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Text Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -266,7 +342,7 @@ RectTransform:
   m_Children:
   - {fileID: 5806371820580569392}
   m_Father: {fileID: 5806371820011958539}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
