@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject pJournal;
     public GameObject inventoryMenu;
     public GameObject confirmMessage;
+    public GameObject daySummary;
 
     public GameObject sister;
     public GameObject[] plantPrefabs;
@@ -26,6 +27,10 @@ public class GameManager : MonoBehaviour
     public GameObject sliderMask;
     public GameObject sliderFill;
     public Text date;
+    public Text daySummaryDayNum;
+    public Text daySummaryMoneyGained;
+    public Text daySummarySanityGained;
+    public Text daySummaryTownStatus;
     public state worldState;
 
     public bool isSiblingAlive = true;
@@ -148,7 +153,30 @@ public class GameManager : MonoBehaviour
         else
         {
             Garden.garden.Grow();
+            ShowDaySummary();
         }
+    }
+
+    void ShowDaySummary()
+    {
+        daySummaryDayNum.text = "Day " + (curDay - 1);
+        
+        Inventory inventory = Inventory.inventory;
+        daySummaryMoneyGained.text = "Money Gained: " + (inventory.money - inventory.dayStartMoney);
+        inventory.dayStartMoney = inventory.money;
+
+        PlayerController pc = PlayerController.pc;
+        daySummarySanityGained.text = "Sanity Gained: " + (pc.curSanity - pc.dayStartSanity);
+        pc.dayStartSanity = pc.curSanity;
+
+        daySummaryTownStatus.text = "Town Status: " + worldState;
+
+        daySummary.SetActive(true);
+    }
+
+    public void DaySummaryContinue()
+    {
+        daySummary.SetActive(false);
     }
 
     public void SliderMasking()
