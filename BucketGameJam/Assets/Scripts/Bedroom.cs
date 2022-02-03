@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Bedroom : MonoBehaviour
 {
     public GameObject mirrorReflection;
+    public GameObject sister;
     public GameObject[] sky;
     public GameObject[] eldritch;
     public Image bushImage;
@@ -137,8 +138,8 @@ public class Bedroom : MonoBehaviour
         gm.ConfirmMessage(gm.AdvanceDay, "End the month?");
     }
 
-    public void ChangeWindowState()
+    public void SisterSpeak()
     {
-
+        sister = Instantiate(GameManager.gm.sister, gameObject.transform.position, Quaternion.identity, gameObject.transform);
     }
 }

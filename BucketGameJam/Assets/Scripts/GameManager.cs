@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public GameObject inventoryMenu;
     public GameObject confirmMessage;
 
+    public GameObject sister;
     public GameObject[] plantPrefabs;
     public PlantsSO[] plantData;
     public GameObject mirrorReflection;
