@@ -148,6 +148,6 @@ public class Bedroom : MonoBehaviour
 
     public void SisterSpeak()
     {
-        sister = Instantiate(GameManager.gm.mirrorReflection, gameObject.transform.position, Quaternion.identity, gameObject.transform);
+        sister = Instantiate(GameManager.gm.sister, gameObject.transform.position, Quaternion.identity, gameObject.transform);
     }
 }
