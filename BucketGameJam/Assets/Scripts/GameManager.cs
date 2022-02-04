@@ -215,7 +215,7 @@ public class GameManager : MonoBehaviour
         Inventory.inventory.seeds = new int[(int)plants.terminator];
         Inventory.inventory.plants = new int[(int)plants.terminator];
         PlayerPrefs.SetInt("san", 25);
-        StartCoroutine("pcSetup");
+        //StartCoroutine("pcSetup");
 
         LoadScene(4);
     }

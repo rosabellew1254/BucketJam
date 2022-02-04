@@ -78,7 +78,7 @@ public class Ending : MonoBehaviour
         Inventory.inventory.seeds = new int[(int)GameManager.plants.terminator];
         Inventory.inventory.plants = new int[(int)GameManager.plants.terminator];
         PlayerPrefs.SetInt("san", 25);
-        StartCoroutine("pcSetup");
+        //StartCoroutine("pcSetup");
 
         GameManager.gm.LoadScene(0);
         //GameManager.gm.RestartGameGM();
