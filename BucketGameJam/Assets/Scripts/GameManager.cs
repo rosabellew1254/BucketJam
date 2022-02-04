@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public GameObject daySummary;
 
     public GameObject sister;
+    public GameObject newGamePopUpPrefab;
     public GameObject[] plantPrefabs;
     public PlantsSO[] plantData;
     public GameObject mirrorReflection;
@@ -203,5 +204,19 @@ public class GameManager : MonoBehaviour
     public void ConfirmMessageCancel()
     {
         confirmMessage.SetActive(false);
+    }
+
+    public void RestartGameGM()
+    {
+        worldState = state.normal;
+        curDay = 0;
+        Inventory.inventory.money = 200;
+        date.text = "Date: " + curDay + "/36";
+        Inventory.inventory.seeds = new int[(int)plants.terminator];
+        Inventory.inventory.plants = new int[(int)plants.terminator];
+        PlayerPrefs.SetInt("san", 25);
+        StartCoroutine("pcSetup");
+
+        LoadScene(4);
     }
 }

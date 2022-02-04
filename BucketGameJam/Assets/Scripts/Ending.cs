@@ -81,5 +81,6 @@ public class Ending : MonoBehaviour
         StartCoroutine("pcSetup");
 
         GameManager.gm.LoadScene(0);
+        //GameManager.gm.RestartGameGM();
     }
 }

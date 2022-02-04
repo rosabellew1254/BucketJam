@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class cMainMenu : MonoBehaviour
 {
     GameManager gm;
+    GameObject popUp;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,14 @@ public class cMainMenu : MonoBehaviour
     // Loads the into the game's first scene
     public void OnPlayGame()
     {
-        gm.LoadScene(4);
+        if (gm.curDay != 0)
+        {
+            popUp = Instantiate(gm.newGamePopUpPrefab, gameObject.transform.position, Quaternion.identity, gameObject.transform);
+        }
+        else
+        {
+            gm.LoadScene(4);
+        } 
     }
 
     // Method to exit the game
