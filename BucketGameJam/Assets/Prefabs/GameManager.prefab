@@ -510,8 +510,9 @@ MonoBehaviour:
   pJournal: {fileID: 7406143437519992371, guid: 14e1b1a7c5f112c40b7f61a437746052, type: 3}
   inventoryMenu: {fileID: 9114729740475252644, guid: 240ebdf2c592e9444b4c20569d70aabf, type: 3}
   confirmMessage: {fileID: 4999395139419088732}
-  sister: {fileID: 5806371820011958536, guid: 9fca02791f5fbba4993e07808fb0b0d3, type: 3}
   daySummary: {fileID: 5014222486439672280}
+  sister: {fileID: 5806371820011958536, guid: 9fca02791f5fbba4993e07808fb0b0d3, type: 3}
+  newGamePopUpPrefab: {fileID: 1614083424929550071, guid: 994375e7db0d7074694ddddd7f4cd547, type: 3}
   plantPrefabs:
   - {fileID: 8001311136834740223, guid: 67de4ae100128694c94c7c6034a7f778, type: 3}
   - {fileID: 8001311136834740223, guid: bc60811b41180014fae5364d3380310c, type: 3}
