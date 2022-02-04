@@ -2421,6 +2421,7 @@ GameObject:
   - component: {fileID: 2031231104}
   - component: {fileID: 2031231103}
   - component: {fileID: 2031231102}
+  - component: {fileID: 2031231105}
   m_Layer: 5
   m_Name: Sister
   m_TagString: Untagged
@@ -2444,8 +2445,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -201, y: -111.51}
-  m_SizeDelta: {x: 146.97699, y: 146.97699}
+  m_AnchoredPosition: {x: -260.9, y: -51.6}
+  m_SizeDelta: {x: 266.81824, y: 266.81824}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2031231102
 MonoBehaviour:
@@ -2515,14 +2516,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5162798, g: 0.9150943, b: 0.366901, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 35161d318802fcd409041d5bdd85714e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2540,3 +2541,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031231100}
   m_CullTransparentMesh: 0
+--- !u!114 &2031231105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031231100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9355241c91a9be8488793a9e6080acd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseObjects:
+  - {fileID: 2031231103}
+  firstPhase:
+  - {fileID: 21300000, guid: 35161d318802fcd409041d5bdd85714e, type: 3}
+  secondPhase:
+  - {fileID: 21300000, guid: 80a09dcf8dc9b994d8a9cabce3921ef0, type: 3}
+  thirdPhase:
+  - {fileID: 21300000, guid: 6713b8141f098274f90d6960a22d19ab, type: 3}
