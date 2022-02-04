@@ -13,8 +13,11 @@ public class InventoryUI : MonoBehaviour
         inventory = Inventory.inventory;
         for (int i = 0; i < (int)GameManager.plants.terminator; i++)
         {
-            plants[i].text = ((GameManager.plants)i).ToString() + ": " + inventory.plants[i];
-            seeds[i].text = ((GameManager.plants)i).ToString() + ": " + inventory.seeds[i];
+            //plants[i].text = ((GameManager.plants)i).ToString() + ": " + inventory.plants[i];
+            //seeds[i].text = ((GameManager.plants)i).ToString() + ": " + inventory.seeds[i];
+
+            plants[i].text = inventory.plants[i].ToString();
+            seeds[i].text = inventory.seeds[i].ToString();
         }
     }
 
