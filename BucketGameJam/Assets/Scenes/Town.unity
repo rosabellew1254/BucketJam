@@ -946,8 +946,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 126.7, y: 204.4}
-  m_SizeDelta: {x: -1565.6562, y: -725.6561}
+  m_AnchoredPosition: {x: 131.6, y: 213}
+  m_SizeDelta: {x: -1532.8887, y: -692.88855}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &411694546
 MonoBehaviour:
@@ -2083,6 +2083,7 @@ GameObject:
   - component: {fileID: 1375350783}
   - component: {fileID: 1375350782}
   - component: {fileID: 1375350781}
+  - component: {fileID: 1375350784}
   m_Layer: 5
   m_Name: TowniesNum
   m_TagString: Untagged
@@ -2103,7 +2104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2113,7 +2114,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 50
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 5
     m_MaxSize: 50
@@ -2148,9 +2149,24 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 795, y: 432}
+  m_AnchoredPosition: {x: 802.5, y: 432}
   m_SizeDelta: {x: 262.22888, y: 96.14801}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1375350784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375350780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1448082777
 GameObject:
   m_ObjectHideFlags: 0
@@ -2654,6 +2670,7 @@ GameObject:
   - component: {fileID: 1706138746}
   - component: {fileID: 1706138748}
   - component: {fileID: 1706138747}
+  - component: {fileID: 1706138749}
   m_Layer: 5
   m_Name: TowniesName
   m_TagString: Untagged
@@ -2677,8 +2694,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 586, y: 432}
-  m_SizeDelta: {x: 262.22888, y: 96.14801}
+  m_AnchoredPosition: {x: 566.35, y: 432}
+  m_SizeDelta: {x: 222.93225, y: 96.14801}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1706138747
 MonoBehaviour:
@@ -2693,7 +2710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2703,7 +2720,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 50
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 5
     m_MaxSize: 50
@@ -2722,6 +2739,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706138745}
   m_CullTransparentMesh: 0
+--- !u!114 &1706138749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706138745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1736674891
 GameObject:
   m_ObjectHideFlags: 0
