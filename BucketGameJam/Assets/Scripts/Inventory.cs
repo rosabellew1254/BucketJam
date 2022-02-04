@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour
     public int[] seeds;
     public int[] plants;
     public int money;
+    public int dayStartMoney;
 
     private void Start()
     {
@@ -16,6 +17,7 @@ public class Inventory : MonoBehaviour
         seeds = new int[(int)GameManager.plants.terminator];
         plants = new int[(int)GameManager.plants.terminator];
         AdjustMoney(200);
+        dayStartMoney = money;
     }
 
     public void AdjustMoney(int _adjustAmount)

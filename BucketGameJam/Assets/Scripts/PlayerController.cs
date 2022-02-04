@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController pc;
     public int curSanity;
+    public int dayStartSanity;
     public Slider sliderSanity;
     public bool curSanSetup;
 
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
         curSanity = PlayerPrefs.GetInt("san");
         curSanSetup = true;
         AdjustSanity(curSanity);
+        dayStartSanity = curSanity;
     }
 
     public void AdjustSanity(int _adjustment)
