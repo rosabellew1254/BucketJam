@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Strawberry
   m_EditorClassIdentifier: 
   type: 1
-  seedCost: 50
-  sellPrice: 120
-  sanity: 5
+  seedCost: 30
+  sellPrice: 130
+  sanity: 3
   turnsToGrow: 3

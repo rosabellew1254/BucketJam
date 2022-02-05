@@ -35,10 +35,13 @@ public class GameManager : MonoBehaviour
     public state worldState;
 
     public bool isSiblingAlive = true;
-    public int curDay = 0;
+    public int curDay;
+    public int initDay = 0;
     public int maxDays = 36;
     public int moneyRequiredToSaveSibling = 5000;
     public int competeMoneyGoal = 12000;
+    public int initialMoney = 500;
+    public int initialSanity = 25;
     public state tempWorldState;
 
     Action action;
@@ -58,6 +61,8 @@ public class GameManager : MonoBehaviour
         worldState = state.normal;
 
         tempWorldState = gm.worldState;
+        curDay = PlayerPrefs.GetInt("turn");
+        date.text = "Date: " + curDay + "/36";
     }
 
     private void OnEnable()
@@ -134,6 +139,8 @@ public class GameManager : MonoBehaviour
             if (Inventory.inventory.money >= GameManager.gm.moneyRequiredToSaveSibling)
             {
                 isSiblingAlive = true;
+                Inventory.inventory.money -= gm.moneyRequiredToSaveSibling;
+                Debug.Log("You have spent your money to save your sibling from illness");
             }
             else
             {
@@ -155,6 +162,19 @@ public class GameManager : MonoBehaviour
         {
             Garden.garden.Grow();
             ShowDaySummary();
+            UpdatePlayerPrefs("san", PlayerController.pc.curSanity, initialSanity);
+            UpdatePlayerPrefs("money", Inventory.inventory.money, initialMoney);
+            UpdatePlayerPrefs("turn", curDay, initDay);
+            for (int i = 0; i < Garden.garden.numHoles; i++)
+            {
+                UpdatePlayerPrefs("soil" + i, (int)Garden.garden.plants[i], (int)plants.terminator);
+                UpdatePlayerPrefs("soilGrowth" + i, Garden.garden.curGrowth[i], 0);
+            }
+            for (int i = 0; i < (int)plants.terminator; i++)
+            {
+                UpdatePlayerPrefs("seed" + i, Inventory.inventory.seeds[i], 0);
+                UpdatePlayerPrefs("plant" + i, Inventory.inventory.plants[i], 0);
+            }
         }
     }
 
@@ -209,14 +229,63 @@ public class GameManager : MonoBehaviour
     public void RestartGameGM()
     {
         worldState = state.normal;
-        curDay = 0;
-        Inventory.inventory.money = 200;
-        date.text = "Date: " + curDay + "/36";
-        Inventory.inventory.seeds = new int[(int)plants.terminator];
-        Inventory.inventory.plants = new int[(int)plants.terminator];
-        PlayerPrefs.SetInt("san", 25);
-        //StartCoroutine("pcSetup");
-
+        //↓↓↓↓↓need to set the variables to the current playerprefs values↓↓↓↓↓
+        UpdatePlayerPrefs("money", initialMoney, initialMoney);
+        UpdatePlayerPrefs("san", initialSanity, initialSanity);
+        UpdatePlayerPrefs("turn", initDay, initDay);
+        for (int i = 0; i < Garden.garden.numHoles; i++)
+        {
+            UpdatePlayerPrefs("soil" + i, (int)plants.terminator, (int)plants.terminator);
+            UpdatePlayerPrefs("soilGrowth" + i, 0, 0);
+        }
+        for (int i = 0; i < (int)plants.terminator; i++)
+        {
+            UpdatePlayerPrefs("seed" + i, 0, 0);
+            UpdatePlayerPrefs("plant" + i, 0, 0);
+        }
+        SetupGameValues();
+        date.text = "Date: " + initDay + "/36";
         LoadScene(4);
+    }
+
+    public void UpdatePlayerPrefs(string _key, int _curAmt, int _initAmt)
+    {
+        if (!PlayerPrefs.HasKey(_key))
+        {
+            PlayerPrefs.SetInt(_key, _initAmt);
+        }
+        else
+        {
+            PlayerPrefs.SetInt(_key, _curAmt);
+        }
+    }
+
+    public void SetupGameValues()
+    {
+        Inventory.inventory.money = PlayerPrefs.GetInt("money");
+        Inventory.inventory.txtMoney.text = Inventory.inventory.money.ToString();
+        PlayerController.pc.curSanity = PlayerPrefs.GetInt("san");
+        curDay = PlayerPrefs.GetInt("turn");
+        for (int i = 0; i < Garden.garden.numHoles; i++)
+        {
+            Garden.garden.plants[i] = (plants)PlayerPrefs.GetInt("soil" + i);
+            Garden.garden.curGrowth[i] = PlayerPrefs.GetInt("soilGrowth" + i);
+        }
+        for (int i = 0; i < (int)plants.terminator; i++)
+        {
+            Inventory.inventory.seeds[i] = PlayerPrefs.GetInt("seed" + i);
+            Inventory.inventory.plants[i] = PlayerPrefs.GetInt("plant" + i);
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            for (int i = 0; i < (int)plants.terminator; i++)
+            {
+                Debug.Log("seed info: " + PlayerPrefs.GetInt("seed" + i));
+            }
+        }
     }
 }

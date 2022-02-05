@@ -28,13 +28,9 @@ public class PlayerController : MonoBehaviour
     {
         gm = GameManager.gm;
         pc = this;
-        if (!PlayerPrefs.HasKey("san"))
-        {
-            PlayerPrefs.SetInt("san", 25);
-        }
         curSanity = PlayerPrefs.GetInt("san");
         curSanSetup = true;
-        AdjustSanity(curSanity);
+        AdjustSanity(0);
         dayStartSanity = curSanity;
     }
 
@@ -60,6 +56,7 @@ public class PlayerController : MonoBehaviour
             bMainMenu.sprite = bMainMenuState[0];
             bInventory.sprite = bInventoryState[0];
         }
+
     }
 
     public void OnMainMenu()

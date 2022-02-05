@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewGanePopUp : MonoBehaviour
+public class NewGamePopUp : MonoBehaviour
 {
     public void NewGame()
     {
@@ -11,6 +11,7 @@ public class NewGanePopUp : MonoBehaviour
 
     public void ResumeGame()
     {
+        GameManager.gm.SetupGameValues();
         GameManager.gm.LoadScene(4);
     }
 
