@@ -9,22 +9,22 @@ public class GardenUI : MonoBehaviour
     Inventory inventory;
     Garden garden;
 
-    public Dropdown seedSelectDropdown;
     public Transform[] plantingSpots;
     public Text[] growthProgress;
     GameObject[] plantInSoil;
     
     GameManager.plants selectedSeed;
-    List<GameManager.plants> dropDownValues;
+    public GameObject[] availableSeeds;
+    public GameObject[] dropdownDisplays;
+    public GameObject dropdownList;
     bool isHarvestMode;
     public Image harvestButton;
+    bool clickedDropDown;
 
     // Start is called before the first frame update
     void Start()
     {
         gm = GameManager.gm;
-        seedSelectDropdown.options = new List<Dropdown.OptionData>();
-        dropDownValues = new List<GameManager.plants>();
         StartCoroutine(Setup());
     }
 
@@ -49,56 +49,57 @@ public class GardenUI : MonoBehaviour
     {
         for (int i = 0; i < inventory.seeds.Length; i++)
         {
-            GameManager.plants currentSeed = (GameManager.plants)i;
+            availableSeeds[i].SetActive(inventory.seeds[i] > 0);
+            dropdownDisplays[i].SetActive(i == (int)selectedSeed);
+        }
+
+        //if no seed is selected then show default select seed button
+        if (selectedSeed == GameManager.plants.terminator)
+        {
+            dropdownDisplays[(int)GameManager.plants.terminator].SetActive(true);
+            return;
+        }
+
+        //if seed is selected and you still have seeds of that type, then we're good
+        if (inventory.seeds[(int)selectedSeed] > 0)
+        {
+            return;
+        }
+
+        //a seed is selected but we are out of that seed so select another type
+        GameManager.plants firstAvailable = GameManager.plants.terminator;
+        for (int i = 0; i < inventory.seeds.Length; i++)
+        {
             if (inventory.seeds[i] > 0)
             {
-                if (dropDownValues.Contains(currentSeed) == false)
-                {
-                    dropDownValues.Add(currentSeed);
-                    Dropdown.OptionData optionData = new Dropdown.OptionData();
-                    optionData.text = currentSeed.ToString() + " " + inventory.seeds[i];
-                    seedSelectDropdown.options.Add(optionData);
-                }
-                else
-                {
-                    int index = dropDownValues.IndexOf(currentSeed);
-                    seedSelectDropdown.options[index].text = currentSeed.ToString() + " " + inventory.seeds[i];
-                }
-            }
-            else if (dropDownValues.Contains(currentSeed))
-            {
-                int index = dropDownValues.IndexOf(currentSeed);
-                dropDownValues.Remove(currentSeed);
-                seedSelectDropdown.options.RemoveAt(index);
+                firstAvailable = (GameManager.plants)i;
+                break;
             }
         }
 
-        seedSelectDropdown.captionText.text = inventory.seeds[(int)selectedSeed] > 0 ? selectedSeed.ToString() : "";
-
-        if (dropDownValues.Contains(selectedSeed) == false && dropDownValues.Count > 0)
-        {
-            SelectSeed(dropDownValues[0]);
-        }
+        selectedSeed = firstAvailable;
+        UpdateDropdown();
     }
 
-    public void SelectSeed()
+    public void ClickDropdown()
     {
-        SelectSeed(dropDownValues[seedSelectDropdown.value]);
+        dropdownList.SetActive(dropdownList.activeSelf == false);
+        clickedDropDown = true;
     }
 
-    void SelectSeed(GameManager.plants _type)
+    public void SelectSeed(int _seedIndex)
     {
-        selectedSeed = _type;
-        seedSelectDropdown.captionText.text = selectedSeed.ToString();
+        selectedSeed = (GameManager.plants)_seedIndex;
+        UpdateDropdown();
     }
 
     public void PlantInteract(int _holeIndex)
     {
-        GameManager.plants ChosenPlantType = garden.plants[_holeIndex];
+        GameManager.plants plantInHole = garden.plants[_holeIndex];
         if (isHarvestMode) //destroy unwanted plants
         {
             //do nothing if there is no plant to destroy
-            if (ChosenPlantType == GameManager.plants.terminator)
+            if (plantInHole == GameManager.plants.terminator)
             {
                 return;
             }
@@ -111,16 +112,16 @@ public class GardenUI : MonoBehaviour
 
             DestroyPlant(_holeIndex);
         }
-        else if (ChosenPlantType == GameManager.plants.terminator && inventory.seeds[(int)selectedSeed] > 0) //plant seeds
+        else if (plantInHole == GameManager.plants.terminator && inventory.seeds[(int)selectedSeed] > 0) //plant seeds
         {
             garden.PlantPlant(selectedSeed, _holeIndex);
             inventory.AdjustSeedQuantity(selectedSeed, -1);
             SpawnPlant(selectedSeed, _holeIndex, false, false);
             UpdateDropdown();
         }
-        else if (ChosenPlantType != GameManager.plants.terminator && garden.IsFullyGrown(_holeIndex)) //harvest fully grown plants
+        else if (plantInHole != GameManager.plants.terminator && garden.IsFullyGrown(_holeIndex)) //harvest fully grown plants
         {
-            inventory.AdjustPlantQuantity(ChosenPlantType, 1);
+            inventory.AdjustPlantQuantity(plantInHole, 1);
             DestroyPlant(_holeIndex);
         }
     }
@@ -159,5 +160,14 @@ public class GardenUI : MonoBehaviour
     {
         isHarvestMode = !isHarvestMode;
         harvestButton.color = Color.Lerp(isHarvestMode ? Color.red : Color.grey, Color.white, .5f);
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonUp(0) && dropdownList.activeSelf && clickedDropDown == false)
+        {
+            Invoke("ClickDropdown", Time.deltaTime);
+        }
+        clickedDropDown = false;
     }
 }
