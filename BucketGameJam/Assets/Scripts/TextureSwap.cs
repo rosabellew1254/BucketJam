@@ -6,12 +6,14 @@ using static GameManager;
 
 public class TextureSwap : MonoBehaviour
 {
+    public bool sister;
     public Image[] baseObjects;
     public Sprite[] firstPhase;
     public Sprite[] secondPhase;
     public Sprite[] thirdPhase;
 
     int tempInt = 0;
+    //bool toLate;
 
     private void Start()
     {
@@ -23,12 +25,29 @@ public class TextureSwap : MonoBehaviour
         switch (gm.worldState)
         {
             case state.normal:
-                baseObjects[_index].sprite = firstPhase[_index];
+                if (sister == true && gm.isSiblingAlive != true)
+                {
+                    Debug.Log("Can't turn back time bud");
+                    baseObjects[_index].sprite = null;
+                }
+                else
+                {
+                    baseObjects[_index].sprite = firstPhase[_index];
+                }
                 break;
             case state.smallEvil:
-                baseObjects[_index].sprite = secondPhase[_index];
+                if (sister == true && gm.isSiblingAlive != true)
+                {
+                    Debug.Log("Can't turn back time bud");
+                    baseObjects[_index].sprite = null;
+                }
+                else
+                {
+                    baseObjects[_index].sprite = secondPhase[_index];
+                }
                 break;
             case state.largeEvil:
+                //toLate = true;
                 baseObjects[_index].sprite = thirdPhase[_index];
                 break;
             case state.terminator:
@@ -44,7 +63,14 @@ public class TextureSwap : MonoBehaviour
         }
         else
         {
-            baseObjects[_index].gameObject.SetActive(true);
+            if (sister == true && gm.isSiblingAlive != true)
+            {
+                baseObjects[_index].gameObject.SetActive(false);
+            }
+            else
+            {
+                baseObjects[_index].gameObject.SetActive(true);
+            }
         }
     }
 
@@ -59,17 +85,10 @@ public class TextureSwap : MonoBehaviour
 
     void Update()
     {
-        if (gm.tempWorldState != gm.worldState)
-        {
-            //ChangeEachSprite(gm.worldState);
-        }
-
         if (tempInt == 0)
         {
             ChangeEachSprite(gm.worldState);
             tempInt++;
         }
-
-
     }
 }
