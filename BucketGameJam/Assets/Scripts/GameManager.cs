@@ -39,10 +39,11 @@ public class GameManager : MonoBehaviour
     public int curDay;
     public int initDay = 0;
     public int maxDays = 36;
-    public int moneyRequiredToSaveSibling = 5000;
-    public int competeMoneyGoal = 12000;
-    public int initialMoney = 500;
-    public int initialSanity = 25;
+    public int moneyRequiredToSaveSibling;
+    public int competeMoneyGoal;
+    public int initialMoney;
+    public int initialSanity;
+    public int sanityThreshold;
     public state tempWorldState;
 
     Action action;
@@ -99,7 +100,7 @@ public class GameManager : MonoBehaviour
 
     public void CheckSanity()
     {
-        if (PlayerController.pc.curSanity < 20 && PlayerController.pc.curSanity > 0)
+        if (PlayerController.pc.curSanity < sanityThreshold && PlayerController.pc.curSanity > 0)
         {
             worldState = state.smallEvil;
             Debug.Log("Set Small");
@@ -245,6 +246,7 @@ public class GameManager : MonoBehaviour
             UpdatePlayerPrefs("plant" + i, 0, 0);
         }
         SetupGameValues();
+        PlayerController.pc.AdjustSanity(0);
         date.text = "Date: " + initDay + "/36";
         LoadScene(4);
     }
@@ -267,6 +269,8 @@ public class GameManager : MonoBehaviour
         Inventory.inventory.dayStartMoney = Inventory.inventory.money;
         Inventory.inventory.txtMoney.text = Inventory.inventory.money.ToString();
         PlayerController.pc.curSanity = PlayerPrefs.GetInt("san");
+        PlayerController.pc.dayStartSanity = PlayerController.pc.curSanity;
+
         curDay = PlayerPrefs.GetInt("turn");
         for (int i = 0; i < Garden.garden.numHoles; i++)
         {
