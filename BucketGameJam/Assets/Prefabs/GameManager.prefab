@@ -47,6 +47,7 @@ MonoBehaviour:
   dayStartSanity: 0
   sliderSanity: {fileID: 2780233939534843083}
   curSanSetup: 0
+  sanityCap: 38ffffffc8000000
   dateState:
   - {fileID: 21300000, guid: bf6803afd79b0134f8db59faff37b54d, type: 3}
   - {fileID: 21300000, guid: 023f8bb4bc496624ca92be8096dadc8f, type: 3}
@@ -537,10 +538,11 @@ MonoBehaviour:
   curDay: 0
   initDay: 0
   maxDays: 36
-  moneyRequiredToSaveSibling: 5000
+  moneyRequiredToSaveSibling: 8000
   competeMoneyGoal: 12000
-  initialMoney: 500
-  initialSanity: 25
+  initialMoney: 300
+  initialSanity: 100
+  sanityThreshold: 50
   tempWorldState: 0
 --- !u!1 &1167060740595847755
 GameObject:

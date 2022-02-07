@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public int dayStartSanity;
     public Slider sliderSanity;
     public bool curSanSetup;
+    public int[] sanityCap;
 
     public Sprite[] dateState;
     public Sprite[] spekState;
@@ -37,7 +38,19 @@ public class PlayerController : MonoBehaviour
 
     public void AdjustSanity(int _adjustment)
     {
-        curSanity += _adjustment;
+        // cap the sanity when it reaches the max/min value
+        if (curSanity + _adjustment > sanityCap[1])
+        {
+            curSanity = sanityCap[1];
+        }
+        else if (curSanity + _adjustment < sanityCap[0])
+        {
+            curSanity = sanityCap[0];
+        }
+        else
+        {
+            curSanity += _adjustment;
+        }
         sliderSanity.value = curSanity;
         if (curSanity < 0)
         {
