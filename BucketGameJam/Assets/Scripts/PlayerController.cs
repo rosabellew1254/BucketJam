@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
     public void OnMainMenu()
     {
         //gm.LoadScene(0);
-        confirm = Instantiate(gm.confirmPrefab, gameObject.transform.position, Quaternion.identity, gameObject.transform);
+        confirm = Instantiate(gm.confirmPrefab, gm.generalHUD.gameObject.transform.position, Quaternion.identity, gm.generalHUD.gameObject.transform);
     }
     
     public void OnInventory()

@@ -9,6 +9,7 @@ public class ConfirmPopUp : MonoBehaviour
     public void YesConfirm()
     {
         GameManager.gm.LoadScene(0);
+        Destroy(gameObject);
     }
 
     public void NoConfirm()
