@@ -263,6 +263,7 @@ public class GameManager : MonoBehaviour
     public void SetupGameValues()
     {
         Inventory.inventory.money = PlayerPrefs.GetInt("money");
+        Inventory.inventory.dayStartMoney = Inventory.inventory.money;
         Inventory.inventory.txtMoney.text = Inventory.inventory.money.ToString();
         PlayerController.pc.curSanity = PlayerPrefs.GetInt("san");
         curDay = PlayerPrefs.GetInt("turn");
