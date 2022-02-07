@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     public Image bInventory;
 
     GameManager gm;
+    GameObject confirm;
 
     private void Start()
     {
@@ -61,7 +62,8 @@ public class PlayerController : MonoBehaviour
 
     public void OnMainMenu()
     {
-        gm.LoadScene(0);
+        //gm.LoadScene(0);
+        confirm = Instantiate(gm.confirmPrefab, gm.generalHUD.gameObject.transform.position, Quaternion.identity, gm.generalHUD.gameObject.transform);
     }
     
     public void OnInventory()

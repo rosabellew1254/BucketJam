@@ -511,6 +511,7 @@ MonoBehaviour:
   inventoryMenu: {fileID: 9114729740475252644, guid: 240ebdf2c592e9444b4c20569d70aabf, type: 3}
   confirmMessage: {fileID: 4999395139419088732}
   daySummary: {fileID: 5014222486439672280}
+  confirmPrefab: {fileID: 7643699522511495197, guid: 7da2917198a7a55448b82a0c5348df93, type: 3}
   sister: {fileID: 5806371820011958536, guid: 9fca02791f5fbba4993e07808fb0b0d3, type: 3}
   newGamePopUpPrefab: {fileID: 1614083424929550071, guid: 994375e7db0d7074694ddddd7f4cd547, type: 3}
   plantPrefabs:
@@ -534,9 +535,12 @@ MonoBehaviour:
   worldState: 0
   isSiblingAlive: 1
   curDay: 0
+  initDay: 0
   maxDays: 36
   moneyRequiredToSaveSibling: 5000
   competeMoneyGoal: 12000
+  initialMoney: 500
+  initialSanity: 25
   tempWorldState: 0
 --- !u!1 &1167060740595847755
 GameObject:

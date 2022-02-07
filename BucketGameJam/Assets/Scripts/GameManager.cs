@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public GameObject confirmMessage;
     public GameObject daySummary;
 
+    public GameObject confirmPrefab;
     public GameObject sister;
     public GameObject newGamePopUpPrefab;
     public GameObject[] plantPrefabs;
