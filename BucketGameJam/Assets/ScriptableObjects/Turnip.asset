@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Turnip
   m_EditorClassIdentifier: 
   type: 0
-  seedCost: 10
-  sellPrice: 50
-  sanity: 3
+  seedCost: 45
+  sellPrice: 100
+  sanity: 6
   turnsToGrow: 3

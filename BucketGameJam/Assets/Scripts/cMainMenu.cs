@@ -30,6 +30,7 @@ public class cMainMenu : MonoBehaviour
         }
         else
         {
+            gm.RestartGameGM();
             gm.LoadScene(4);
         } 
     }

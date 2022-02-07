@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EyePomegranate
   m_EditorClassIdentifier: 
   type: 2
-  seedCost: 200
-  sellPrice: 500
-  sanity: -10
+  seedCost: 210
+  sellPrice: 380
+  sanity: -3
   turnsToGrow: 2

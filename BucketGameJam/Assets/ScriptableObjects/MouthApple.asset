@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MouthApple
   m_EditorClassIdentifier: 
   type: 3
-  seedCost: 500
-  sellPrice: 900
-  sanity: -20
+  seedCost: 430
+  sellPrice: 800
+  sanity: -9
   turnsToGrow: 2

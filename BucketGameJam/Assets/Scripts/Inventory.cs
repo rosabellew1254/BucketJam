@@ -16,14 +16,15 @@ public class Inventory : MonoBehaviour
         inventory = this;
         seeds = new int[(int)GameManager.plants.terminator];
         plants = new int[(int)GameManager.plants.terminator];
-        AdjustMoney(200);
+        AdjustMoney(PlayerPrefs.GetInt("money"));
         dayStartMoney = money;
     }
 
     public void AdjustMoney(int _adjustAmount)
     {
         money += _adjustAmount;
-        txtMoney.text = "Money: " + money;
+        txtMoney.text = money.ToString();
+
     }
 
     public void AdjustSeedQuantity(GameManager.plants _plant, int _adjustAmount)
