@@ -21,10 +21,29 @@ public class GardenUI : MonoBehaviour
     public Image harvestButton;
     bool clickedDropDown;
 
+    public Sprite[] spriteEldrichAvailableSeeds;
+    public Sprite spriteEldrichDropdownList;
+
+    public Sprite[] spriteNormalDropdownDisplaysUp;
+    public Sprite[] spriteEldrichDropdownDisplaysUp;
+    public Sprite[] spriteNormalDropdownDisplaysDown;
+    public Sprite[] spriteEldrichDropdownDisplaysDown;
+
     // Start is called before the first frame update
     void Start()
     {
         gm = GameManager.gm;
+        int numPlants = (int)GameManager.plants.terminator;
+        if (gm.worldState == GameManager.state.largeEvil)
+        {
+            for (int i = 0; i < numPlants; i++)
+            {
+                availableSeeds[i].GetComponent<Image>().sprite = spriteEldrichAvailableSeeds[i];
+            }
+            dropdownDisplays[numPlants].GetComponent<Image>().sprite = spriteEldrichDropdownDisplaysDown[numPlants];
+            dropdownList.GetComponent<Image>().sprite = spriteEldrichDropdownList;
+        }
+
         StartCoroutine(Setup());
     }
 
@@ -47,11 +66,16 @@ public class GardenUI : MonoBehaviour
 
     void UpdateDropdown()
     {
+        dropdownDisplays[(int)GameManager.plants.terminator].SetActive(false);
+
         for (int i = 0; i < inventory.seeds.Length; i++)
         {
+            bool isSelected = i == (int)selectedSeed;
             availableSeeds[i].SetActive(inventory.seeds[i] > 0);
-            dropdownDisplays[i].SetActive(i == (int)selectedSeed);
+            dropdownDisplays[i].SetActive(isSelected);
         }
+
+        UpdateDropdownSprite();
 
         //if no seed is selected then show default select seed button
         if (selectedSeed == GameManager.plants.terminator)
@@ -81,9 +105,37 @@ public class GardenUI : MonoBehaviour
         UpdateDropdown();
     }
 
+    void UpdateDropdownSprite()
+    {
+        Image image = dropdownDisplays[(int)selectedSeed].GetComponent<Image>();
+        if (gm.worldState == GameManager.state.largeEvil)
+        {
+            if (dropdownList.activeSelf)
+            {
+                image.sprite = spriteEldrichDropdownDisplaysUp[(int)selectedSeed];
+            }
+            else
+            {
+                image.sprite = spriteEldrichDropdownDisplaysDown[(int)selectedSeed];
+            }
+        }
+        else
+        {
+            if (dropdownList.activeSelf)
+            {
+                image.sprite = spriteNormalDropdownDisplaysUp[(int)selectedSeed];
+            }
+            else
+            {
+                image.sprite = spriteNormalDropdownDisplaysDown[(int)selectedSeed];
+            }
+        }
+    }
+
     public void ClickDropdown()
     {
         dropdownList.SetActive(dropdownList.activeSelf == false);
+        UpdateDropdownSprite();
         clickedDropDown = true;
     }
 
@@ -159,7 +211,7 @@ public class GardenUI : MonoBehaviour
     public void ToggleRemoveSeedMode()
     {
         isHarvestMode = !isHarvestMode;
-        harvestButton.color = Color.Lerp(isHarvestMode ? Color.red : Color.grey, Color.white, .5f);
+        harvestButton.color =  Color.Lerp( Color.red , Color.white, isHarvestMode ? .5f : 1f);
     }
 
     private void Update()
