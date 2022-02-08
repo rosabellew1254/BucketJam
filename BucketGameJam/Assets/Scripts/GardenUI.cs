@@ -164,12 +164,12 @@ public class GardenUI : MonoBehaviour
 
             DestroyPlant(_holeIndex);
         }
-        else if (plantInHole == GameManager.plants.terminator && inventory.seeds[(int)selectedSeed] > 0) //plant seeds
+        else if (plantInHole == GameManager.plants.terminator && selectedSeed != GameManager.plants.terminator && inventory.seeds[(int)selectedSeed] > 0) //plant seeds
         {
             garden.PlantPlant(selectedSeed, _holeIndex);
-            inventory.AdjustSeedQuantity(selectedSeed, -1);
+            inventory.AdjustSeedQuantity(selectedSeed, -1); // reduces seed count
             SpawnPlant(selectedSeed, _holeIndex, false, false);
-            UpdateDropdown();
+            UpdateDropdown(); // updates seed count
         }
         else if (plantInHole != GameManager.plants.terminator && garden.IsFullyGrown(_holeIndex)) //harvest fully grown plants
         {

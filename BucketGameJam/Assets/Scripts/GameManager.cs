@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     public GameObject mirrorReflection;
     public GameObject sliderMask;
     public GameObject sliderFill;
+    public Text tSanity;
     public Text date;
     public Text daySummaryDayNum;
     public Text daySummaryMoneyGained;
@@ -270,6 +271,7 @@ public class GameManager : MonoBehaviour
         Inventory.inventory.txtMoney.text = Inventory.inventory.money.ToString();
         PlayerController.pc.curSanity = PlayerPrefs.GetInt("san");
         PlayerController.pc.dayStartSanity = PlayerController.pc.curSanity;
+        tSanity.text = PlayerController.pc.curSanity.ToString();
 
         curDay = PlayerPrefs.GetInt("turn");
         for (int i = 0; i < Garden.garden.numHoles; i++)

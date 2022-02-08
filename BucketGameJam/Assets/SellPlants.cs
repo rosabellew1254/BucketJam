@@ -93,6 +93,7 @@ public class SellPlants : MonoBehaviour
     {
         inventory.AdjustMoney(totalSale);
         PlayerController.pc.AdjustSanity(totalSanity);
+        gm.tSanity.text = PlayerController.pc.curSanity.ToString();
 
         for (int i = 0; i < (int)GameManager.plants.terminator; i++)
         {
