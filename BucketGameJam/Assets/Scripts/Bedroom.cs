@@ -7,11 +7,13 @@ public class Bedroom : MonoBehaviour
 {
     public GameObject mirrorReflection;
     public GameObject sister;
-    public GameObject[] sky;
-    public GameObject[] eldritch;
+    //public GameObject[] sky;
+    //public GameObject[] eldritch;
+    public Image skyImage;
+    public Sprite[] skyState;
     public Image bushImage;
     public Sprite[] bushStates;
-    public Image window;
+    public Image windowImage;
     public Sprite[] windowStates;
 
     public int randInt;
@@ -30,90 +32,57 @@ public class Bedroom : MonoBehaviour
 
     public void OutsideState()
     {
-        if(pc.curSanity < 0)
+        switch(gm.worldState)
         {
-            sky[0].gameObject.SetActive(false);
-            sky[1].gameObject.SetActive(true);
-            if (randInt == 4)
-            {
-                eldritch[0].gameObject.SetActive(true);
-                eldritch[1].gameObject.SetActive(false);
-                window.gameObject.SetActive(true);
-                window.sprite = windowStates[1];
-            }
-            else if (randInt == 3)
-            {
-                eldritch[0].gameObject.SetActive(false);
-                eldritch[1].gameObject.SetActive(true);
-                window.gameObject.SetActive(false);
-            }
-            else if (randInt == 2)
-            {
-                eldritch[0].gameObject.SetActive(false);
-                eldritch[1].gameObject.SetActive(false);
-                window.gameObject.SetActive(true);
-                window.sprite = windowStates[1];
-            }
-            else
-            {
-                eldritch[0].gameObject.SetActive(false);
-                eldritch[1].gameObject.SetActive(true);
-                window.gameObject.SetActive(true);
-                window.sprite = windowStates[2];
-            }
-            eldritch[2].gameObject.SetActive(false);
-            bushImage.sprite = bushStates[1];
-        }
-        else if(pc.curSanity < 20 && pc.curSanity > -1)
-        {
-            sky[0].gameObject.SetActive(true);
-            sky[1].gameObject.SetActive(false);
-            if (randInt == 4)
-            {
-                eldritch[0].gameObject.SetActive(false);
-                eldritch[1].gameObject.SetActive(false);
-                eldritch[2].gameObject.SetActive(true);
-                window.gameObject.SetActive(false);
-                bushImage.sprite = bushStates[1];
-            }
-            else if (randInt == 3)
-            {
-                eldritch[0].gameObject.SetActive(false);
-                eldritch[1].gameObject.SetActive(false);
-                eldritch[2].gameObject.SetActive(false);
-                window.gameObject.SetActive(false);
-                bushImage.sprite = bushStates[1];
-            }
-            else if (randInt == 2)
-            {
-                eldritch[0].gameObject.SetActive(false);
-                eldritch[1].gameObject.SetActive(false);
-                eldritch[2].gameObject.SetActive(false);
-                window.gameObject.SetActive(true);
-                window.sprite = windowStates[0];
+            case GameManager.state.normal:
+                skyImage.sprite = skyState[0];
+                windowImage.gameObject.SetActive(false);
                 bushImage.sprite = bushStates[0];
-            }
-            else
-            {
-                eldritch[0].gameObject.SetActive(false);
-                eldritch[1].gameObject.SetActive(false);
-                eldritch[2].gameObject.SetActive(false);
-                window.gameObject.SetActive(false);
-                bushImage.sprite = bushStates[0];
-            }
+                break;
+            case GameManager.state.smallEvil:
+                randomSighting();
+                if (randInt > 2)
+                {
+                    skyImage.sprite = skyState[0];
+                    windowImage.gameObject.SetActive(true);
+                    windowImage.sprite = windowStates[0];
+                    bushImage.sprite = bushStates[1];
+                }
+                else
+                {
+                    skyImage.sprite = skyState[1];
+                    windowImage.gameObject.SetActive(false);
+                    bushImage.sprite = bushStates[0];
+                }
+                break;
+            case GameManager.state.largeEvil:
+                randomSighting();
+                bushImage.sprite = bushStates[1];
+                if (randInt == 4)
+                {
+                    skyImage.sprite = skyState[2];
+                    windowImage.gameObject.SetActive(true);
+                    windowImage.sprite = windowStates[1];
+                    
+                }
+                else if (randInt == 3)
+                {
+                    skyImage.sprite = skyState[3];
+                    windowImage.gameObject.SetActive(false);
+                }
+                else if (randInt == 2)
+                {
+                    skyImage.sprite = skyState[4];
+                    windowImage.gameObject.SetActive(false);
+                }
+                else
+                {
+                    skyImage.sprite = skyState[2];
+                    windowImage.gameObject.SetActive(true);
+                    windowImage.sprite = windowStates[2];
+                }
+                break;
         }
-        else
-        {
-            sky[0].gameObject.SetActive(true);
-            sky[1].gameObject.SetActive(false);
-            eldritch[0].gameObject.SetActive(false);
-            eldritch[1].gameObject.SetActive(false);
-            eldritch[2].gameObject.SetActive(false);
-            bushImage.sprite = bushStates[0];
-            window.gameObject.SetActive(false);
-        }
-
-        
     }
 
     public void randomSighting()
