@@ -15,6 +15,8 @@ public class Bedroom : MonoBehaviour
     public Sprite[] bushStates;
     public Image windowImage;
     public Sprite[] windowStates;
+    public Button[] bedRoomButtons;
+
 
     public int randInt;
 
@@ -28,6 +30,10 @@ public class Bedroom : MonoBehaviour
 
         randomSighting();
         OutsideState();
+        for (int i = 0; i < bedRoomButtons.Length; i++)
+        {
+            bedRoomButtons[i].GetComponent<Image>().alphaHitTestMinimumThreshold = 0.8f;
+        }
     }
 
     public void OutsideState()

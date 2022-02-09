@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: cfe24353df49f8944b2632dc4476197c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4473038890095244095
+    second: Room_Bed_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -20,7 +23,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -41,17 +44,17 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 72, y: 82, z: 640, w: 544}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -73,10 +76,73 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
-    outline: []
+    sprites:
+    - serializedVersion: 2
+      name: Room_Bed_0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 67
+        width: 1213
+        height: 470
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -284.5, y: 213}
+        - {x: -291.5, y: 213}
+        - {x: -572.5, y: 139}
+        - {x: -584.5, y: 129}
+        - {x: -584.5, y: 35}
+        - {x: -455.5, y: -213}
+        - {x: 584.5, y: -213}
+        - {x: 584.5, y: 51}
+        - {x: 449.5, y: 156}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3372aedb2d631e30800000000000000
+      internalID: 4473038890095244095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -376, y: -25}
+      - {x: -647, y: -25}
+      - {x: -871, y: -83}
+      - {x: -871, y: -227}
+      - {x: -675, y: -451}
+      - {x: 292, y: -451}
+      - {x: 298, y: -424}
+      - {x: 298, y: -143}
+      - {x: 166, y: -73}
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000

@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: ac5e6612b173a2c489c83ed865508332
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4746852632557250169
+    second: Room_Bed_OuterGlow_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -20,7 +23,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -41,9 +44,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -51,7 +54,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -73,10 +76,96 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
-    outline: []
+    sprites:
+    - serializedVersion: 2
+      name: Room_Bed_OuterGlow_0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 67
+        width: 1213
+        height: 470
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -472.5, y: 235}
+        - {x: -606.5, y: 150}
+        - {x: -606.5, y: 78}
+        - {x: -431.5, y: -235}
+        - {x: 606.5, y: -235}
+        - {x: 606.5, y: 149}
+        - {x: 236.5, y: 235}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 976e3b4c15530e140800000000000000
+      internalID: 4746852632557250169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: 92, y: -84}
+      - {x: 86, y: -98}
+      - {x: 25, y: -103}
+      - {x: -133, y: -104}
+      - {x: -169, y: -113}
+      - {x: -204, y: -109}
+      - {x: -226, y: -93}
+      - {x: -256, y: -100}
+      - {x: -298, y: -65}
+      - {x: -380, y: -47}
+      - {x: -409, y: -31}
+      - {x: -440, y: -45}
+      - {x: -456, y: -66}
+      - {x: -511, y: -52}
+      - {x: -522, y: -13}
+      - {x: -571, y: -6}
+      - {x: -891, y: -102}
+      - {x: -891, y: -152}
+      - {x: -844, y: -158}
+      - {x: -817, y: -144}
+      - {x: -681, y: -147}
+      - {x: -679, y: -409}
+      - {x: -451, y: -409}
+      - {x: -436, y: -454}
+      - {x: -406, y: -464}
+      - {x: -359, y: -455}
+      - {x: -322, y: -467}
+      - {x: -277, y: -445}
+      - {x: -278, y: -408}
+      - {x: 187, y: -397}
+      - {x: 223, y: -459}
+      - {x: 312, y: -455}
+      - {x: 315, y: -187}
+      - {x: 160, y: -77}
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
