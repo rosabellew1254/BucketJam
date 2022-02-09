@@ -35,6 +35,12 @@ public class cMainMenu : MonoBehaviour
         } 
     }
 
+    public void OnCredits()
+    {
+        gm.generalHUD.SetActive(false);
+        gm.LoadScene(6);
+    }
+
     // Method to exit the game
     public void OnExitGame()
     {
