@@ -32,7 +32,7 @@ public class Bedroom : MonoBehaviour
         OutsideState();
         for (int i = 0; i < bedRoomButtons.Length; i++)
         {
-            bedRoomButtons[i].GetComponent<Image>().alphaHitTestMinimumThreshold = 0.8f;
+            bedRoomButtons[i].GetComponent<Image>().alphaHitTestMinimumThreshold = gm.alphaHitMinValue;
         }
     }
 

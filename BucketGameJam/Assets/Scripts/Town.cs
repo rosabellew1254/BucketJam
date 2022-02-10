@@ -11,12 +11,15 @@ public class Town : MonoBehaviour
     public int townies;
     public Text nTownies;
     int san;
-
+    public Button[] bTownObjects;
     void Start()
     {
         pc = PlayerController.pc;
         StartCoroutine(pcSetup());
-
+        for (int i = 0; i < bTownObjects.Length; i++)
+        {
+            bTownObjects[i].GetComponent<Image>().alphaHitTestMinimumThreshold = GameManager.gm.alphaHitMinValue;
+        }
     }
 
     public IEnumerator pcSetup()
