@@ -140,7 +140,7 @@ public class GameManager : MonoBehaviour
         }
         else if (curDay == 20)
         {
-            if (Inventory.inventory.money >= GameManager.gm.moneyRequiredToSaveSibling)
+            if (Inventory.inventory.money >= gm.moneyRequiredToSaveSibling)
             {
                 isSiblingAlive = true;
                 Inventory.inventory.money -= gm.moneyRequiredToSaveSibling;
@@ -149,14 +149,16 @@ public class GameManager : MonoBehaviour
             else
             {
                 isSiblingAlive = false;
+                HideSister();
                 Debug.Log("Your sibling has died");
             }
         }
-        else if (PlayerController.pc.curSanity < 0)
+        /*else if (PlayerController.pc.curSanity < 0 && curDay > 20)
         {
             isSiblingAlive = false;
+            HideSister();
             Debug.Log("Your sibling has died");
-        }
+        }*/
 
         if (curDay == maxDays + 1)
         {
@@ -180,6 +182,12 @@ public class GameManager : MonoBehaviour
                 UpdatePlayerPrefs("plant" + i, Inventory.inventory.plants[i], 0);
             }
         }
+    }
+
+    void HideSister()
+    {
+        Bedroom Broom = FindObjectOfType<Bedroom>().GetComponent<Bedroom>();
+        Broom.SetSisterFalse();
     }
 
     void ShowDaySummary()
@@ -234,6 +242,7 @@ public class GameManager : MonoBehaviour
     {
         worldState = state.normal;
         //↓↓↓↓↓need to set the variables to the current playerprefs values↓↓↓↓↓
+        isSiblingAlive = true;
         UpdatePlayerPrefs("money", initialMoney, initialMoney);
         UpdatePlayerPrefs("san", initialSanity, initialSanity);
         UpdatePlayerPrefs("turn", initDay, initDay);

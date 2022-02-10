@@ -117,4 +117,9 @@ public class Bedroom : MonoBehaviour
     {
         sister = Instantiate(GameManager.gm.sister, gameObject.transform.position, Quaternion.identity, gameObject.transform);
     }
+
+    public void SetSisterFalse()
+    {
+        sister.SetActive(false);
+    }
 }

@@ -399,8 +399,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9488dfc07c0c42547a73ee550face694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mirrorReflection: {fileID: 0}
-  sister: {fileID: 0}
+  mirrorReflection: {fileID: 2019526383}
+  sister: {fileID: 2031231100}
   skyImage: {fileID: 1145141353}
   skyState:
   - {fileID: 21300000, guid: b231721f83a68d74685bc3cf8c9062e6, type: 3}
@@ -2329,4 +2329,4 @@ MonoBehaviour:
   secondPhase:
   - {fileID: -4971461728505969104, guid: 47e4a3e6f852fc942b253ea3882a0996, type: 3}
   thirdPhase:
-  - {fileID: 0}
+  - {fileID: -4971461728505969104, guid: 47e4a3e6f852fc942b253ea3882a0996, type: 3}
