@@ -139,7 +139,7 @@ public class GameManager : MonoBehaviour
         }
         else if (curDay == 20)
         {
-            if (Inventory.inventory.money >= GameManager.gm.moneyRequiredToSaveSibling)
+            if (Inventory.inventory.money >= gm.moneyRequiredToSaveSibling)
             {
                 isSiblingAlive = true;
                 Inventory.inventory.money -= gm.moneyRequiredToSaveSibling;
@@ -179,6 +179,11 @@ public class GameManager : MonoBehaviour
                 UpdatePlayerPrefs("plant" + i, Inventory.inventory.plants[i], 0);
             }
         }
+    }
+
+    void HideSister()
+    {
+
     }
 
     void ShowDaySummary()

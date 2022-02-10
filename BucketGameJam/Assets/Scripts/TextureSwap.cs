@@ -71,7 +71,7 @@ public class TextureSwap : MonoBehaviour
         }
         else
         {
-            if (sister == true && gm.isSiblingAlive != true)
+            if (sister == true && gm.isSiblingAlive == false)
             {
                 baseObjects[_index].gameObject.SetActive(false);
             }
