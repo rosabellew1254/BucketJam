@@ -48,7 +48,15 @@ public class TextureSwap : MonoBehaviour
                 break;
             case state.largeEvil:
                 //toLate = true;
-                baseObjects[_index].sprite = thirdPhase[_index];
+                if (sister == true && gm.isSiblingAlive != true)
+                {
+                    Debug.Log("Can't turn back time bud");
+                    baseObjects[_index].sprite = null;
+                }
+                else
+                {
+                    baseObjects[_index].sprite = thirdPhase[_index];
+                }
                 break;
             case state.terminator:
                 Debug.Log("Bruh, how?");

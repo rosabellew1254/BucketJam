@@ -151,7 +151,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Your sibling has died");
             }
         }
-        else if (PlayerController.pc.curSanity < 0)
+        else if (PlayerController.pc.curSanity < 0 && curDay > 20)
         {
             isSiblingAlive = false;
             Debug.Log("Your sibling has died");
