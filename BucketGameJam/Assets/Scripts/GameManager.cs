@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     public int sanityThreshold;
     public state tempWorldState;
 
+    public float alphaHitMinValue;
     Action action;
 
 
