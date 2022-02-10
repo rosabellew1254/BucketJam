@@ -211,7 +211,7 @@ public class GardenUI : MonoBehaviour
     public void ToggleRemoveSeedMode()
     {
         isHarvestMode = !isHarvestMode;
-        harvestButton.color =  Color.Lerp( Color.red , Color.white, isHarvestMode ? .5f : 1f);
+        harvestButton.color = Color.Lerp(Color.red , Color.white, isHarvestMode ? .5f : 1f);
     }
 
     private void Update()
