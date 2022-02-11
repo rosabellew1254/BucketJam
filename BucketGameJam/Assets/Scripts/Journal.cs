@@ -11,7 +11,7 @@ public class Journal : MonoBehaviour
     public int currentpage = 0;
     public Button TurnLeftPage;
     public Button TurnRightPage;
-    GameManager.state[] stateHistory;
+    public static GameManager.state[] stateHistory;
 
     public Sprite[] bookState;
     public Image journal;
@@ -23,17 +23,7 @@ public class Journal : MonoBehaviour
     public void Start()
     {
         gm = GameManager.gm;
-        
         CurBookState();
-        
-        //******temporary stand in array until player prefs for state history is set up*********(start)
-        stateHistory = new GameManager.state[gm.maxDays];
-        for (int i = 0; i < currentpage; i++)
-        {
-            stateHistory[i] = GameManager.state.normal;
-        }
-        stateHistory[currentpage] = gm.worldState;
-        //******temporary stand in array until player prefs for state history is set up*********(end)
 
         JournalPagesNormal = new string[gm.maxDays];
         JournalPagesSmallEvil = new string[gm.maxDays];
