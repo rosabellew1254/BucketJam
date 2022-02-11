@@ -62,10 +62,10 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             gm = this;
         }
-        worldState = state.normal;
+        curDay = PlayerPrefs.GetInt("turn");
+        worldState = (state)PlayerPrefs.GetInt("stateHistory" + curDay);
 
         tempWorldState = gm.worldState;
-        curDay = PlayerPrefs.GetInt("turn");
         date.text = "Date: " + curDay + "/36";
     }
 
@@ -171,6 +171,13 @@ public class GameManager : MonoBehaviour
             UpdatePlayerPrefs("san", PlayerController.pc.curSanity, initialSanity);
             UpdatePlayerPrefs("money", Inventory.inventory.money, initialMoney);
             UpdatePlayerPrefs("turn", curDay, initDay);
+            for (int i = 0; i < maxDays + 1; i++)
+            {
+                if (i >= curDay)
+                {
+                    UpdatePlayerPrefs("stateHistory" + i, (int)worldState, (int)state.normal);
+                }
+            }
             for (int i = 0; i < Garden.garden.numHoles; i++)
             {
                 UpdatePlayerPrefs("soil" + i, (int)Garden.garden.plants[i], (int)plants.terminator);
@@ -192,7 +199,7 @@ public class GameManager : MonoBehaviour
 
     void ShowDaySummary()
     {
-        daySummaryDayNum.text = "Day " + (curDay - 1);
+        daySummaryDayNum.text = "Month " + (curDay - 1);
         
         Inventory inventory = Inventory.inventory;
         daySummaryMoneyGained.text = "Money Gained: " + (inventory.money - inventory.dayStartMoney);
@@ -246,6 +253,11 @@ public class GameManager : MonoBehaviour
         UpdatePlayerPrefs("money", initialMoney, initialMoney);
         UpdatePlayerPrefs("san", initialSanity, initialSanity);
         UpdatePlayerPrefs("turn", initDay, initDay);
+        for (int i = 0; i < maxDays + 1; i++)
+        {
+            // resets the world state to normal for all days
+            UpdatePlayerPrefs("stateHistory" + i, (int)state.normal, (int)state.normal);
+        }
         for (int i = 0; i < Garden.garden.numHoles; i++)
         {
             UpdatePlayerPrefs("soil" + i, (int)plants.terminator, (int)plants.terminator);
@@ -274,7 +286,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SetupGameValues()
+    public void SetupGameValues() // write PlayerPrefs values to the game variables
     {
         Inventory.inventory.money = PlayerPrefs.GetInt("money");
         Inventory.inventory.dayStartMoney = Inventory.inventory.money;
@@ -284,6 +296,12 @@ public class GameManager : MonoBehaviour
         tSanity.text = PlayerController.pc.curSanity.ToString();
 
         curDay = PlayerPrefs.GetInt("turn");
+        Journal.stateHistory = new state[gm.maxDays + 1];
+        for (int i = 0; i < maxDays + 1; i++)
+        {
+            Journal.stateHistory[i] = (state)PlayerPrefs.GetInt("stateHistory" + i);
+            Debug.Log("state history " + i + " is: " + Journal.stateHistory[i]);
+        }
         for (int i = 0; i < Garden.garden.numHoles; i++)
         {
             Garden.garden.plants[i] = (plants)PlayerPrefs.GetInt("soil" + i);
@@ -296,14 +314,4 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            for (int i = 0; i < (int)plants.terminator; i++)
-            {
-                Debug.Log("seed info: " + PlayerPrefs.GetInt("seed" + i));
-            }
-        }
-    }
 }
