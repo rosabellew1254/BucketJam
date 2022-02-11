@@ -7,6 +7,8 @@ public class Bedroom : MonoBehaviour
 {
     public GameObject mirrorReflection;
     public GameObject sister;
+    public GameObject bedMonster;
+    public GameObject eldritchFog;
     //public GameObject[] sky;
     //public GameObject[] eldritch;
     public Image skyImage;
@@ -16,7 +18,10 @@ public class Bedroom : MonoBehaviour
     public Image windowImage;
     public Sprite[] windowStates;
     public Button[] bedRoomButtons;
-
+    public Image furnitureImage;
+    public Sprite eldritchFurnitureSprite;
+    public Image midGround;
+    public Sprite eldritchMidGroundSprite;
 
     public int randInt;
 
@@ -63,29 +68,36 @@ public class Bedroom : MonoBehaviour
                 break;
             case GameManager.state.largeEvil:
                 randomSighting();
-                bushImage.sprite = bushStates[1];
+                bedMonster.SetActive(true);
+                eldritchFog.SetActive(true);
+                furnitureImage.sprite = eldritchFurnitureSprite;
+                midGround.sprite = eldritchMidGroundSprite;
+                
                 if (randInt == 4)
                 {
                     skyImage.sprite = skyState[2];
                     windowImage.gameObject.SetActive(true);
                     windowImage.sprite = windowStates[1];
-                    
+                    bushImage.sprite = bushStates[2];
                 }
                 else if (randInt == 3)
                 {
                     skyImage.sprite = skyState[3];
                     windowImage.gameObject.SetActive(false);
+                    bushImage.sprite = bushStates[3];
                 }
                 else if (randInt == 2)
                 {
                     skyImage.sprite = skyState[4];
                     windowImage.gameObject.SetActive(false);
+                    bushImage.sprite = bushStates[3];
                 }
                 else
                 {
                     skyImage.sprite = skyState[2];
                     windowImage.gameObject.SetActive(true);
                     windowImage.sprite = windowStates[2];
+                    bushImage.sprite = bushStates[2];
                 }
                 break;
         }

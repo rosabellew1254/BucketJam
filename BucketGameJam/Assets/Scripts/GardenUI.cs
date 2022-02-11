@@ -30,13 +30,29 @@ public class GardenUI : MonoBehaviour
     public Sprite[] spriteNormalDropdownDisplaysDown;
     public Sprite[] spriteEldrichDropdownDisplaysDown;
 
+    public Image background;
+    public Sprite eldritchBackground;
+    public Image grassMain;
+    public Sprite eldritchGrassMain;
+    public Image grassBack;
+    public Sprite eldritchGrassBack;
+    public Image grassFront;
+    public Sprite eldritchGrassFront;
+    public GameObject fog;
+
     // Start is called before the first frame update
     void Start()
     {
         gm = GameManager.gm;
         int numPlants = (int)GameManager.plants.terminator;
+        
         if (gm.worldState == GameManager.state.largeEvil)
         {
+            background.sprite = eldritchBackground;
+            grassMain.sprite = eldritchGrassMain;
+            grassBack.sprite = eldritchGrassBack;
+            grassFront.sprite = eldritchGrassFront;
+            fog.SetActive(true);
             for (int i = 0; i < numPlants; i++)
             {
                 availableSeeds[i].GetComponent<Image>().sprite = spriteEldrichAvailableSeeds[i];
