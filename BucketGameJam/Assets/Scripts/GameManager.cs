@@ -300,7 +300,6 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < maxDays + 1; i++)
         {
             Journal.stateHistory[i] = (state)PlayerPrefs.GetInt("stateHistory" + i);
-            Debug.Log("state history " + i + " is: " + Journal.stateHistory[i]);
         }
         for (int i = 0; i < Garden.garden.numHoles; i++)
         {
@@ -314,4 +313,28 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void UpdateButtonSprite(Button _button, Sprite _normalUnselected, Sprite _normalHighlighted, Sprite _eldritchUnselected, Sprite _eldritchHighlighted)
+    {
+        SpriteState bState = new SpriteState();
+        switch (worldState)
+        {
+            case state.normal:
+            case state.smallEvil:
+                _button.image.sprite = _normalUnselected;
+                _button.transition = Selectable.Transition.SpriteSwap;
+                bState.highlightedSprite = _normalHighlighted;
+                _button.spriteState = bState;
+                break;
+            case state.largeEvil:
+                _button.image.sprite = _eldritchUnselected;
+                _button.transition = Selectable.Transition.SpriteSwap;
+                bState.highlightedSprite = _eldritchHighlighted;
+                _button.spriteState = bState;
+                break;
+            case state.terminator:
+                break;
+            default:
+                break;
+        }
+    }
 }
