@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0965b8cd60cfb9f45b9eaa42ff8836ba
+guid: 41b5543d2d794d447a1d1a805123d64c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 782775412253235548
-    second: Town_Shop_Normal_Full_0
+      213: -1655567617255793425
+    second: Town_Farm_Eldritch_OuterGlow_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -104,22 +104,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Town_Shop_Normal_Full_0
+      name: Town_Farm_Eldritch_OuterGlow_0
       rect:
         serializedVersion: 2
-        x: 970
-        y: 596
-        width: 234
-        height: 310
+        x: 145
+        y: 0
+        width: 883
+        height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c599342171afcda00800000000000000
-      internalID: 782775412253235548
+      spriteID: fec14df060e3609e0800000000000000
+      internalID: -1655567617255793425
       vertices: []
       indices: 
       edges: []
