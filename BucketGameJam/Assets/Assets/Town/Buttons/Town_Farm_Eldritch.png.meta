@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 0965b8cd60cfb9f45b9eaa42ff8836ba
+guid: d5d85e4cf9d964a4a9096ab5f11c9ae3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 782775412253235548
-    second: Town_Shop_Normal_Full_0
+      213: 5555472127484853609
+    second: Town_Farm_Eldritch_0
+  - first:
+      213: -7017166782808413837
+    second: Town_Farm_Eldritch_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -54,7 +57,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -104,27 +107,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Town_Shop_Normal_Full_0
+      name: Town_Farm_Eldritch_0
       rect:
         serializedVersion: 2
-        x: 970
-        y: 596
-        width: 234
-        height: 310
+        x: 145
+        y: 0
+        width: 883
+        height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c599342171afcda00800000000000000
-      internalID: 782775412253235548
+      spriteID: 96d715e3770091d40800000000000000
+      internalID: 5555472127484853609
       vertices: []
       indices: 
       edges: []
       weights: []
-    outline: []
+    outline:
+    - - {x: -612, y: -540}
+      - {x: -619, y: -444}
+      - {x: -669, y: -465}
+      - {x: -799, y: -294}
+      - {x: -800, y: -142}
+      - {x: -716.56256, y: -78.312744}
+      - {x: -700, y: 7}
+      - {x: -671, y: 45}
+      - {x: -678, y: 161}
+      - {x: -597, y: 161}
+      - {x: -567, y: 70}
+      - {x: -561, y: -17}
+      - {x: -452, y: -38}
+      - {x: -327, y: -109}
+      - {x: -351, y: -156}
+      - {x: -347, y: -289}
+      - {x: -249, y: -278}
+      - {x: 59, y: -540}
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000

@@ -11,7 +11,9 @@ public class Town : MonoBehaviour
     public int townies;
     public Text nTownies;
     int san;
-    public Button[] bTownObjects;
+    public Button[] bTownObjects; // shop, farm
+    public Sprite[] spriteButtonNormal; // shopNor, shopNorOutline, farmNor, farmNorOutline
+    public Sprite[] spriteButtonEldritch; // shopEld, shopEldOutline, farmEld, farmEldOutline
     void Start()
     {
         pc = PlayerController.pc;
@@ -20,6 +22,11 @@ public class Town : MonoBehaviour
         {
             bTownObjects[i].GetComponent<Image>().alphaHitTestMinimumThreshold = GameManager.gm.alphaHitMinValue;
         }
+        //(button, normalUnselected, normalHighlighted, eldritchUnselected, eldritchHighlited)
+        //(shop, shopNor, shopNorOutline, shopEld, shopEldOutline)
+        GameManager.gm.UpdateButtonSprite(bTownObjects[0], spriteButtonNormal[0], spriteButtonNormal[1], spriteButtonEldritch[0], spriteButtonEldritch[1]);
+        //(farm, farmNor, farmNorOutline, farmEld, farmEldOutline)
+        GameManager.gm.UpdateButtonSprite(bTownObjects[1], spriteButtonNormal[2], spriteButtonNormal[3], spriteButtonEldritch[2], spriteButtonEldritch[3]);
     }
 
     public IEnumerator pcSetup()

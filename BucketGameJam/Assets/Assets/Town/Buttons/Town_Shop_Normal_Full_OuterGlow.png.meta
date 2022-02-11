@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0965b8cd60cfb9f45b9eaa42ff8836ba
+guid: 7d4cb5f965b49304c815a470cd468186
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 782775412253235548
-    second: Town_Shop_Normal_Full_0
+      213: 9214592586670894027
+    second: Town_Shop_Normal_Full_OuterGlow_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Town_Shop_Normal_Full_0
+      name: Town_Shop_Normal_Full_OuterGlow_0
       rect:
         serializedVersion: 2
         x: 970
@@ -118,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c599342171afcda00800000000000000
-      internalID: 782775412253235548
+      spriteID: bcb6776f22fc0ef70800000000000000
+      internalID: 9214592586670894027
       vertices: []
       indices: 
       edges: []
