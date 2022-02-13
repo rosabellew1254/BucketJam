@@ -8,12 +8,19 @@ public class Journal : MonoBehaviour
     string[] JournalPagesNormal;
     string[] JournalPagesSmallEvil;
     string[] JournalpagesLargeEvil;
+
+    public Sprite[] jSketch_Norm;
+    public Sprite[] jSketch_Low;
+    public Sprite[] jSketch_High;
+
     public int currentpage = 0;
     public Button TurnLeftPage;
     public Button TurnRightPage;
     public static GameManager.state[] stateHistory;
 
     public Sprite[] bookState;
+    public Sprite[] journalSketch;
+    public Image sketch;
     public Image journal;
     public Text entry;
     public TextAsset textAssetData;
@@ -105,6 +112,7 @@ public class Journal : MonoBehaviour
         currentpage = _page;
         GameManager.state state = stateHistory[_page];
         int stateCount = 0;
+        sketch.sprite = journalSketch[_page];
         for (int i = 0; i < _page; i++)
         {
             if (stateHistory[i] == state)
