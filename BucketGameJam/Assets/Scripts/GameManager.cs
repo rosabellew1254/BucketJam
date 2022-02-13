@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
 
     public float alphaHitMinValue;
     Action action;
-
+    public Sprite[] journalSketch;
 
     private void Awake()
     {
@@ -253,6 +253,7 @@ public class GameManager : MonoBehaviour
         UpdatePlayerPrefs("money", initialMoney, initialMoney);
         UpdatePlayerPrefs("san", initialSanity, initialSanity);
         UpdatePlayerPrefs("turn", initDay, initDay);
+        Array.Clear(journalSketch, 0, journalSketch.Length);
         for (int i = 0; i < maxDays + 1; i++)
         {
             // resets the world state to normal for all days

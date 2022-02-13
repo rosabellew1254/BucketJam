@@ -19,7 +19,6 @@ public class Journal : MonoBehaviour
     public static GameManager.state[] stateHistory;
 
     public Sprite[] bookState;
-    public Sprite[] journalSketch;
     public Image sketch;
     public Image journal;
     public Text entry;
@@ -107,12 +106,36 @@ public class Journal : MonoBehaviour
         }
     }
 
+
+    public void SetPicture(int _day)
+    {
+
+        switch (gm.worldState)
+        {
+            case GameManager.state.normal:
+                gm.journalSketch[_day] = jSketch_Norm[_day];
+                break;
+            case GameManager.state.smallEvil:
+                gm.journalSketch[_day] = jSketch_Low[_day];
+                break;
+            case GameManager.state.largeEvil:
+                gm.journalSketch[_day] = jSketch_High[_day];
+                break;
+            default:
+                break;
+        }
+    }
+
     public void DisplayPage(int _page)
     {
         currentpage = _page;
         GameManager.state state = stateHistory[_page];
         int stateCount = 0;
-        sketch.sprite = journalSketch[_page];
+        if (gm.journalSketch[currentpage] == null)
+        {
+            SetPicture(currentpage);
+        }
+        sketch.sprite = gm.journalSketch[currentpage];
         for (int i = 0; i < _page; i++)
         {
             if (stateHistory[i] == state)
