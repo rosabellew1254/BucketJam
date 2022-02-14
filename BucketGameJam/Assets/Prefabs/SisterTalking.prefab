@@ -682,6 +682,11 @@ MonoBehaviour:
   textBox: {fileID: 2027899645223391360}
   textBoxFill: {fileID: 5806371820580569395}
   choices: {fileID: 5445216824913194801}
+  sisterLook:
+  - {fileID: 21300000, guid: bced2574b4069ce4f90b5fc0cf6a8273, type: 3}
+  - {fileID: 21300000, guid: b059712bd336d18459f5f95e83257fb8, type: 3}
+  - {fileID: 21300000, guid: 93d34d77d55139146a9b86a77c83c1e9, type: 3}
+  sisterCharacter: {fileID: 8301760313234511360}
   textDialog:
   - U suk at farm
   - Git gud

@@ -8,7 +8,8 @@ public class Sister : MonoBehaviour
     public Image textBox;
     public Text textBoxFill;
     public GameObject choices;
-
+    public Sprite[] sisterLook;
+    public Image sisterCharacter;
 
 
     [Space]
