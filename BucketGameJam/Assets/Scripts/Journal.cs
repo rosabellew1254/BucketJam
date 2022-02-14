@@ -41,6 +41,7 @@ public class Journal : MonoBehaviour
 
         for (int i = 0; i < tableSize; i++)
         {
+            Debug.Log(i);
             JournalPagesNormal[i] = TextFixer(data[numColumns * (i + 1)]);
             JournalPagesSmallEvil[i] = TextFixer(data[numColumns * (i + 1) + 1]);
             JournalpagesLargeEvil[i] = TextFixer(data[numColumns * (i + 1) + 2]);
@@ -104,25 +105,17 @@ public class Journal : MonoBehaviour
     {
         currentpage = _page;
         GameManager.state state = stateHistory[_page];
-        int stateCount = 0;
-        for (int i = 0; i < _page; i++)
-        {
-            if (stateHistory[i] == state)
-            {
-                stateCount++;
-            }
-        }
 
         switch (state)
         {
             case GameManager.state.smallEvil:
-                entry.text = JournalPagesSmallEvil[stateCount];
+                entry.text = JournalPagesSmallEvil[_page];
                 break;
             case GameManager.state.largeEvil:
-                entry.text = JournalpagesLargeEvil[stateCount];
+                entry.text = JournalpagesLargeEvil[_page];
                 break;
             default:
-                entry.text = JournalPagesNormal[stateCount];
+                entry.text = JournalPagesNormal[_page];
                 break;
         }
 
@@ -131,7 +124,7 @@ public class Journal : MonoBehaviour
 
         Debug.Log("Day: " + _page);
         Debug.Log("Sanity: " + state);
-        Debug.Log("Journal Entry Index: " + stateCount);
+        Debug.Log("Journal Entry Index: " + _page);
     }
 
     public void PageFlip(int _change)
