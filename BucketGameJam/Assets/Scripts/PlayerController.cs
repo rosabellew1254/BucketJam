@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
             bMainMenu.sprite = bMainMenuState[0];
             bInventory.sprite = bInventoryState[0];
         }
-
+        CursorScript.cursor.UpdateSprite();
     }
 
     public void OnMainMenu()

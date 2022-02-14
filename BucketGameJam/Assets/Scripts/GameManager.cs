@@ -117,6 +117,7 @@ public class GameManager : MonoBehaviour
             worldState = state.normal;
             Debug.Log("Passed Through Check for Sanity");
         }
+        CursorScript.cursor.UpdateSprite();
     }
     
     public void AdvanceDay()
