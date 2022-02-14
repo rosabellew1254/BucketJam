@@ -13,7 +13,9 @@ public class GardenUI : MonoBehaviour
     public Text[] growthProgress;
     GameObject[] plantInSoil;
     public Button door;
-    
+    public Sprite[] spriteDoor;
+
+
     GameManager.plants selectedSeed;
     public GameObject[] availableSeeds;
     public GameObject[] dropdownDisplays;
@@ -61,6 +63,7 @@ public class GardenUI : MonoBehaviour
             dropdownList.GetComponent<Image>().sprite = spriteEldrichDropdownList;
         }
         door.GetComponent<Image>().alphaHitTestMinimumThreshold = gm.alphaHitMinValue;
+        gm.UpdateButtonSprite(door, spriteDoor[0], spriteDoor[1], spriteDoor[2], spriteDoor[3]);
         StartCoroutine(Setup());
     }
 

@@ -1376,7 +1376,7 @@ GameObject:
   - component: {fileID: 365647842}
   - component: {fileID: 365647841}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2625,6 +2625,11 @@ MonoBehaviour:
   - {fileID: 21965707}
   - {fileID: 1487179616}
   door: {fileID: 365647841}
+  spriteDoor:
+  - {fileID: 7063688994137567007, guid: 0d3b99ea3fb11f043ababec44be69533, type: 3}
+  - {fileID: 7124951453407900223, guid: f224e6e9aec98f3418ccb930710ee3ec, type: 3}
+  - {fileID: -3042188608430797223, guid: f677266be49a02840bc41db0eaabf4d9, type: 3}
+  - {fileID: 4978833926646247575, guid: 050c0985d5e90c8478a0353661135b4f, type: 3}
   availableSeeds:
   - {fileID: 1772243553}
   - {fileID: 1639642807}
