@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public enum plants { turnip, strawberry, eyePomegranite, mouthApple, terminator}
     public enum scenes { frontEnd, town, garden, shop, bedroom, endScene, terminator }
     public enum state { normal, smallEvil, largeEvil, terminator }
-
+    public enum sisterStatus { sick, cured, dead}
 
     [Space]
     [Header("Menus")]
@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     public state worldState;
 
     public bool isSiblingAlive = true;
+    public sisterStatus mySister;
     public int curDay;
     public int initDay = 0;
     public int maxDays = 36;
@@ -134,24 +135,22 @@ public class GameManager : MonoBehaviour
 
     public void DayCheck()
     {
-        if (isSiblingAlive == false)
+        if (curDay == 20)
         {
-            Debug.Log("Your sibling is dead");
-        }
-        else if (curDay == 20)
-        {
-            if (Inventory.inventory.money >= gm.moneyRequiredToSaveSibling)
+            if (Inventory.inventory.money >= moneyRequiredToSaveSibling)
             {
-                isSiblingAlive = true;
-                Inventory.inventory.money -= gm.moneyRequiredToSaveSibling;
+                Inventory.inventory.AdjustMoney(-moneyRequiredToSaveSibling);
+
+                mySister = sisterStatus.cured;
                 Debug.Log("You have spent your money to save your sibling from illness");
             }
             else
             {
-                isSiblingAlive = false;
-                HideSister();
+                mySister = sisterStatus.dead;
                 Debug.Log("Your sibling has died");
             }
+            UpdatePlayerPrefs("sisterStatus", (int)mySister, (int)sisterStatus.sick);
+            ChangeSisterButton();
         }
         /*else if (PlayerController.pc.curSanity < 0 && curDay > 20)
         {
@@ -183,13 +182,14 @@ public class GameManager : MonoBehaviour
                 UpdatePlayerPrefs("seed" + i, Inventory.inventory.seeds[i], 0);
                 UpdatePlayerPrefs("plant" + i, Inventory.inventory.plants[i], 0);
             }
+            UpdatePlayerPrefs("sisterStatus", (int)mySister, (int)sisterStatus.sick);
         }
     }
 
-    void HideSister()
+    void ChangeSisterButton()
     {
         Bedroom Broom = FindObjectOfType<Bedroom>().GetComponent<Bedroom>();
-        Broom.SetSisterFalse();
+        Broom.UpdateSisterButton();
     }
 
     void ShowDaySummary()
@@ -212,6 +212,7 @@ public class GameManager : MonoBehaviour
     public void DaySummaryContinue()
     {
         daySummary.SetActive(false);
+        UpdatePlayerPrefs("sisterStatus", (int)mySister, (int)sisterStatus.sick);
     }
 
     public void SliderMasking()
@@ -263,6 +264,8 @@ public class GameManager : MonoBehaviour
             UpdatePlayerPrefs("seed" + i, 0, 0);
             UpdatePlayerPrefs("plant" + i, 0, 0);
         }
+        UpdatePlayerPrefs("sisterStatus", (int)sisterStatus.sick, (int)sisterStatus.sick);
+        
         SetupGameValues();
         PlayerController.pc.AdjustSanity(0);
         date.text = "Date: " + initDay + "/36";
@@ -306,6 +309,7 @@ public class GameManager : MonoBehaviour
             Inventory.inventory.seeds[i] = PlayerPrefs.GetInt("seed" + i);
             Inventory.inventory.plants[i] = PlayerPrefs.GetInt("plant" + i);
         }
+        mySister = (sisterStatus)PlayerPrefs.GetInt("sisterStatus");
     }
 
     public void UpdateButtonSprite(Button _button, Sprite _normalUnselected, Sprite _normalHighlighted, Sprite _eldritchUnselected, Sprite _eldritchHighlighted)

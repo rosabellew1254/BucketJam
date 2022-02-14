@@ -27,7 +27,79 @@ public class Ending : MonoBehaviour
         //deserted = sanity normal, sibling dies
         //evil = sibling dies, sanity 0
 
-        if (GameManager.gm.isSiblingAlive == true && Inventory.inventory.money < GameManager.gm.competeMoneyGoal)
+
+        //endings: 
+        //  - 0: peaceful
+        //  - 1: double-faced
+        //  - 2: deserted
+        //  - 3: evil
+        switch (GameManager.gm.mySister)
+        {
+            case GameManager.sisterStatus.sick:
+                Debug.Log("sister can't remain sick until the end");
+                break;
+            case GameManager.sisterStatus.cured:
+                // have enough money to reach extended goal and the sister is alive
+                if (Inventory.inventory.money >= GameManager.gm.competeMoneyGoal)
+                {
+                    //sanity < 0
+                    if (GameManager.gm.worldState == GameManager.state.largeEvil)
+                    {
+                        // trigger evil ending
+                        currentEnding = 3;
+                    }
+                    //sanity >= 0
+                    else
+                    {
+                        // trigger double-faced ending
+                        currentEnding = 1;
+                    }
+                }
+                // not enough money to reach extended goal and sister is alive
+                else
+                {
+                    //sanity < 0
+                    if (GameManager.gm.worldState == GameManager.state.largeEvil)
+                    {
+                        // trigger deserted ending
+                        currentEnding = 2;
+                    }
+                    //sanity >= 0
+                    else
+                    {
+                        // trigger peaceful ending
+                        currentEnding = 0;
+                    }
+                }
+                break;
+            case GameManager.sisterStatus.dead:
+                // enough money to reach extended goal and sister is dead
+                if (Inventory.inventory.money >= GameManager.gm.competeMoneyGoal)
+                {
+                    //sanity < 0
+                    if (GameManager.gm.worldState == GameManager.state.largeEvil)
+                    {
+                        // trigger evil ending
+                        currentEnding = 3;
+                    }
+                    //sanity >= 0
+                    else
+                    {
+                        // trigger deserted ending
+                        currentEnding = 2;
+                    }
+                }
+                // not enough money to reach extended goal and sister is dead
+                else
+                {
+                    // trigger deserted ending no matter what sanity level the player is in
+                    currentEnding = 2;
+                }
+                break;
+            default:
+                break;
+        }
+        /*if (GameManager.gm.isSiblingAlive == true && Inventory.inventory.money < GameManager.gm.competeMoneyGoal)
         {
             //peaceful end
             currentEnding = 0;
@@ -51,7 +123,7 @@ public class Ending : MonoBehaviour
         else
         {
             Debug.Log("Oof");
-        }
+        }*/
 
         endNameText.text = endName[currentEnding];
         endingFillerText.text = endFill[currentEnding];
