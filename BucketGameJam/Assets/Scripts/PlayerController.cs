@@ -78,6 +78,11 @@ public class PlayerController : MonoBehaviour
         confirm = Instantiate(gm.confirmPrefab, gm.generalHUD.gameObject.transform.position, Quaternion.identity, gm.generalHUD.gameObject.transform);
     }
     
+    public void OnToggleMusic()
+    {
+
+    }
+
     public void OnInventory()
     {
 
