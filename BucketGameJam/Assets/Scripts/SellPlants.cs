@@ -100,6 +100,8 @@ public class SellPlants : MonoBehaviour
             inventory.AdjustPlantQuantity((GameManager.plants)i, -sellQuantity[i]);
         }
 
+        FindObjectOfType<CursorScript>().UpdateSprite();
+
         CloseMenu();
     }
 
