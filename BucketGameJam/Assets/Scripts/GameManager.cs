@@ -137,9 +137,10 @@ public class GameManager : MonoBehaviour
     {
         if (curDay == 20)
         {
-            if (Inventory.inventory.money >= gm.moneyRequiredToSaveSibling)
+            if (Inventory.inventory.money >= moneyRequiredToSaveSibling)
             {
-                Inventory.inventory.money -= gm.moneyRequiredToSaveSibling;
+                Inventory.inventory.AdjustMoney(-moneyRequiredToSaveSibling);
+
                 mySister = sisterStatus.cured;
                 Debug.Log("You have spent your money to save your sibling from illness");
             }
@@ -216,6 +217,7 @@ public class GameManager : MonoBehaviour
     public void DaySummaryContinue()
     {
         daySummary.SetActive(false);
+        UpdatePlayerPrefs("sisterStatus", (int)mySister, (int)sisterStatus.sick);
     }
 
     public void SliderMasking()

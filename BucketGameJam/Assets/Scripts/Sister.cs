@@ -10,6 +10,7 @@ public class Sister : MonoBehaviour
     public GameObject choices;
     public Sprite[] sisterLook;
     public Image sisterCharacter;
+    public Image bearCharacter;
 
 
     [Space]

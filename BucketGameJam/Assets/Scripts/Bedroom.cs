@@ -46,19 +46,22 @@ public class Bedroom : MonoBehaviour
             bedRoomButtons[i].GetComponent<Image>().alphaHitTestMinimumThreshold = gm.alphaHitMinValue;
         }
         //sister's bed sprite update
-        switch (gm.worldState)
+        if (gm.mySister == GameManager.sisterStatus.sick)
         {
-            case GameManager.state.normal:
-            case GameManager.state.smallEvil:
-                iSisterBed.sprite = spriteSisterBed[0];
-                break;
-            case GameManager.state.largeEvil:
-                iSisterBed.sprite = spriteSisterBed[1];
-                break;
-            case GameManager.state.terminator:
-                break;
-            default:
-                break;
+            switch (gm.worldState)
+            {
+                case GameManager.state.normal:
+                case GameManager.state.smallEvil:
+                    iSisterBed.sprite = spriteSisterBed[0];
+                    break;
+                case GameManager.state.largeEvil:
+                    iSisterBed.sprite = spriteSisterBed[1];
+                    break;
+                case GameManager.state.terminator:
+                    break;
+                default:
+                    break;
+            }
         }
 
         //bed:0, normal: 0, highlight: 1
@@ -74,7 +77,7 @@ public class Bedroom : MonoBehaviour
         gm.UpdateButtonSprite(bedRoomButtons[3], spriteButtonNormal[6], spriteButtonNormal[7], spriteButtonEldritch[6], spriteButtonEldritch[7]);
 
         // sister(sick:4, cured:5, bear:6) need to be implemented separately
-
+        UpdateSisterButton();
 
 
     }
@@ -168,16 +171,22 @@ public class Bedroom : MonoBehaviour
         //sisterButton = Instantiate(GameManager.gm.sister, gameObject.transform.position, Quaternion.identity, gameObject.transform);
         sisterMenu = Instantiate(GameManager.gm.sister, gameObject.transform.position, Quaternion.identity, gameObject.transform);
         // sister(sick:4, cured:5, bear:6) need to be implemented separately
+        GameObject sisterImage = sisterMenu.GetComponent<Sister>().sisterCharacter.gameObject;
+        GameObject bearImage = sisterMenu.GetComponent<Sister>().bearCharacter.gameObject;
+        sisterImage.gameObject.SetActive(false);
+        bearImage.gameObject.SetActive(false);
         switch (gm.mySister)
         {
             case GameManager.sisterStatus.sick:
-                sisterMenu.GetComponent<Sister>().sisterCharacter.sprite = sisterMenu.GetComponent<Sister>().sisterLook[0];
+                sisterImage.SetActive(true);
+                sisterImage.GetComponent<Image>().sprite = sisterMenu.GetComponent<Sister>().sisterLook[0];
                 break;
             case GameManager.sisterStatus.cured:
-                sisterMenu.GetComponent<Sister>().sisterCharacter.sprite = sisterMenu.GetComponent<Sister>().sisterLook[1];
+                sisterImage.SetActive(true);
+                sisterImage.GetComponent<Image>().sprite = sisterMenu.GetComponent<Sister>().sisterLook[1];
                 break;
             case GameManager.sisterStatus.dead:
-                sisterMenu.GetComponent<Sister>().sisterCharacter.sprite = sisterMenu.GetComponent<Sister>().sisterLook[2];
+                bearImage.gameObject.SetActive(true);
                 break;
             default:
                 break;
@@ -190,7 +199,7 @@ public class Bedroom : MonoBehaviour
         {
             bedRoomButtons[4 + i].gameObject.SetActive(false);
         }
-        // sister(sick:4, cured:5, bear:6) need to be implemented separately
+        // sister(sick:4, cured:5, bear:6)
         switch (gm.mySister)
         {
             case GameManager.sisterStatus.sick:
