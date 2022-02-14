@@ -8,11 +8,16 @@ public class Journal : MonoBehaviour
     string[] JournalPagesNormal;
     string[] JournalPagesSmallEvil;
     string[] JournalpagesLargeEvil;
-
+    [Space]
+    [Space]
     public Sprite[] jSketch_Norm;
     public Sprite[] jSketch_Low;
     public Sprite[] jSketch_High;
-
+    [Space]
+    public Sprite[] jSketch_Case1;
+    public Sprite[] jSketch_Case2;
+    [Space]
+    [Space]
     public int currentpage = 0;
     public Button TurnLeftPage;
     public Button TurnRightPage;
