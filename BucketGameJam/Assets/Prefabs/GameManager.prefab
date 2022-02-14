@@ -88,6 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb6b344795d6fa14385a488e0e9079c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myImage: {fileID: 186746859}
   normalSprite: {fileID: 21300000, guid: 0785cd5e7d3fc954b86950e6ea16047b, type: 3}
   eldritchSprite: {fileID: 21300000, guid: 0f4ae79e5871b3e43bec6ab22c3f29e6, type: 3}
 --- !u!1 &1607914148
