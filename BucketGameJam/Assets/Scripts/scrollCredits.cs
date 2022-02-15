@@ -8,6 +8,7 @@ public class scrollCredits : MonoBehaviour
     Vector2 velocity;
     public float moveValue;
     public float delay;
+    public float duration;
 
     void Start()
     {
@@ -18,7 +19,7 @@ public class scrollCredits : MonoBehaviour
 
     void InvoLerp()
     {
-        StartCoroutine(LerpPosition(positionToMoveTo, 70));
+        StartCoroutine(LerpPosition(positionToMoveTo, duration));
     }
 
     IEnumerator LerpPosition(Vector2 targetPosition, float duration)
@@ -26,7 +27,7 @@ public class scrollCredits : MonoBehaviour
         float time = 0;
         while (time < duration)
         {
-            transform.position = Vector2.SmoothDamp(transform.position, targetPosition, ref velocity, time / duration, 40f);
+            transform.position = Vector2.SmoothDamp(transform.position, targetPosition, ref velocity, time / duration, 75f);
             //transform.position = Vector2.Lerp(startPosition, targetPosition, time / duration);
             time += Time.deltaTime;
             yield return null;

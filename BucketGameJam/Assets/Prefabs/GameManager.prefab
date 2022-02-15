@@ -162,6 +162,11 @@ MonoBehaviour:
   iSanitySlider: {fileID: 8252672033032773397}
   bMainMenu: {fileID: 5174694680876706669}
   bInventory: {fileID: 1747109109920045872}
+  musicToggle: {fileID: 7171829816541958537}
+  musicToggleImage: {fileID: 5466028677531399069}
+  musicToggleSprite:
+  - {fileID: 21300000, guid: c662d71e41ea5824cb82b3b309c93a94, type: 3}
+  - {fileID: 21300000, guid: 1ca673afd957d2d47992d9e5fefb97bf, type: 3}
 --- !u!1 &1612022985
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,7 +495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -518,11 +523,23 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 5466028677531399069}
   toggleTransition: 1
-  graphic: {fileID: 4861136199414279124}
+  graphic: {fileID: 0}
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1607914150}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnToggleMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1 &638696971130132105
 GameObject:
@@ -1860,8 +1877,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: c662d71e41ea5824cb82b3b309c93a94, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2765,7 +2782,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5427674263006727568}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -2778,7 +2795,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: c662d71e41ea5824cb82b3b309c93a94, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2986,7 +3003,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8995903290052027876
 RectTransform:
   m_ObjectHideFlags: 0
