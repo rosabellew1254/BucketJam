@@ -5,17 +5,16 @@ using System;
 public class Journal : MonoBehaviour
 {
     public string[] Journalpages;
-    string[] JournalPagesNormal;
-    string[] JournalPagesSmallEvil;
-    string[] JournalpagesLargeEvil;
+    public string[] JournalPagesNormal;
+    public string[] JournalPagesSmallEvil;
+    public string[] JournalpagesLargeEvil;
     [Space]
     [Space]
     public Sprite[] jSketch_Norm;
     public Sprite[] jSketch_Low;
     public Sprite[] jSketch_High;
     [Space]
-    public Sprite[] jSketch_Case1;
-    public Sprite[] jSketch_Case2;
+    public Sprite[] jSketch_SisDead;
     [Space]
     [Space]
     public int currentpage = 0;
@@ -125,38 +124,42 @@ public class Journal : MonoBehaviour
         //  if nothing in any array, default to normal
 
 
-
-        switch (gm.worldState)
+        Debug.Log("SET PIC");
+        switch (stateHistory[_day])
         {
             case GameManager.state.normal:
                 gm.journalSketch[_day] = jSketch_Norm[_day];
                 break;
             case GameManager.state.smallEvil:
-                gm.journalSketch[_day] = jSketch_Low[_day];
+                
                 if (jSketch_Low[_day] == null)
                 {
                     gm.journalSketch[_day] = jSketch_Norm[_day];
                 }
+                else
+                {
+                    gm.journalSketch[_day] = jSketch_Low[_day];
+                }
                 break;
             case GameManager.state.largeEvil:
-                gm.journalSketch[_day] = jSketch_High[_day];
+                
                 if (jSketch_High[_day] == null)
                 {
                     gm.journalSketch[_day] = jSketch_Norm[_day];
+                }
+                else
+                {
+                    gm.journalSketch[_day] = jSketch_High[_day];
                 }
                 break;
             default:
                 break;
         }
 
-        switch (gm.isSiblingAlive)
+        if (gm.mySister == GameManager.sisterStatus.dead)
         {
-            case true:
-                gm.journalSketch[_day] = jSketch_Norm[_day];
-                break;
-            case false:
-                gm.journalSketch[_day] = jSketch_Case2[_day];
-                break;
+            Debug.Log("SIS DEAD");
+            gm.journalSketch[_day] = jSketch_SisDead[_day];
         }
     }
 
@@ -164,24 +167,47 @@ public class Journal : MonoBehaviour
     {
         currentpage = _page;
         GameManager.state state = stateHistory[_page];
-        if (gm.journalSketch[currentpage] == null)
-        {
-            SetPicture(currentpage);
-        }
-        sketch.sprite = gm.journalSketch[currentpage];
-
         switch (state)
         {
             case GameManager.state.smallEvil:
                 entry.text = JournalPagesSmallEvil[_page];
+                gm.journalSketch[_page] = jSketch_Low[_page];
+                if (gm.mySister == GameManager.sisterStatus.dead)
+                {
+                    Debug.Log("SIS DEAD");
+                    if (jSketch_SisDead[_page] != null)
+                    {
+                        gm.journalSketch[_page] = jSketch_SisDead[_page];
+                    }
+                }
                 break;
             case GameManager.state.largeEvil:
-                entry.text = JournalpagesLargeEvil[_page];
+                entry.text = JournalpagesLargeEvil[_page]; 
+                gm.journalSketch[_page] = jSketch_High[_page];
+                if (gm.mySister == GameManager.sisterStatus.dead)
+                {
+                    Debug.Log("SIS DEAD");
+                    if (jSketch_SisDead[_page] != null)
+                    {
+                        gm.journalSketch[_page] = jSketch_SisDead[_page];
+                    }
+                }
                 break;
             default:
                 entry.text = JournalPagesNormal[_page];
+                gm.journalSketch[_page] = jSketch_Norm[_page];
+                if (gm.mySister == GameManager.sisterStatus.dead)
+                {
+                    Debug.Log("SIS DEAD");
+                    if (jSketch_SisDead[_page] != null)
+                    {
+                        gm.journalSketch[_page] = jSketch_SisDead[_page];
+                    }
+                }
                 break;
         }
+
+        sketch.sprite = gm.journalSketch[currentpage];
 
         TurnLeftPage.gameObject.SetActive(currentpage > 0);
         TurnRightPage.gameObject.SetActive(currentpage < gm.curDay);
