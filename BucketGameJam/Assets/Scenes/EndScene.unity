@@ -393,29 +393,32 @@ MonoBehaviour:
   - '"It''s Too Late" Ending'
   - '"Eldritch Abomination" Ending'
   endFill:
-  - "In the end, I managed to gather enough money to buy medicine for my sister.
-    She is doing well now, and the town seems happy. My crops are still flourishing
-    like crazy and the town loves them, but my sister says she\u2019s sick of turnips\u2026
-    Perhaps I should plant some carrots next season instead. "
-  - "In the end, I managed to gather enough money to save my sister. The journey
-    getting here was tough, and things are still pretty weird around here, but it
-    was worth it to see my sister smile again. However, I feel like something\u2019s
-    watching me everywhere I go, I\u2019m not sure what I should do about it\u2026 "
-  - "In the end, I was too late. I slacked off and did not come up with enough money
-    to save my sister\u2026 She rests in a grave I used the rest of my money to buy\u2026
-    I am glad she\u2019s not suffering any longer\u2026 I hope she\u2019s happy now
-    wherever  she is\u2026 "
-  - "In the end, the world as we know it is collapsing. At first a strange mist took
-    over the town and abnormal creatures began to inhabit earth. My body has changed
-    as well, I don\u2019t look like a human anymore. However, I also feel.. Powerful\u2026
-    so powerful. My sister and the people of the world may be dead or dying, but
-    I am in control now. I am rich and powerful and it was all worth it. I won't
-    stop planting the eldritch fruits until I have complete control. The world will
-    be mine, whether it dies or lives. "
+  - "My farm is flourishing thanks to all the work I\u2019ve been putting into it
+    lately and the town loves my crops! Clove is healthier than ever and has been
+    having a blast playing with the kids in town. We couldn't be happier, though
+    Clove might be if I tried planting something other than turnips. Maybe I\u2019ll
+    give it another go next season. "
+  - "After a lot of hardship I managed to raise enough to save Clove and she\u2019s
+    been doing really well. However in the process there have been some pretty strange
+    things popping up around town. I hope whatever it is will start clearing up soon.
+    Weirdly enough, I feel as though something\u2019s been watching me lately\u2026
+    but that can\u2019t be right?"
+  - "Working on the farm hasn\u2019t been the same ever since Clove passed. I keep
+    on going in her memory, but it's lonely without her. I\u2019ve been visiting
+    her grave on the farm everyday\u2026 it just isn\u2019t the same. I hope she\u2019s
+    resting well\u2026"
+  - Everything is collapsing. Spekleton is mine and I shall make sure it all burns
+    as the Horrors deem fit. I have been blessed with a strong body to carry out
+    this unholy duty. It is unfortunate that Clove will not see the world become
+    ours as she was too weak for the transition. The Horrors reassure me that they
+    can bring her back to me though if I manage to bring enough human life to fuel
+    her. I swear I will take control, my eldritch fruits will take root and spread
+    across the globe. It will all be mine, whether the world lives or dies in the
+    process is of no concern.
   endPicture:
   - {fileID: 21300000, guid: db9a24e3a9df657479874277362ff75a, type: 3}
   - {fileID: 21300000, guid: d6c49ada069a86540b20bff5df2e6a35, type: 3}
-  - {fileID: 21300000, guid: 5206c251aa129da4bb9dd15f173d0658, type: 3}
+  - {fileID: 21300000, guid: f7ab3970a4069a04893ba460443fcf4e, type: 3}
   - {fileID: 21300000, guid: 382aa9be780a3c644b3d973666b1eaa8, type: 3}
 --- !u!1 &625268929
 GameObject:
