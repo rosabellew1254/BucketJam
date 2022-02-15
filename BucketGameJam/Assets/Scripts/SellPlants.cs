@@ -21,6 +21,13 @@ public class SellPlants : MonoBehaviour
     public Button[] minusButtons;
     public Button[] plusButtons;
     public Button confirmButton;
+    public Image backgroundImage;
+    public Sprite backgroundEldritch;
+    public Sprite minusEldritchSprite;
+    public Sprite plusEldritchSprite;
+    public Sprite eldritchConfirmSprite;
+    public Image closeButtonImage;
+    public Sprite eldritchCloseSprite;
 
     private void Start()
     {
@@ -33,6 +40,18 @@ public class SellPlants : MonoBehaviour
         sanityChange = new int[numPlants];
 
         ShowButtons();
+
+        if (PlayerController.pc.curSanity < 0)
+        {
+            backgroundImage.sprite = backgroundEldritch;
+            for (int i = 0; i < minusButtons.Length; i++)
+            {
+                minusButtons[i].GetComponent<Image>().sprite = minusEldritchSprite;
+                plusButtons[i].GetComponent<Image>().sprite = plusEldritchSprite;
+            }
+            confirmButton.GetComponent<Image>().sprite = eldritchConfirmSprite;
+            closeButtonImage.sprite = eldritchCloseSprite;
+        }
 
         for (int i = 0; i < numPlants; i++)
         {
@@ -101,6 +120,7 @@ public class SellPlants : MonoBehaviour
         }
 
         FindObjectOfType<CursorScript>().UpdateSprite();
+        FindObjectOfType<Shop>().UpdateUiForSanity();
 
         CloseMenu();
     }

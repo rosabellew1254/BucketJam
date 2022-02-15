@@ -18,6 +18,24 @@ public class Shop : MonoBehaviour
     bool isBuying;
     public GameObject sellPlantsMenu;
 
+    public Image backgroundImage;
+    public Sprite eldritchBackgroundSprite;
+    public Sprite normalBackgroundSprite;
+    public Image shopkeeperImage;
+    public Sprite eldritchShopkeeperSprite;
+    public Sprite normalShopkeeperSprite;
+
+    public Sprite eldritchSellCropsSprite;
+    public Sprite normalSellCropsSprite;
+    public Sprite eldritchBuySeedsSprite;
+    public Sprite normalBuySeedsSprite;
+    public Image goToTownButtonImage;
+    public Sprite eldritchGeneralButton;
+    public Sprite normalGoToTownButton;
+
+
+
+
     private void Start()
     {
         gm = GameManager.gm;
@@ -70,5 +88,31 @@ public class Shop : MonoBehaviour
     void ShowBuySeedsButton()
     {
         buttonBuySeeds.gameObject.SetActive(selectedPlant != GameManager.plants.terminator && inventory.money >= selectedPrice);
+    }
+
+    public void UpdateUiForSanity()
+    {
+        Image sellPlants = buttonSellPlants.GetComponent<Image>();
+        Image buySeeds = buttonBuySeeds.GetComponent<Image>();
+        bool isEvil = PlayerController.pc.curSanity < 0;
+
+        if (isEvil)
+        {
+            backgroundImage.sprite = eldritchBackgroundSprite;
+            shopkeeperImage.sprite = eldritchShopkeeperSprite;
+            sellPlants.sprite = eldritchSellCropsSprite;
+            buySeeds.sprite = eldritchBuySeedsSprite;
+            goToTownButtonImage.sprite = eldritchGeneralButton;
+        }
+        else
+        {
+            backgroundImage.sprite = normalBackgroundSprite;
+            shopkeeperImage.sprite = normalShopkeeperSprite;
+            sellPlants.sprite = normalSellCropsSprite;
+            buySeeds.sprite = normalBuySeedsSprite;
+            goToTownButtonImage.sprite = normalGoToTownButton;
+        }
+
+        goToTownButtonImage.transform.GetChild(0).gameObject.SetActive(isEvil);
     }
 }

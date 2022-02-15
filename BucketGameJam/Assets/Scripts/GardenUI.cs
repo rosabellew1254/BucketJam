@@ -57,9 +57,9 @@ public class GardenUI : MonoBehaviour
             grassBack.sprite = eldritchGrassBack;
             grassFront.sprite = eldritchGrassFront;
             goToTownButton.sprite = generalEldritchButtonSprite;
-            goToTownButton.GetComponentInChildren<Text>().gameObject.SetActive(true);
+            goToTownButton.transform.GetChild(0).gameObject.SetActive(true);
             harvestButton.sprite = generalEldritchButtonSprite;
-            harvestButton.GetComponentInChildren<Text>().gameObject.SetActive(true);
+            harvestButton.transform.GetChild(0).gameObject.SetActive(true);
             fog.SetActive(true);
             for (int i = 0; i < numPlants; i++)
             {
