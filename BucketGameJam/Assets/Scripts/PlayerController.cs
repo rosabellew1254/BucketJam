@@ -23,6 +23,10 @@ public class PlayerController : MonoBehaviour
     public Image bMainMenu;
     public Image bInventory;
 
+    public Toggle musicToggle;
+    public Image musicToggleImage;
+    public Sprite[] musicToggleSprite;
+
     GameManager gm;
     GameObject confirm;
 
@@ -80,7 +84,15 @@ public class PlayerController : MonoBehaviour
     
     public void OnToggleMusic()
     {
-
+        musicToggle = GameObject.Find("Toggle Music").GetComponent<Toggle>();
+        if (musicToggle.isOn == true)
+        {
+            musicToggleImage.sprite = musicToggleSprite[0];
+        }
+        else
+        {
+            musicToggleImage.sprite = musicToggleSprite[1];
+        }
     }
 
     public void OnInventory()
