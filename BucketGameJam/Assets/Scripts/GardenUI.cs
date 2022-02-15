@@ -41,6 +41,8 @@ public class GardenUI : MonoBehaviour
     public Image grassFront;
     public Sprite eldritchGrassFront;
     public GameObject fog;
+    public Image goToTownButton;
+    public Sprite generalEldritchButtonSprite;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +56,10 @@ public class GardenUI : MonoBehaviour
             grassMain.sprite = eldritchGrassMain;
             grassBack.sprite = eldritchGrassBack;
             grassFront.sprite = eldritchGrassFront;
+            goToTownButton.sprite = generalEldritchButtonSprite;
+            goToTownButton.GetComponentInChildren<Text>().gameObject.SetActive(true);
+            harvestButton.sprite = generalEldritchButtonSprite;
+            harvestButton.GetComponentInChildren<Text>().gameObject.SetActive(true);
             fog.SetActive(true);
             for (int i = 0; i < numPlants; i++)
             {
