@@ -164,19 +164,11 @@ public class Journal : MonoBehaviour
     {
         currentpage = _page;
         GameManager.state state = stateHistory[_page];
-        //int stateCount = 0;
         if (gm.journalSketch[currentpage] == null)
         {
             SetPicture(currentpage);
         }
         sketch.sprite = gm.journalSketch[currentpage];
-        /*for (int i = 0; i < _page; i++)
-        {
-            if (stateHistory[i] == state)
-            {
-                stateCount++;
-            }
-        }*/
 
         switch (state)
         {
