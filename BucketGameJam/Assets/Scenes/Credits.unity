@@ -1621,7 +1621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveValue: 2000
-  delay: 2
+  delay: 1.5
 --- !u!1 &674273112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2125,7 +2125,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 309.78052, y: 175.12442}
+  m_SizeDelta: {x: 309.78052, y: 211.85709}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1033068415
 MonoBehaviour:
@@ -2176,6 +2176,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1.3
   m_Text: 'Alex Kiselich
+
+    Katherine Murphy
 
     Mackenzie Scott
 
@@ -2937,7 +2939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveValue: 1500
-  delay: 12
+  delay: 11
 --- !u!1 &1516657140
 GameObject:
   m_ObjectHideFlags: 0
@@ -3261,7 +3263,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 384.349, y: 175.12439}
+  m_SizeDelta: {x: 384.349, y: 211.85703}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1562484173
 MonoBehaviour:
@@ -3315,6 +3317,8 @@ MonoBehaviour:
 
     Graphic Artist
 
+    Graphic Artist
+
     Lead Artist'
 --- !u!222 &1562484175
 CanvasRenderer:
@@ -3363,7 +3367,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 781.6295, y: 216.95132}
+  m_SizeDelta: {x: 781.6295, y: 261.84875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1646707605
 MonoBehaviour:

@@ -114,6 +114,16 @@ public class Journal : MonoBehaviour
 
     public void SetPicture(int _day)
     {
+        //grab from array of pictures
+        //depending on the state of the world, pick from according array
+        // If sister dies or lives draw from another table for specific days
+        //
+        //draw from norm
+        //  if state diff - change to another array (maybe leave spots as empty in other arrays?)
+        //  if sister dead or alive change array
+        //  if nothing in any array, default to normal
+
+
 
         switch (gm.worldState)
         {
@@ -122,11 +132,29 @@ public class Journal : MonoBehaviour
                 break;
             case GameManager.state.smallEvil:
                 gm.journalSketch[_day] = jSketch_Low[_day];
+                if (jSketch_Low[_day] == null)
+                {
+                    gm.journalSketch[_day] = jSketch_Norm[_day];
+                }
                 break;
             case GameManager.state.largeEvil:
                 gm.journalSketch[_day] = jSketch_High[_day];
+                if (jSketch_High[_day] == null)
+                {
+                    gm.journalSketch[_day] = jSketch_Norm[_day];
+                }
                 break;
             default:
+                break;
+        }
+
+        switch (gm.isSiblingAlive)
+        {
+            case true:
+                gm.journalSketch[_day] = jSketch_Norm[_day];
+                break;
+            case false:
+                gm.journalSketch[_day] = jSketch_Case2[_day];
                 break;
         }
     }
