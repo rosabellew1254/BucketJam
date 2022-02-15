@@ -8,12 +8,23 @@ public class Journal : MonoBehaviour
     string[] JournalPagesNormal;
     string[] JournalPagesSmallEvil;
     string[] JournalpagesLargeEvil;
+    [Space]
+    [Space]
+    public Sprite[] jSketch_Norm;
+    public Sprite[] jSketch_Low;
+    public Sprite[] jSketch_High;
+    [Space]
+    public Sprite[] jSketch_Case1;
+    public Sprite[] jSketch_Case2;
+    [Space]
+    [Space]
     public int currentpage = 0;
     public Button TurnLeftPage;
     public Button TurnRightPage;
     public static GameManager.state[] stateHistory;
 
     public Sprite[] bookState;
+    public Image sketch;
     public Image journal;
     public Text entry;
     public TextAsset textAssetData;
@@ -101,10 +112,43 @@ public class Journal : MonoBehaviour
         }
     }
 
+
+    public void SetPicture(int _day)
+    {
+
+        switch (gm.worldState)
+        {
+            case GameManager.state.normal:
+                gm.journalSketch[_day] = jSketch_Norm[_day];
+                break;
+            case GameManager.state.smallEvil:
+                gm.journalSketch[_day] = jSketch_Low[_day];
+                break;
+            case GameManager.state.largeEvil:
+                gm.journalSketch[_day] = jSketch_High[_day];
+                break;
+            default:
+                break;
+        }
+    }
+
     public void DisplayPage(int _page)
     {
         currentpage = _page;
         GameManager.state state = stateHistory[_page];
+        //int stateCount = 0;
+        if (gm.journalSketch[currentpage] == null)
+        {
+            SetPicture(currentpage);
+        }
+        sketch.sprite = gm.journalSketch[currentpage];
+        /*for (int i = 0; i < _page; i++)
+        {
+            if (stateHistory[i] == state)
+            {
+                stateCount++;
+            }
+        }*/
 
         switch (state)
         {
