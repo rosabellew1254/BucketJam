@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
             gm = this;
         }
         curDay = PlayerPrefs.GetInt("turn");
-        worldState = (state)PlayerPrefs.GetInt("stateHistory" + curDay);
+        worldState = (state)PlayerPrefs.GetInt("stateHistory" + curDay, 0);
 
         tempWorldState = gm.worldState;
         date.text = "Date: " + curDay + "/36";
@@ -137,9 +137,10 @@ public class GameManager : MonoBehaviour
     {
         if (curDay == 20)
         {
-            if (Inventory.inventory.money >= gm.moneyRequiredToSaveSibling)
+            if (Inventory.inventory.money >= moneyRequiredToSaveSibling)
             {
-                Inventory.inventory.money -= gm.moneyRequiredToSaveSibling;
+                Inventory.inventory.AdjustMoney(-moneyRequiredToSaveSibling);
+
                 mySister = sisterStatus.cured;
                 Debug.Log("You have spent your money to save your sibling from illness");
             }
@@ -169,13 +170,8 @@ public class GameManager : MonoBehaviour
             UpdatePlayerPrefs("san", PlayerController.pc.curSanity, initialSanity);
             UpdatePlayerPrefs("money", Inventory.inventory.money, initialMoney);
             UpdatePlayerPrefs("turn", curDay, initDay);
-            for (int i = 0; i < maxDays + 1; i++)
-            {
-                if (i >= curDay)
-                {
-                    UpdatePlayerPrefs("stateHistory" + i, (int)worldState, (int)state.normal);
-                }
-            }
+            UpdatePlayerPrefs("stateHistory" + curDay, (int)worldState, (int)worldState);
+            Journal.stateHistory[curDay] = worldState;
             for (int i = 0; i < Garden.garden.numHoles; i++)
             {
                 UpdatePlayerPrefs("soil" + i, (int)Garden.garden.plants[i], (int)plants.terminator);
@@ -216,6 +212,7 @@ public class GameManager : MonoBehaviour
     public void DaySummaryContinue()
     {
         daySummary.SetActive(false);
+        UpdatePlayerPrefs("sisterStatus", (int)mySister, (int)sisterStatus.sick);
     }
 
     public void SliderMasking()
@@ -301,7 +298,7 @@ public class GameManager : MonoBehaviour
         Journal.stateHistory = new state[gm.maxDays + 1];
         for (int i = 0; i < maxDays + 1; i++)
         {
-            Journal.stateHistory[i] = (state)PlayerPrefs.GetInt("stateHistory" + i);
+            Journal.stateHistory[i] = (state)PlayerPrefs.GetInt("stateHistory" + i, 0);
         }
         for (int i = 0; i < Garden.garden.numHoles; i++)
         {

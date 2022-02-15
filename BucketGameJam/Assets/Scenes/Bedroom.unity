@@ -924,7 +924,6 @@ GameObject:
   - component: {fileID: 903572983}
   - component: {fileID: 903572981}
   - component: {fileID: 903572980}
-  - component: {fileID: 903572982}
   m_Layer: 5
   m_Name: SisterCured
   m_TagString: Untagged
@@ -1002,7 +1001,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 600, y: 300, z: 1100, w: 400}
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1017,27 +1016,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &903572982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903572979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9355241c91a9be8488793a9e6080acd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sister: 1
-  baseObjects:
-  - {fileID: 903572981}
-  firstPhase:
-  - {fileID: -4971461728505969104, guid: 47e4a3e6f852fc942b253ea3882a0996, type: 3}
-  secondPhase:
-  - {fileID: -4971461728505969104, guid: 47e4a3e6f852fc942b253ea3882a0996, type: 3}
-  thirdPhase:
-  - {fileID: -4971461728505969104, guid: 47e4a3e6f852fc942b253ea3882a0996, type: 3}
 --- !u!222 &903572983
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1145,7 +1123,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 909942964}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 596070994}
+        m_TargetAssemblyTypeName: Bedroom, Assembly-CSharp
+        m_MethodName: SisterSpeak
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &909942964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2658,7 +2648,6 @@ GameObject:
   - component: {fileID: 2031231104}
   - component: {fileID: 2031231103}
   - component: {fileID: 2031231102}
-  - component: {fileID: 2031231105}
   m_Layer: 5
   m_Name: SisterSick
   m_TagString: Untagged
@@ -2756,7 +2745,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 600, y: 300, z: 1100, w: 400}
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2779,24 +2768,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031231100}
   m_CullTransparentMesh: 0
---- !u!114 &2031231105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031231100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9355241c91a9be8488793a9e6080acd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sister: 1
-  baseObjects:
-  - {fileID: 2031231103}
-  firstPhase:
-  - {fileID: -4971461728505969104, guid: 47e4a3e6f852fc942b253ea3882a0996, type: 3}
-  secondPhase:
-  - {fileID: -4971461728505969104, guid: 47e4a3e6f852fc942b253ea3882a0996, type: 3}
-  thirdPhase:
-  - {fileID: -4971461728505969104, guid: 47e4a3e6f852fc942b253ea3882a0996, type: 3}
