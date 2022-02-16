@@ -420,6 +420,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d6c49ada069a86540b20bff5df2e6a35, type: 3}
   - {fileID: 21300000, guid: f7ab3970a4069a04893ba460443fcf4e, type: 3}
   - {fileID: 21300000, guid: 382aa9be780a3c644b3d973666b1eaa8, type: 3}
+  evilEndingMusicEvent:
+    Guid:
+      Data1: 1658799018
+      Data2: 1327736222
+      Data3: -1063512943
+      Data4: -1776358066
+    Path: event:/evil_ending
 --- !u!1 &625268929
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,10 +567,10 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 1714548866
-      Data2: 1259687661
-      Data3: -67369285
-      Data4: 71193757
+      Data1: 1658799018
+      Data2: 1327736222
+      Data3: -1063512943
+      Data4: -1776358066
     Path: event:/evil_ending
   Event: 
   PlayEvent: 1
