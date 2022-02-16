@@ -156,6 +156,7 @@ public class Journal : MonoBehaviour
         }
     }
 
+
     /*
                 switch (gm.mySister)
                 {
