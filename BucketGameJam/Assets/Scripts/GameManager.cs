@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
     public float alphaHitMinValue;
     Action action;
     public Sprite[] journalSketch;
+    public bool isNewGame;
 
     private void Awake()
     {
@@ -270,6 +271,7 @@ public class GameManager : MonoBehaviour
         SetupGameValues();
         PlayerController.pc.AdjustSanity(0);
         date.text = "Date: " + initDay + "/36";
+        isNewGame = true;
         LoadScene(4);
     }
 
