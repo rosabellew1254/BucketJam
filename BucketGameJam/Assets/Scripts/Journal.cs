@@ -154,39 +154,6 @@ public class Journal : MonoBehaviour
     }
 
 
-    public void SetDay20(GameManager.state _state)
-    {
-        switch (gm.mySister)
-        {
-            case GameManager.state.normal:
-                gm.journalSketch[_day] = jSketch_NormCured[_day];
-                break;
-            case GameManager.state.smallEvil:
-                
-                if (jSketch_LowCured[_day] == null)
-                {
-                    gm.journalSketch[_day] = jSketch_NormCured[_day];
-                }
-                else
-                {
-                    gm.journalSketch[_day] = jSketch_LowCured[_day];
-                }
-                break;
-            case GameManager.state.largeEvil:
-                
-                if (jSketch_MedCured[_day] == null)
-                {
-                    gm.journalSketch[_day] = jSketch_NormCured[_day];
-                }
-                else
-                {
-                    gm.journalSketch[_day] = jSketch_MedCured[_day];
-                }
-                break;
-            default:
-                break;
-        }
-    }
     /*
                 switch (gm.mySister)
                 {
