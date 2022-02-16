@@ -9,8 +9,6 @@ public class Bedroom : MonoBehaviour
     public GameObject sisterMenu;
     public GameObject bedMonster;
     public GameObject eldritchFog;
-    //public GameObject[] sky;
-    //public GameObject[] eldritch;
     public Image skyImage;
     public Sprite[] skyState;
     public Image bushImage;
@@ -28,6 +26,8 @@ public class Bedroom : MonoBehaviour
     public Image iSisterBed;
     public Sprite[] spriteSisterBed;
 
+    public Image introImage;
+    public Sprite introSprite2;
 
     public int randInt;
 
@@ -79,7 +79,76 @@ public class Bedroom : MonoBehaviour
         // sister(sick:4, cured:5, bear:6) need to be implemented separately
         UpdateSisterButton();
 
+        if (gm.isNewGame)
+        {
+            introImage.gameObject.SetActive(true);
+            StartCoroutine(CutScene());
+        }
+        else
+        {
+            Destroy(introImage.gameObject);
+        }
+    }
 
+    IEnumerator CutScene()
+    {
+        gm.generalHUD.SetActive(false);
+        float timer = 0f;
+        float timeBetweenTransitions = 1f;
+        GameObject dialogueBox = introImage.transform.GetChild(0).gameObject;
+        Text speaker = dialogueBox.transform.GetChild(0).GetComponent<Text>();
+        Text dialogue = dialogueBox.transform.GetChild(1).GetComponent<Text>();
+        introImage.color = Color.black;
+        dialogueBox.gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(2f);
+        while (timer < timeBetweenTransitions)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+            introImage.color = Color.Lerp(Color.black, Color.white, timer/timeBetweenTransitions);
+        }
+
+        dialogueBox.SetActive(true);
+        yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
+        dialogueBox.SetActive(false);
+        timer = 0f;
+        while (timer < timeBetweenTransitions)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+            introImage.color = Color.Lerp(Color.white, Color.black, timer / timeBetweenTransitions);
+        }
+        introImage.sprite = introSprite2;
+        timer = 0f;
+        while (timer < timeBetweenTransitions)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+            introImage.color = Color.Lerp(Color.black, Color.white, timer / timeBetweenTransitions);
+        }
+        speaker.text = "You";
+        dialogue.text = "Don't worry sister, I'll save you with my gardening powers.";
+        dialogueBox.SetActive(true);
+        yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
+        dialogueBox.SetActive(false);
+        timer = 0f;
+        while (timer < timeBetweenTransitions)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+            introImage.color = Color.Lerp(Color.white, Color.black, timer / timeBetweenTransitions);
+        }
+        timer = 0f;
+        while (timer < timeBetweenTransitions)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+            introImage.color = Color.Lerp(Color.black, new Color(0f, 0f, 0f, 0f), timer / timeBetweenTransitions);
+        }
+        gm.isNewGame = false;
+        gm.generalHUD.SetActive(true);
+        Destroy(introImage.gameObject);
     }
 
     public void OutsideState()
