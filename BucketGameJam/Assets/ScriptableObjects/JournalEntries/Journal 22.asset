@@ -21,7 +21,7 @@ MonoBehaviour:
   - low_cured_00
   - low_dead_00
   sketches:
-  - {fileID: 21300000, guid: 5b26b8466d46e6644b6208ef52fa2c66, type: 3}
+  - {fileID: 21300000, guid: e92500f76c8b6b345a555f5834e085ac, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}

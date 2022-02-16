@@ -14,14 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
+  - "Browsing around some tools in the shop made me realize how old a few of mine
+    are and I was tempted to buy some new ones. But I resisted! If it isn\u2019t
+    broken or I can\u2019t fix it then I\u2019ll think about it again but right now
+    every penny needs to go towards that medicine!"
   - normal_dead_00
-  - med_cured_00
+  - "The mice have been more relentless and it\u2019s becoming quite a problem. I\u2019ve
+    seen the cat manage to hunt a few of them but he\u2019s been avoiding them recently.
+    After taking a look at them myself I can\u2019t really blame the poor thing,
+    their teeth seemed to have sharpened somehow. Maybe I\u2019ll give the cat some
+    food as a thanks for his efforts."
   - med_dead_00
-  - low_cured_00
+  - "Pandora tells me that my crops have been of excellent quality for her clients.
+    Maybe that\u2019s where she vanishes after I leave, she hasn\u2019t even been
+    trying to hide her disappearing act anymore. I don\u2019t really care anyway,
+    as long as I get my money she can do whatever she wants."
   - low_dead_00
   sketches:
-  - {fileID: 21300000, guid: 5b26b8466d46e6644b6208ef52fa2c66, type: 3}
+  - {fileID: 21300000, guid: 58e1fac30972b60458b34b785d7cf838, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}

@@ -14,14 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
+  - This month I set a goal for myself to clean up our house storage a little and
+    found some old pictures! Clove looks so cute as a baby!
   - normal_dead_00
-  - med_cured_00
+  - "I swung by the well towards the beginning of the month but\u2026 I can\u2019t
+    say I\u2019ve been back. When I approached there seemed to be a strange mist
+    flowing from the top and I could swear I saw a tentacle creeping around the rim."
   - med_dead_00
-  - low_cured_00
+  - "I\u2019ve found that leaving the weeds in the ground provide food for my crops.
+    Well I won\u2019t complain about one less task to complete, plus it\u2019s entertaining
+    to watch the weeds disappear from the crops\u2019 attacks."
   - low_dead_00
   sketches:
-  - {fileID: 21300000, guid: 5b26b8466d46e6644b6208ef52fa2c66, type: 3}
+  - {fileID: 21300000, guid: d1b9b09cea9987f46942147e1f27d54d, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}

@@ -14,12 +14,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
-  - normal_dead_00
-  - med_cured_00
-  - med_dead_00
-  - low_cured_00
-  - low_dead_00
+  - "I finally got the medicine this month! The doc and I have been admittedly hovering
+    but Clove has been doing a lot better than before. Doc even said she\u2019ll
+    be able to go outside next month! I\u2019m relieved I was able to make it in
+    time\u2026 I don\u2019t even want to think about what might have happened if
+    I didn\u2019t."
+  - "I\u2026 I didn\u2019t make it. Clove she\u2019s\u2026 gone. The illness took
+    her during the night. She seemed fine during the day, I never thought that she\u2019d\u2026
+    I thought I had more time! It\u2019s all my fault\u2026 \nThe doc helped me with
+    burial preparations. She\u2019s resting out on the flower field on the farm that
+    she loved so much\u2026 I hope she likes it\u2026"
+  - "I finally got the medicine this month! The doc and I have been admittedly hovering
+    but Clove has been doing a lot better than before. Doc even said she\u2019ll
+    be able to go outside next month! I\u2019m relieved I was able to make it in
+    time\u2026 I don\u2019t even want to think about what might have happened if
+    I didn\u2019t."
+  - "I\u2026 I didn\u2019t make it. Clove she\u2019s\u2026 gone. The illness took
+    her during the night. She seemed fine during the day, I never thought that she\u2019d\u2026
+    I thought I had more time! It\u2019s all my fault\u2026 \nThe doc helped me with
+    burial preparations. She\u2019s resting out on the flower field on the farm that
+    she loved so much\u2026 I hope she likes it\u2026"
+  - "I\u2019ve done it! I collected more than enough money to save Clove and she\u2019s
+    doing so much better than before. Lately though, she\u2019s been hanging out
+    in her room a lot more if not going outside, but I don\u2019t think Clove can
+    decide what she wants to do. She never spends much time in town before coming
+    back. Hopefully she\u2019ll let me know if something\u2019s bothering her."
+  - "I\u2026 I didn\u2019t make it. Clove she\u2019s\u2026 gone. The illness took
+    her during the night. She seemed fine during the day, I never thought that she\u2019d\u2026
+    I thought I had more time! It\u2019s all my fault\u2026 \nThe doc helped me with
+    burial preparations. She\u2019s resting out on the flower field on the farm that
+    she loved so much\u2026 I hope she likes it\u2026"
   sketches:
   - {fileID: 21300000, guid: 5b26b8466d46e6644b6208ef52fa2c66, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
