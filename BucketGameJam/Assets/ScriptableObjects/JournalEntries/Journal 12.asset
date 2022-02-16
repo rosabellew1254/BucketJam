@@ -14,14 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
+  - "I set out to fix some of the various repairs that need to be done around the
+    house this month. It\u2019s hard work, especially the roof repairs, but anything
+    I can do to make Clove more comfortable is worth it."
   - normal_dead_00
-  - med_cured_00
+  - "I went out near the flower fields to try and bring some back for Clove, but
+    most of them looked sickly. It was sad to see the field in that state, but I
+    did manage to find a few that were still in full bloom! I had to be pretty careful
+    when picking them though, I could\u2019ve sworn they tried to bite me."
   - med_dead_00
-  - low_cured_00
+  - "Clove has been asking questions during the past month about the new crops I\u2019ve
+    been growing. I\u2019m glad she seems interested in my work but I do wish she
+    would stop asking about how to dispose of them. I\u2019m only trying to help
+    her after all."
   - low_dead_00
   sketches:
-  - {fileID: 21300000, guid: 5b26b8466d46e6644b6208ef52fa2c66, type: 3}
+  - {fileID: 21300000, guid: 95229568dbfd34142937d7f3fda58b75, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}

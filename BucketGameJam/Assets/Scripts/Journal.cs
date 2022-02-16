@@ -11,6 +11,7 @@ public class Journal : MonoBehaviour
     public string[] JournalPagesSmallEvilNotCured;
     public string[] JournalPagesLargeEvilCured;
     public string[] JournalPagesLargeEvilNotCured;
+    public string[] tMonth;
     [Space]
     [Space]
     public Sprite[] jSketch_NormCured;
@@ -53,6 +54,7 @@ public class Journal : MonoBehaviour
         jSketch_MedNotCured = new Sprite[gm.maxDays + 1];
         jSketch_LowCured = new Sprite[gm.maxDays + 1];
         jSketch_LowNotCured = new Sprite[gm.maxDays + 1];
+        tMonth = new string[gm.maxDays + 1];
         //ReadCSV();
         SetupJournalText();
         //setup journal image
@@ -82,6 +84,7 @@ public class Journal : MonoBehaviour
             jSketch_MedNotCured[i] = gm.journalData[i].sketches[3];
             jSketch_LowCured[i] = gm.journalData[i].sketches[4];
             jSketch_LowNotCured[i] = gm.journalData[i].sketches[5];
+            tMonth[i] = "Month " + i;
         }
     }
 

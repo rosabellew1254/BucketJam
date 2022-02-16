@@ -14,14 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
+  - "The doctor visited us again today for the monthly check-up\u2026 she told me
+    my Clove won\u2019t have much time left unless I can buy the medicine she needs
+    next month. I hope I can make it in time\u2026"
   - normal_dead_00
-  - med_cured_00
+  - "The doctor visited us again today for the monthly check-up\u2026 she told me
+    Clove won\u2019t have much time left unless I can buy the medicine she needs
+    next month. I hope I can make it in time\u2026 hopefully selling those strange
+    crops will give me the boost I need"
   - med_dead_00
-  - low_cured_00
+  - "The doctor visited us again today for the monthly check-up\u2026 she told me
+    Clove won\u2019t have much time left unless I can buy the medicine she needs
+    next month. I swear I will make it in time\u2026 otherwise I can\u2019t promise
+    that the doctor will survive the ordeal\u2026"
   - low_dead_00
   sketches:
-  - {fileID: 21300000, guid: 5b26b8466d46e6644b6208ef52fa2c66, type: 3}
+  - {fileID: 21300000, guid: f03ff41b460997f4093858ef54f7c0bf, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}

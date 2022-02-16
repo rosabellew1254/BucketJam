@@ -14,14 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
+  - "Pandora asked for my help with restocking her shelves. Apparently, her usual
+    helpers needed to travel this month and she wasn\u2019t able to find temporary
+    replacements. It\u2019s nice to think she trusts me enough to ask for help, and
+    she even promised me a meal in exchange! "
   - normal_dead_00
-  - med_cured_00
+  - "Pandora has been acting a little\u2026 off lately. I\u2019m not sure what\u2019s
+    been going on with her but she\u2019s been a lot more distant and pushy about
+    when I complete my crops. I hope she isn\u2019t in any trouble\u2026"
   - med_dead_00
-  - low_cured_00
+  - During the past month the mist has managed to completely block the sun. Good.
+    My crops prefer the dark anyway.
   - low_dead_00
   sketches:
-  - {fileID: 21300000, guid: 5b26b8466d46e6644b6208ef52fa2c66, type: 3}
+  - {fileID: 21300000, guid: d2d3db735ad358e45b749a4c7a5f70e6, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}

@@ -14,14 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
+  - "From what I can tell my plan to combat the mice has been working with the help
+    of my new feline friend! I\u2019ve noticed a big decrease in the rodents lately
+    and have seen the stray hanging around the fields. I should start leaving out
+    some water for him so he won\u2019t go thirsty. Thanks for the help little guy!"
   - normal_dead_00
-  - med_cured_00
+  - "The weeds have gotten more difficult to pull up lately. Their root systems have
+    gotten tougher and I think they\u2019re starting to\u2026 squirm? It feels like
+    they are gripping onto the dirt. Maybe I should think about looking for some
+    weed killers."
   - med_dead_00
-  - low_cured_00
+  - "I\u2019ve tried cooking meals out of my crops for Clove this month. Perhaps
+    they will help her in ways that medicine never could. Unfortunately, she refused
+    my cooking again and again, I even tasted it myself and everything. Can\u2019t
+    she see I\u2019m just trying to help?"
   - low_dead_00
   sketches:
-  - {fileID: 21300000, guid: 5b26b8466d46e6644b6208ef52fa2c66, type: 3}
+  - {fileID: 21300000, guid: 7f44577c40684524888e6f4f7aa4a612, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}

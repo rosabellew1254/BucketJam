@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public enum scenes { frontEnd, town, garden, shop, bedroom, endScene, terminator }
     public enum state { normal, smallEvil, largeEvil, terminator }
     public enum sisterStatus { sick, cured, dead}
-    public enum months { month00, month01, month02, month03, month04, month05, month06, month07, month08, month09, month10, month11, month12, month13, month14, month15, month16, month17, month18, month19, month20, month21, month22, month23, month24, month25, month26, month27, month28, month29, month30, month31, month32, month33, month34, month35, month36}
+    public enum months { month0, month1, month2, month3, month4, month5, month6, month7, month8, month9, month10, month11, month12, month13, month14, month15, month16, month17, month18, month19, month20, month21, month22, month23, month24, month25, month26, month27, month28, month29, month30, month31, month32, month33, month34, month35, month36}
 
     [Space]
     [Header("Menus")]

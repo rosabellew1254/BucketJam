@@ -14,14 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
+  - Looking around the shop I noticed a few saplings for sale this month and was
+    reminded about how Clove and I would climb whatever tree we could get our hands-on.
+    Maybe I should think about growing a few trees on the farm, it might be fun to
+    have some close to home!
   - normal_dead_00
-  - med_cured_00
+  - "I\u2019m not sure what\u2019s been going on but the houses nearest the well
+    look like they\u2019re\u2026 melting? It\u2019s difficult to describe but I doubt
+    they\u2019re safe to live in anymore. I\u2019ve asked a few of the residents
+    if they need help with repairs but they seem to think it\u2019s perfectly normal.
+    Maybe it\u2019s best to steer clear just in case they collapse."
   - med_dead_00
-  - low_cured_00
+  - "I\u2019ve been beating some of the books in the house in order to allow Clove
+    to read them. I\u2019ve found quite a few of them scooting away when she\u2019d
+    reach for one and cause her to scream. I don\u2019t want her to become bored
+    so it\u2019s better that they learn their place."
   - low_dead_00
   sketches:
-  - {fileID: 21300000, guid: 5b26b8466d46e6644b6208ef52fa2c66, type: 3}
+  - {fileID: 21300000, guid: 2dc8637da14608243b2bb173bef8cb0c, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}

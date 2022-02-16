@@ -10,18 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20a192c6683cf1c4bbdd77e7824594c2, type: 3}
-  m_Name: Journal 7
+  m_Name: Journal 07
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
+  - "I found a small family of spiders making their home near the shed this past
+    month. As long as they don\u2019t go after my crops and only eat the other bugs
+    around then they can stay (even if I\u2019m not their biggest fan\u2026 but they\u2019re
+    outside so I shouldn\u2019t complain)"
   - normal_dead_00
   - med_cured_00
   - med_dead_00
   - low_cured_00
   - low_dead_00
   sketches:
-  - {fileID: 21300000, guid: 5b26b8466d46e6644b6208ef52fa2c66, type: 3}
+  - {fileID: 21300000, guid: d2278ebe3caebc941b53ccf53b4dfe5a, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}

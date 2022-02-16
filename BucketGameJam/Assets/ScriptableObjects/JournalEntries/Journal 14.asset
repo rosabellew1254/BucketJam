@@ -14,14 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
+  - "I couldn\u2019t resist keeping a few of my crops to try out cooking again. Clove
+    was always the one making our meals before falling ill. It was a complete disaster\u2026
+    guess I should leave the complicated stuff to her!"
   - normal_dead_00
-  - med_cured_00
+  - "I can\u2019t say I\u2019m a huge fan of bugs, but something is definitely wrong
+    with the spiders near the shed. They\u2019re a lot bigger than others that I\u2019ve
+    seen and I swear the web I tried to dust off cut me. Maybe it\u2019s time to
+    break out a broom and some bug killer."
   - med_dead_00
-  - low_cured_00
+  - "I\u2019ve had to chase off that wretched cat one too many times this month\u2026
+    the infernal thing has been stalking my crops for the last time. Meat has been
+    scarce ever since the rancher \u201Cdisappeared\u201D. Perhaps it\u2019s time
+    to set out some traps\u2026"
   - low_dead_00
   sketches:
-  - {fileID: 21300000, guid: 5b26b8466d46e6644b6208ef52fa2c66, type: 3}
+  - {fileID: 21300000, guid: 5d36541692affbf4da46deb16dd9bad3, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}

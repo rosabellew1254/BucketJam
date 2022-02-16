@@ -14,14 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
+  - "During the last month I tried out a few different creative hobbies to keep myself
+    busy, like basket weaving and crochet. All of my attempts didn\u2019t turn out
+    too well\u2026maybe I\u2019ll just stick to doodling and farming."
   - normal_dead_00
-  - med_cured_00
+  - "It feels like the birds have been acting strange since last month. Their cries
+    have become a lot more\u2026 unnerving. And that isn\u2019t even mentioning what
+    I think are more eyes along their neck? I haven\u2019t been able to get close
+    enough to really tell\u2026"
   - med_dead_00
-  - low_cured_00
+  - "I can hear the crows squawking outside. Mocking me. Those blasted birds won\u2019t
+    be laughing for long\u2026 I hope they like my little treat I\u2019ve left for
+    them in the crops. We\u2019ll see who's laughing then."
   - low_dead_00
   sketches:
-  - {fileID: 21300000, guid: 5b26b8466d46e6644b6208ef52fa2c66, type: 3}
+  - {fileID: 21300000, guid: 3fa950542f4e46d4fa59263ba1553720, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
