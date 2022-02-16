@@ -88,10 +88,14 @@ public class PlayerController : MonoBehaviour
         if (musicToggle.isOn == true)
         {
             musicToggleImage.sprite = musicToggleSprite[0];
+            FMOD.Studio.Bus musicBus = FMODUnity.RuntimeManager.GetBus("bus:/music");
+            musicBus.setVolume(1f);
         }
         else
         {
             musicToggleImage.sprite = musicToggleSprite[1];
+            FMOD.Studio.Bus musicBus = FMODUnity.RuntimeManager.GetBus("bus:/music");
+            musicBus.setVolume(0f);
         }
     }
 

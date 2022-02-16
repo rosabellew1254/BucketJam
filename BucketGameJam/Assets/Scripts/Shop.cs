@@ -66,6 +66,7 @@ public class Shop : MonoBehaviour
         inventory.AdjustMoney(-selectedPrice);
         inventory.AdjustSeedQuantity(selectedPlant, 1);
         ShowBuySeedsButton();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/buy");
     }
 
     public void SellPlant()

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20a192c6683cf1c4bbdd77e7824594c2, type: 3}
+  m_Name: Journal 11
+  m_EditorClassIdentifier: 
+  month: 0
+  entryTexts:
+  - normal_cured_00
+  - normal_dead_00
+  - med_cured_00
+  - med_dead_00
+  - low_cured_00
+  - low_dead_00
+  sketches:
+  - {fileID: 21300000, guid: 5b26b8466d46e6644b6208ef52fa2c66, type: 3}
+  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
