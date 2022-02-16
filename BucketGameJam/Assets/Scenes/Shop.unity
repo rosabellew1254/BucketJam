@@ -1327,7 +1327,7 @@ MonoBehaviour:
   plantNames:
   - Turnip
   - Strawberry
-  - Eyemogranate
+  - Eyemagranate
   - Grinny Smith
   sellPlantsMenu: {fileID: 5082254746762719564, guid: 8105a316befaf564fb7f53c6d562ba91, type: 3}
   backgroundImage: {fileID: 390007394}

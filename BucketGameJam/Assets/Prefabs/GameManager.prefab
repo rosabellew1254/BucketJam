@@ -160,8 +160,8 @@ MonoBehaviour:
   iSpeks: {fileID: 3750302390233241606}
   iSanityText: {fileID: 4225428644029388665}
   iSanitySlider: {fileID: 8252672033032773397}
-  bMainMenu: {fileID: 5174694680876706669}
-  bInventory: {fileID: 1747109109920045872}
+  bMainMenu: {fileID: 2021610558741577266}
+  bInventory: {fileID: 7108048431049974640}
   musicToggle: {fileID: 7171829816541958537}
   musicToggleImage: {fileID: 5466028677531399069}
   musicToggleSprite:

@@ -20,8 +20,8 @@ public class PlayerController : MonoBehaviour
     public Image iSpeks;
     public Image iSanityText;
     public Image iSanitySlider;
-    public Image bMainMenu;
-    public Image bInventory;
+    public Button bMainMenu;
+    public Button bInventory;
 
     public Toggle musicToggle;
     public Image musicToggleImage;
@@ -62,8 +62,8 @@ public class PlayerController : MonoBehaviour
             iSpeks.sprite = spekState[1];
             iSanityText.sprite = sanityTxtState[1];
             iSanitySlider.sprite = sanitySliderState[1];
-            bMainMenu.sprite = bMainMenuState[1];
-            bInventory.sprite = bInventoryState[1];
+            bMainMenu.GetComponent<Image>().sprite = bMainMenuState[1];
+            bInventory.GetComponent<Image>().sprite = bInventoryState[1];
         }
         else
         {
@@ -71,8 +71,8 @@ public class PlayerController : MonoBehaviour
             iSpeks.sprite = spekState[0];
             iSanityText.sprite = sanityTxtState[0];
             iSanitySlider.sprite = sanitySliderState[0];
-            bMainMenu.sprite = bMainMenuState[0];
-            bInventory.sprite = bInventoryState[0];
+            bMainMenu.GetComponent<Image>().sprite = bMainMenuState[0];
+            bInventory.GetComponent<Image>().sprite = bInventoryState[0];
         }
     }
 
