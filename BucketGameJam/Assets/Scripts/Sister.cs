@@ -129,10 +129,10 @@ public class Sister : MonoBehaviour
     public void ReadTextHello()
     {
         string sick0 = "Good morning Arum! You ask how I am feeling? Honestly I’m still not doing very well. Hopefully I can be cured soon, I really want to go outside and play with you!";
-        string sick1 = "We still need " + GameManager.gm.moneyRequiredToSaveSibling + " Speks and the doctor says we only have "  + (20 - GameManager.gm.curDay) + " days. The medicine costs a lot, but please stay healthy for me.";
+        string sick1 = "We need a total of " + GameManager.gm.moneyRequiredToSaveSibling + " Speks and the doctor says we only have "  + (20 - GameManager.gm.curDay) + " months. The medicine costs a lot, but please stay healthy for me.";
         string cured0 = "You still don’t want me to help you plant crops? I feel so much better now after getting the treatment!";
         string cured1 = "I’m excited to move to that city you’ve been telling me about. I wish I could help you earn that " + GameManager.gm.competeMoneyGoal +  " Speks in the last " + (36 - GameManager.gm.curDay) + " days…";
-        string dead = "(Memories keep flooding in my head, there is no turning back… The eldritch god is calling me…)";
+        string dead = "(Memories keep flooding in my head, there is no turning back… The eldritch gods are calling me…)";
         panelButton.gameObject.SetActive(false);
         bPageFlip[1].gameObject.SetActive(true);
         bPageFlip[0].gameObject.SetActive(false);

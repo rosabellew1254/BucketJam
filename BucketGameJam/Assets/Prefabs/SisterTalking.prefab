@@ -2143,7 +2143,7 @@ MonoBehaviour:
   textBox: {fileID: 2027899645223391360}
   color:
   - {r: 0.50980395, g: 0.41960788, b: 0.34509805, a: 1}
-  - {r: 0.7725491, g: 0.17254902, b: 0.6862745, a: 1}
+  - {r: 0.77254903, g: 0.172549, b: 0.6862745, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   textBoxFill: {fileID: 5806371820580569395}
   textName: {fileID: 3553702643652503968}
@@ -2194,28 +2194,30 @@ MonoBehaviour:
   - Hello Arum, my brother!
   - (The teddy bear is quietly sitting on the bed and staring at me)
   textRoom:
-  - 'Bed: Sleeping in the bed will pass the months and the plants will grow.'
-  - 'Journal: Opening up the journal tells you how your month is going as well as
-    the story.'
-  - 'Door:  The door will get you to the garden.'
-  - 'Mirror: The mirror will let you see what you look like, who knows you might
-    change.'
+  - <color=#9d21c4>Bed:</color> Sleeping in the <color=#9d21c4>bed</color> will pass
+    the months and the plants will grow.
+  - <color=#9d21c4>Journal:</color> Opening up the <color=#9d21c4>journal</color>
+    tells you how your month is going as well as the story.
+  - <color=#9d21c4>Door:</color>  The <color=#9d21c4>door</color> will get you to
+    the garden.
+  - <color=#9d21c4>Mirror:</color> The <color=#9d21c4>mirror</color> will let you
+    see what you look like, who knows you might change.
   textGarden:
-  - "Go to Town: Takes to to the town. You can come back to the garden or go to the
-    shop when you\u2019re in town."
-  - 'Plant: plant the seed that is currently showing in the dropdown and plant them
-    in the soil you click on.'
-  - 'Remove Seed: Removes planted seed. Seeds will be gone after removal, so double
-    check before removing them.'
-  - 'Select Seed: You can select the seed you have from the dropdown and plant in
-    the soil.'
+  - "<color=#9d21c4>Go to Town:</color> Takes you to the town. You can come back
+    to the garden or go to the shop when you\u2019re in town."
+  - <color=#9d21c4>Plant:</color> Plant the seed that is currently showing in the
+    dropdown and plant them in the soil you click on.
+  - <color=#9d21c4>Remove Seed:</color> Removes planted seed. Seeds will be gone
+    after removal, so double check before removing them.
+  - <color=#9d21c4>Select Seed:</color> You can select the seed you have from the
+    dropdown and plant in the soil.
   textTown:
-  - 'Town: The look of the town will change according to your sanity.'
+  - The look of the <color=#9d21c4>town</color> will change according to your <color=#9d21c4>sanity.</color>
   textShop:
-  - 'Shop: you buy seeds and sell plants. Be careful at what you''re selling. It
-    will affect your sanity.'
+  - 'Shop: You buy <color=#9d21c4>seeds</color> and sell <color=#9d21c4>crops.</color>
+    Be careful of what you''re selling. It will affect your <color=#9d21c4>sanity.</color>'
   textSister:
-  - 'Also, please talk to me to access this information again if you need to. '
+  - Be sure to talk to me if you need help with anything.
 --- !u!1 &5806371820580569393
 GameObject:
   m_ObjectHideFlags: 0

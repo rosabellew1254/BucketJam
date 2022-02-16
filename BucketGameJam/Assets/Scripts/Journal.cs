@@ -154,20 +154,9 @@ public class Journal : MonoBehaviour
     }
 
 
-    public void SetPicture(int _day)
+    public void SetDay20(GameManager.state _state)
     {
-        //grab from array of pictures
-        //depending on the state of the world, pick from according array
-        // If sister dies or lives draw from another table for specific days
-        //
-        //draw from norm
-        //  if state diff - change to another array (maybe leave spots as empty in other arrays?)
-        //  if sister dead or alive change array
-        //  if nothing in any array, default to normal
-
-
-        Debug.Log("SET PIC");
-        switch (stateHistory[_day])
+        switch (gm.mySister)
         {
             case GameManager.state.normal:
                 gm.journalSketch[_day] = jSketch_NormCured[_day];
@@ -196,12 +185,6 @@ public class Journal : MonoBehaviour
                 break;
             default:
                 break;
-        }
-
-        if (gm.mySister == GameManager.sisterStatus.dead)
-        {
-            Debug.Log("SIS DEAD");
-            gm.journalSketch[_day] = jSketch_SisDead[_day];
         }
     }
     /*
