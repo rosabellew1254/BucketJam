@@ -308,69 +308,50 @@ MonoBehaviour:
   - 'Day 34: It''s not real...'
   - 'Day 35:  I don''t want to go away...'
   - 'Day 36: ...'
-  jSketch_Norm:
-  - {fileID: 21300000, guid: adaebc438e935ae4b964639eeb5f3460, type: 3}
-  - {fileID: 21300000, guid: 3ab00d77a102caa499331b29bc9489ad, type: 3}
-  - {fileID: 21300000, guid: f3cd7d51b5e4ff142af1023fabc7e858, type: 3}
-  - {fileID: 21300000, guid: c6ebf4d9e7a3e88468ffa8ad0900234c, type: 3}
-  - {fileID: 21300000, guid: d2b0c788597954749909f44f731cb2fd, type: 3}
-  - {fileID: 21300000, guid: b0dfc907ef1c9c546adc3946a80a3149, type: 3}
-  - {fileID: 21300000, guid: f03ff41b460997f4093858ef54f7c0bf, type: 3}
-  - {fileID: 21300000, guid: 5d36541692affbf4da46deb16dd9bad3, type: 3}
-  - {fileID: 21300000, guid: 7c208ee661756ba488538512ec75525e, type: 3}
-  - {fileID: 21300000, guid: 58e1fac30972b60458b34b785d7cf838, type: 3}
-  - {fileID: 21300000, guid: a183142e162128d40894bd14bf433f33, type: 3}
-  - {fileID: 21300000, guid: 171ee1eb61c62664b9bec3bfeb7ae790, type: 3}
-  - {fileID: 21300000, guid: ff9e09e5180c1184ca6c594b1adac5f0, type: 3}
-  - {fileID: 21300000, guid: 3fa950542f4e46d4fa59263ba1553720, type: 3}
-  - {fileID: 21300000, guid: d2278ebe3caebc941b53ccf53b4dfe5a, type: 3}
-  - {fileID: 21300000, guid: ca0c94c103405f246953211921a46838, type: 3}
-  - {fileID: 21300000, guid: 64973c8d8d18fcb45afdb482a6db5188, type: 3}
-  - {fileID: 21300000, guid: d1b9b09cea9987f46942147e1f27d54d, type: 3}
-  - {fileID: 21300000, guid: 5b26b8466d46e6644b6208ef52fa2c66, type: 3}
-  - {fileID: 21300000, guid: 2dc8637da14608243b2bb173bef8cb0c, type: 3}
-  - {fileID: 21300000, guid: 149c800a350c42146b9ac0a025f18ad3, type: 3}
-  - {fileID: 21300000, guid: 95229568dbfd34142937d7f3fda58b75, type: 3}
-  - {fileID: 21300000, guid: 85fb92aea49890643b21e181571caf6e, type: 3}
-  - {fileID: 21300000, guid: 7f44577c40684524888e6f4f7aa4a612, type: 3}
-  - {fileID: 21300000, guid: bb02c71b86ba23e4e875715c10c21fde, type: 3}
-  - {fileID: 21300000, guid: d2d3db735ad358e45b749a4c7a5f70e6, type: 3}
-  - {fileID: 21300000, guid: 8d7251d4c2a7d42489fe820fbb309a81, type: 3}
-  - {fileID: 21300000, guid: 1553ec280f86b7f46bff5a4b09801785, type: 3}
-  - {fileID: 21300000, guid: 472c97491bd946e42984033c8c15493a, type: 3}
-  - {fileID: 21300000, guid: b6aea51659a8f7542b0c59fe067fc513, type: 3}
-  - {fileID: 21300000, guid: 5375c7473bbe69d4bb6b6c362c531d15, type: 3}
-  - {fileID: 21300000, guid: db47bb4d730a4ab4ca03ea7bff10bc33, type: 3}
-  - {fileID: 21300000, guid: 67fbb3215c2b3bc428fb07dd849a70cd, type: 3}
-  - {fileID: 21300000, guid: 70429a6c5f78dcc4dae837522f8e06f9, type: 3}
-  - {fileID: 21300000, guid: ff99cb753ff3b1143bdb7c2124b0759e, type: 3}
-  - {fileID: 21300000, guid: e92500f76c8b6b345a555f5834e085ac, type: 3}
-  jSketch_Low:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 21300000, guid: 6689a9f9594fceb4d8175a93170dc52d, type: 3}
-  - {fileID: 21300000, guid: 8694e3493e8af694f9ff1534efe670c8, type: 3}
-  - {fileID: 21300000, guid: 54d28a126c337994494102515fee6328, type: 3}
-  - {fileID: 21300000, guid: 52c070cf17bd09147be961cc69639cef, type: 3}
-  - {fileID: 21300000, guid: 2419dd72bbd3e924aa2dd68074a33467, type: 3}
-  - {fileID: 21300000, guid: abe755fae7065db42a8d26a83e869f7e, type: 3}
-  - {fileID: 21300000, guid: cb1e561123a1c8d489063bb6ce1f7876, type: 3}
-  - {fileID: 21300000, guid: dd6bf28650239194fb805341a6afc298, type: 3}
-  - {fileID: 21300000, guid: b64556cdfb66a3143a6e486fab47fbdf, type: 3}
-  - {fileID: 21300000, guid: 37cd4441b59755f4f998b02cd304d39f, type: 3}
-  - {fileID: 21300000, guid: 3a4ae8084ebecc7459b349fdacc837a8, type: 3}
-  - {fileID: 21300000, guid: 9eae3079a401e7a4299b51f742a9dbc1, type: 3}
-  - {fileID: 21300000, guid: 0252f7a1a2a2ecd42a6e1cc92e6f9b6c, type: 3}
-  - {fileID: 21300000, guid: 241563a313ae5ba4b83643fd2cdd38c2, type: 3}
-  - {fileID: 21300000, guid: a8ac657e5d8c7b749956105206d78056, type: 3}
-  - {fileID: 21300000, guid: c5c8aa251450b684bb63a6866dfb7ec7, type: 3}
-  - {fileID: 21300000, guid: 822de683c3b9feb429359edd4433a205, type: 3}
+  JournalPagesNormalCured: []
+  JournalPagesNormalNotCured: []
+  JournalPagesSmallEvilCured: []
+  JournalPagesSmallEvilNotCured: []
+  JournalPagesLargeEvilCured: []
+  JournalPagesLargeEvilNotCured:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  jSketch_NormCured:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -382,7 +363,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  jSketch_High:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -393,16 +373,196 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 21300000, guid: 626799ec73968ef408a195020d2302c6, type: 3}
-  - {fileID: 21300000, guid: 8730394bef01ce045a0735c8f068de97, type: 3}
   - {fileID: 0}
-  - {fileID: 21300000, guid: 49fefdf6a6e698d4bb6c82b73996562a, type: 3}
   - {fileID: 0}
-  - {fileID: 21300000, guid: 5c9104dbb2b1118409cce243cdbe888e, type: 3}
-  - {fileID: 21300000, guid: a5c7bfee60b88f24983f4d22376b4974, type: 3}
-  - {fileID: 21300000, guid: 1358c9532a396ab49b82d63e11df0382, type: 3}
   - {fileID: 0}
-  - {fileID: 21300000, guid: 8c45974008cae744aa39a0f0c2d7d16c, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  jSketch_NormNotCured:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  jSketch_MedCured:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  jSketch_MedNotCured:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  jSketch_LowCured:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  jSketch_LowNotCured:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
