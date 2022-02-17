@@ -14,16 +14,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
-  - normal_dead_00
-  - med_cured_00
-  - med_dead_00
-  - low_cured_00
-  - low_dead_00
+  - "This past month I\u2019ve been trying to keep up with the flower beds near the
+    house but ironically enough my growing skills don\u2019t extend to flowers. Clove
+    laughed, rolled up her sleeves, and took over the beds herself and they\u2019re
+    looking a lot better than what I was trying to do! The house looks great with
+    all the flowers blooming and Clove is saying she wants to help me with the farm!
+    Two pairs of hands are better than one I always say!"
+  - "During the past month I noticed that the flowers growing around the house haven\u2019t
+    been doing so well so I tried to revive them. Nothing I did was working so I
+    unfortunately had to pull up the plants. The house looks more depressing but
+    the wilting flowers weren\u2019t helping with that either. There isn\u2019t really
+    any reason to keep them anyway, Clove was the one to suggest them\u2026 maybe
+    I\u2019ll try again next month."
+  - "Clove mentioned the other day while tending to the flowers around the house
+    that she could\u2019ve sworn one of the flowers reached out for her. I headed
+    out myself but didn\u2019t see the plants move, maybe it was a trick of the light?
+    In either case Clove refuses to touch the beds again. It\u2019s alright, I\u2019ll
+    see what I can do with them."
+  - "The flower beds are starting to get quite overgrown but I can\u2019t bring myself
+    to do something about them. Clove loved the flowers and I don\u2019t want to
+    see them go. However, whenever I\u2019m passing them I could swear I see something
+    twitching out of the corner of my eye. Probably just a small critter making a
+    home."
+  - "I\u2019ve had to practically quarantine Clove inside starting this month, regardless
+    of her personal feelings. I have valid reasoning, during the past few weeks she
+    was unresponsive to all attempts to get her attention. Fearing she was sick again
+    I prodded around and found a small creature attached to the base of her neck
+    and disposed of it promptly. She\u2019s fine now thankfully but seemed a bit\u2026
+    disappointed after waking up. I refuse for something like that to happen again."
+  - "When I last dropped off my crops to Pandora she warned me to stay inside for
+    a few weeks. I asked why but all she said was that she \u201Cdidn\u2019t want
+    to lose her best supplier to any stupid dreams\u201D. Whatever that means. Regardless,
+    it's probably best to heed her advice."
   sketches:
   - {fileID: 21300000, guid: ff99cb753ff3b1143bdb7c2124b0759e, type: 3}
   - {fileID: 21300000, guid: d311ce3ee29f8814cab3c86d0880f15b, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: 8c1cad69c87036840817445704a57026, type: 3}
+  - {fileID: 21300000, guid: 8c1cad69c87036840817445704a57026, type: 3}
+  - {fileID: 21300000, guid: bd975c15aa618f946b10a780d991a5d6, type: 3}
+  - {fileID: 21300000, guid: d523166a147ce4d42b0f9af4febe4e08, type: 3}

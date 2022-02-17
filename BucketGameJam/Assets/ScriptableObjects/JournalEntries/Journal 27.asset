@@ -14,16 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
-  - normal_dead_00
-  - med_cured_00
-  - med_dead_00
-  - low_cured_00
-  - low_dead_00
+  - "Clove found my pitiful attempts at basket weaving this past month\u2026 glad
+    she got a laugh out of it but did she have to make fun of me that much? In any
+    case, we decided to try out weaving again. Maybe we\u2019ll be able to figure
+    it out together!"
+  - "Stumbled across my failed art projects in the shed a few weeks ago and had to
+    throw them out. It makes me sad to see my effort in the trash but I need room
+    for my new tools\u2026 no reason not to just buy a basket anyway."
+  - "I\u2019ve had to warn Clove against playing near the trees last month, even
+    if she initially argued with me about it. I don\u2019t know why, but I have a
+    bad feeling about the forest lately and I\u2019d rather not risk Clove\u2019s
+    health again."
+  - I took a walk near the woods to try and get away from it all, but it started
+    to give me the creeps. The birds have been going quiet near there lately so I
+    decided to head home.
+  - "Since I\u2019ve been seeing some of the kids out near the square I tried to
+    encourage Clove to go join them. She seemed excited at first but came home quite
+    quickly with a scared look on her face. I swear if they\u2019ve done anything
+    to hurt her\u2026"
+  - "WIth the kids milling about the square more often this month I\u2019ve been
+    trying to elude them as much as possible to avoid reminders. In the glimpses
+    I\u2019ve seen of them though they just stand there and stare blankly at whatever
+    moves. All the more reason to avoid them I\u2019d say."
   sketches:
   - {fileID: 21300000, guid: 67fbb3215c2b3bc428fb07dd849a70cd, type: 3}
   - {fileID: 21300000, guid: 153b303cceca3194eb652f3ec13c2594, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: b5eee2958da48724fb3baa306324b7c8, type: 3}
+  - {fileID: 21300000, guid: b5eee2958da48724fb3baa306324b7c8, type: 3}
+  - {fileID: 21300000, guid: a6a9cf502c208234d8ecd6fb7b0b0877, type: 3}
+  - {fileID: 21300000, guid: 5f60ec812602df44cad242ee73a8dda4, type: 3}

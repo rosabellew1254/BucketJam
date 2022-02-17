@@ -14,16 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
-  - normal_dead_00
-  - med_cured_00
-  - med_dead_00
-  - low_cured_00
-  - low_dead_00
+  - "I\u2019ve been trying out a new type of fertilizer this month and I think I
+    saw some improvement in my crops? It\u2019s a little hard to tell if there\u2019s
+    a difference honestly but at least I can always tell when something is wrong!"
+  - "I\u2019ve been trying out a new type of fertilizer this month and I think I
+    saw some improvement in my crops? It\u2019s a little hard to tell if there\u2019s
+    a difference honestly but at least I can always tell when something is wrong!"
+  - "A few of the townsfolk came around the farm to warn me about the road leaving
+    town. Apparently a few people who left during the past month haven\u2019t come
+    back yet. I hope everyone is okay\u2026"
+  - "A few of the townsfolk came around the farm to warn me about the road leaving
+    town. Apparently a few people who left during the past month haven\u2019t come
+    back yet. I hope everyone is okay\u2026"
+  - "In the distance of the farm I\u2019ve seen some distant silhouettes. With such
+    gigantic frames, maybe I should consider either growing more or larger crops
+    to accommodate them. I\u2019m sure Pandora will know what to do."
+  - "In the distance of the farm I\u2019ve seen some distant silhouettes. With such
+    gigantic frames, maybe I should consider either growing more or larger crops
+    to accommodate them. I\u2019m sure Pandora will know what to do."
   sketches:
   - {fileID: 21300000, guid: ca0c94c103405f246953211921a46838, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: ca0c94c103405f246953211921a46838, type: 3}
+  - {fileID: 21300000, guid: c8ebb1e6ca4031a4e89697ddf2c098ac, type: 3}
+  - {fileID: 21300000, guid: c8ebb1e6ca4031a4e89697ddf2c098ac, type: 3}
+  - {fileID: 21300000, guid: 99717b430cbf8654499d999b20c4f5e5, type: 3}
+  - {fileID: 21300000, guid: 99717b430cbf8654499d999b20c4f5e5, type: 3}

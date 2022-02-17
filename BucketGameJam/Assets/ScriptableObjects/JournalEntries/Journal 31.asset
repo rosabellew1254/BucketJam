@@ -14,16 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
-  - normal_dead_00
-  - med_cured_00
-  - med_dead_00
-  - low_cured_00
-  - low_dead_00
+  - "It was so nice to eat Clove\u2019s cooking again, she\u2019s a genius in the
+    kitchen! She\u2019s been showing me a few things lately and now I can confidently
+    help her out. Food has never tasted better!"
+  - "I\u2019ve burned yet another dish in our cookbook, I don\u2019t know how Clove
+    did it. I miss her cooking a lot\u2026 maybe I can get Pandora to give me a few
+    pointers."
+  - "Clove took some of the crops to try and make something out of them for dinner
+    a few days ago but shortly after she tossed it out and pushed me out the door
+    to buy some groceries instead. I wonder what spooked her? Hope a worm hadn\u2019t
+    made a home in my produce, that would be bad for business!"
+  - "I tried to make dinner out of some of my new crops but something tasted\u2026
+    off about it. Now I know that my cooking usually tastes a little odd, but this
+    was on a different level. All I can hope is that it wasn\u2019t my crops and
+    instead my cooking has simply gotten worse."
+  - "I\u2019ve gotten Clove to take walks with me again this month but I\u2019m not
+    sure I can convince her to come again after the last one. We came across some
+    kind of abomination that she claims looks like the doctor\u2019s son, but it
+    looks more like a beast to me. A shame, I know those two got along quite well."
+  - "During my last walk I came across quite a strange creature hanging around the
+    doctor\u2019s house. When I asked about it, she claimed to not know what happened
+    past eating some of my crops last month then asked if I had some more. At least
+    they\u2019re enjoying the produce."
   sketches:
   - {fileID: 21300000, guid: 472c97491bd946e42984033c8c15493a, type: 3}
   - {fileID: 21300000, guid: 50c5338f2867b1a44b2f2538512b20eb, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: ae620747a4ee71b4aac9b07fb2c5af3d, type: 3}
+  - {fileID: 21300000, guid: e9258d1dfe4873b45a102f1599169356, type: 3}
+  - {fileID: 21300000, guid: 72ea0af8fd37c284ea701d5b36f8d4bf, type: 3}
+  - {fileID: 21300000, guid: 5dce78097462e254395fcb2a243322f5, type: 3}

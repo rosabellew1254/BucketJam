@@ -14,16 +14,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
-  - normal_dead_00
-  - med_cured_00
-  - med_dead_00
-  - low_cured_00
-  - low_dead_00
+  - "I decided to do a little fishing this month during my free time to try and bring
+    in a little something different to eat. The fishermen make this look so easy!
+    It took a while and when I managed to catch a fish it wasn\u2019t really big
+    enough to eat. Maybe Oliver will like a little treat."
+  - "I decided to do a little fishing this month during my free time to try and bring
+    in a little something different to eat. The fishermen make this look so easy!
+    It took a while and when I managed to catch a fish it wasn\u2019t really big
+    enough to eat. Maybe Oliver will like a little treat."
+  - "During the past month I tried to visit the pond for a little fishing but found
+    that the waters have turned black. It seems the plants haven\u2019t been poisoned
+    and I heard a few frogs when I got closer, but the screeching of birds made me
+    turn back. I\u2019m not sure what happened but it\u2019s probably best to steer
+    clear for now."
+  - "During the past month I tried to visit the pond for a little fishing but found
+    that the waters have turned black. It seems the plants haven\u2019t been poisoned
+    and I heard a few frogs when I got closer, but the screeching of birds made me
+    turn back. I\u2019m not sure what happened but it\u2019s probably best to steer
+    clear for now."
+  - "I took a walk near the pond in order to try and find some frogs to go with dinner
+    a few weeks ago and found quite a large shadow swimming under the surface. I\u2019m
+    not sure how comfortable it is in such a small area\u2026 perhaps the pond is
+    deeper than I thought. Maybe I should leave some crops as an offering?"
+  - "I took a walk near the pond in order to try and find some frogs to go with dinner
+    a few weeks ago and found quite a large shadow swimming under the surface. I\u2019m
+    not sure how comfortable it is in such a small area\u2026 perhaps the pond is
+    deeper than I thought. Maybe I should leave some crops as an offering?"
   sketches:
   - {fileID: 21300000, guid: bb02c71b86ba23e4e875715c10c21fde, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: bb02c71b86ba23e4e875715c10c21fde, type: 3}
+  - {fileID: 21300000, guid: 52c070cf17bd09147be961cc69639cef, type: 3}
+  - {fileID: 21300000, guid: 52c070cf17bd09147be961cc69639cef, type: 3}
+  - {fileID: 21300000, guid: 283646b9c20d30440a9b3cd3c055b465, type: 3}
+  - {fileID: 21300000, guid: 283646b9c20d30440a9b3cd3c055b465, type: 3}

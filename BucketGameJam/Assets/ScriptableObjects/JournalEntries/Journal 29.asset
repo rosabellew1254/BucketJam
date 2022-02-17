@@ -14,16 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
-  - normal_dead_00
-  - med_cured_00
-  - med_dead_00
-  - low_cured_00
-  - low_dead_00
+  - I manage to make a huge tear in my overalls this month. Thankfully Clove is better
+    at sewing than I am and the patch we chose looks great! Hopefully, it will last
+    for a long time.
+  - "I tore a hole in my overalls today. Unfortunately, I had to throw them out since
+    the damage is a bit too much for my skill level\u2026 Clove might have been able
+    to fix it\u2026"
+  - "While Clove and I were out on a walk we happened to cross the town graveyard.
+    It\u2019s strange but it almost looks as though some of the graves have been
+    freshly dug? There aren\u2019t any new headstones from what I can tell though\u2026"
+  - "I accidentally wandered too close to the graveyard a few weeks ago. I\u2019ve
+    been trying to avoid it for\u2026 obvious reasons. The graves looked pretty strange
+    but I didn\u2019t stick around too long to investigate. A few rumors have been
+    floating around town about graves being freshly dug and concerns about grave
+    robbing. I should keep an eye on Clove\u2019s just in case."
+  - "Clove ran in screaming a couple weeks ago, pointing to the shed. I investigated
+    for her sake knowing I\u2019d find the growing spider population where she directed
+    me. If they\u2019re bothering her I\u2019ll find a way to dispose of them this
+    month. It\u2019s a shame though, they\u2019ve been helpful in accumulating some
+    birds for my crops."
+  - "The spiders behind the shed are starting to grow past their allowed area and
+    it\u2019s time to correct their behavior. I\u2019ve found them helpful with finding
+    \u2018fertilizer\u2019 but they need to remember who the owner of this land is."
   sketches:
   - {fileID: 21300000, guid: b6aea51659a8f7542b0c59fe067fc513, type: 3}
   - {fileID: 21300000, guid: e87aca780a705cf43864441b9236b2d4, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: ce9a4983bf3fa264992552e1858af91d, type: 3}
+  - {fileID: 21300000, guid: ce9a4983bf3fa264992552e1858af91d, type: 3}
+  - {fileID: 21300000, guid: 77066a587caab2e41945382a0078de01, type: 3}
+  - {fileID: 21300000, guid: 77066a587caab2e41945382a0078de01, type: 3}

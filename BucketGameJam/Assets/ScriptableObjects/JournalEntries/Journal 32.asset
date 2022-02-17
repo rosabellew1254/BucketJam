@@ -14,16 +14,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
-  - normal_dead_00
-  - med_cured_00
-  - med_dead_00
-  - low_cured_00
-  - low_dead_00
+  - "It\u2019s been really windy around town this month, so windy in fact that I\u2019ve
+    been hit in the face with quite a few leaves! Luckily I haven\u2019t been hit
+    with something bigger but I should still try to be careful if this weather keeps
+    up."
+  - "It\u2019s been really windy around town this month, so windy in fact that I\u2019ve
+    been hit in the face with quite a few leaves! Luckily I haven\u2019t been hit
+    with something bigger but I should still try to be careful if this weather keeps
+    up."
+  - "Last month I decided to take a small detour towards the town hall and saw that
+    the statue in front had disappeared. I thought that maybe something had happened
+    to it but\u2026 later that day I saw it standing in an alley covering its face
+    with its hands. I wonder how it got there?"
+  - "Last month I decided to take a small detour towards the town hall and saw that
+    the statue in front had disappeared. I thought that maybe something had happened
+    to it but\u2026 later that day I saw it standing in an alley covering its face
+    with its hands. I wonder how it got there?"
+  - "For the past few weeks I\u2019ve been feeling rumbling on the farm like an earthquake
+    is passing through. Curious, I followed them to the source one day and found
+    quite a deep hole in the ground near the forests that looked suspiciously\u2026
+    fleshy. Perhaps it is hungry and that\u2019s what the tremors are for? I should
+    try tossing some crops in and see if that solves anything."
+  - "For the past few weeks I\u2019ve been feeling rumbling on the farm like an earthquake
+    is passing through. Curious, I followed them to the source one day and found
+    quite a deep hole in the ground near the forests that looked suspiciously\u2026
+    fleshy. Perhaps it is hungry and that\u2019s what the tremors are for? I should
+    try tossing some crops in and see if that solves anything."
   sketches:
   - {fileID: 21300000, guid: 85fb92aea49890643b21e181571caf6e, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: 85fb92aea49890643b21e181571caf6e, type: 3}
+  - {fileID: 21300000, guid: 9eae3079a401e7a4299b51f742a9dbc1, type: 3}
+  - {fileID: 21300000, guid: 9eae3079a401e7a4299b51f742a9dbc1, type: 3}
+  - {fileID: 21300000, guid: ae2985249565df24b8ec9b16fdd58d13, type: 3}
+  - {fileID: 21300000, guid: ae2985249565df24b8ec9b16fdd58d13, type: 3}

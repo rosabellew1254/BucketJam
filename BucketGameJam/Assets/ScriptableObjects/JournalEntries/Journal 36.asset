@@ -14,19 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - "It\u2019s a nice sunny day outside which means today is a perfect day to plant!
-    My sister Clove suggested writing in a journal to keep memories and talk about
-    farming, but I can\u2019t promise that I\u2019ll remember to write every day.
-    Maybe I\u2019ll start out with at least one entry a month."
-  - normal_dead_00
-  - med_cured_00
-  - med_dead_00
-  - low_cured_00
-  - low_dead_00
+  - "Clove and Oliver have been going on a few more adventures together into town
+    during the past couple of weeks. I think Oliver wanted to say hi to a few of
+    the townsfolk and tagged along with my sister. I don\u2019t blame her for wanting
+    to take a walk, she\u2019s been in bed for so long after all!"
+  - "Oliver has been following me into town lately, wanders off for a few minutes,
+    then comes right back. I think he\u2019s been visiting a few of his old friends
+    in town\u2026 can\u2019t complain, the company is a lot nicer than walking alone."
+  - "It\u2019s been getting harder and harder to find things for Clove to do outside
+    anymore with everything that\u2019s been happening lately. I hate telling her
+    to stay inside again but the rumors worry me\u2026 maybe we could take a walk
+    together through town. I\u2019d feel a lot better if I was with her."
+  - "It\u2019s getting more difficult to head outside and simply explore for the
+    sake of it anymore and even harder to ignore what\u2019s been going on around
+    town. I wish I knew what was causing all of this\u2026 but maybe some things
+    are better left unknown."
+  - "Clove has been giving me odd looks lately and I\u2019m not sure why. I feel
+    perfectly fine. Terrific even! And yet she looks at me as if I\u2019m a monster.
+    Well she may give all the looks she pleases but that doesn't change that I\u2019m
+    her brother\u2026 and there\u2019s nothing she can do about that."
+  - "My body has felt\u2026 strange lately. I don\u2019t know what\u2019s happening
+    but\u2026 I feel stronger. Better than I ever have before. Perhaps this is a
+    gift for all that I have accomplished\u2026 and all the loss that I\u2019ve endured."
   sketches:
   - {fileID: 21300000, guid: 70429a6c5f78dcc4dae837522f8e06f9, type: 3}
   - {fileID: 21300000, guid: 177b1c686209f62439567a332bc2ea56, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: 4f0883d2a4e1aaa478ec61ab9695ea34, type: 3}
+  - {fileID: 21300000, guid: d9c3d18f7631c60438884dc7d7521fbd, type: 3}
+  - {fileID: 21300000, guid: 64672a771dd044142bd378e53c957525, type: 3}
+  - {fileID: 21300000, guid: e50bb837d384fae4bad52de784eb543c, type: 3}
