@@ -15,6 +15,8 @@ public class GardenUI : MonoBehaviour
     public Button door;
     public Sprite[] spriteDoor;
 
+    public Color[] textColor;
+
 
     GameManager.plants selectedSeed;
     public GameObject[] availableSeeds;
@@ -57,9 +59,9 @@ public class GardenUI : MonoBehaviour
             grassBack.sprite = eldritchGrassBack;
             grassFront.sprite = eldritchGrassFront;
             goToTownButton.sprite = generalEldritchButtonSprite;
-            goToTownButton.transform.GetChild(0).gameObject.SetActive(true);
+            goToTownButton.transform.GetChild(0).GetComponent<Text>().color = textColor[1];
             harvestButton.sprite = generalEldritchButtonSprite;
-            harvestButton.transform.GetChild(0).gameObject.SetActive(true);
+            harvestButton.transform.GetChild(0).GetComponent<Text>().color = textColor[1];
             fog.SetActive(true);
             for (int i = 0; i < numPlants; i++)
             {
