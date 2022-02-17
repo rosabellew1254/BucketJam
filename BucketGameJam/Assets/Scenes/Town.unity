@@ -1309,7 +1309,6 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
@@ -1318,36 +1317,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &519420029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -1948904998
-      Data2: 1291410268
-      Data3: 327296139
-      Data4: -1354885296
-    Path: event:/good
-  Event: 
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1920,6 +1889,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9b1998d2057eaad48bc2e496b2a899d8, type: 3}
   - {fileID: 21300000, guid: c9c519b6dfd8c3645a7c65b9d69c1ee6, type: 3}
   - {fileID: 21300000, guid: b39784966ef5c8c4e8dd1ca4af02234c, type: 3}
+  textCases: []
+  textColorHud: []
 --- !u!1 &1002603913
 GameObject:
   m_ObjectHideFlags: 0

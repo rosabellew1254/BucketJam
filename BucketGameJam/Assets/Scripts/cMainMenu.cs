@@ -13,6 +13,7 @@ public class cMainMenu : MonoBehaviour
     void Start()
     {
         gm = GameManager.gm;
+        AudioManager.am.StartInstance(9);
     }
 
     // Update is called once per frame

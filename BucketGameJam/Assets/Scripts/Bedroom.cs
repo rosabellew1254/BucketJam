@@ -88,7 +88,23 @@ public class Bedroom : MonoBehaviour
         {
             Destroy(introImage.gameObject);
         }
+        switch (gm.worldState)
+        {
+            case GameManager.state.normal:
+                StartCoroutine(AudioManager.am.PlaySound(3));
+                break;
+            case GameManager.state.smallEvil:
+            case GameManager.state.largeEvil:
+                StartCoroutine(AudioManager.am.PlaySound(4));
+                break;
+            case GameManager.state.terminator:
+                break;
+            default:
+                break;
+        }
     }
+
+
 
     IEnumerator CutScene()
     {
@@ -256,6 +272,24 @@ public class Bedroom : MonoBehaviour
                 break;
             case GameManager.sisterStatus.dead:
                 bearImage.gameObject.SetActive(true);
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void StopInstance()
+    {
+        switch (gm.worldState)
+        {
+            case GameManager.state.normal:
+                AudioManager.am.StopInstance(3);
+                break;
+            case GameManager.state.smallEvil:
+            case GameManager.state.largeEvil:
+                AudioManager.am.StopInstance(4);
+                break;
+            case GameManager.state.terminator:
                 break;
             default:
                 break;

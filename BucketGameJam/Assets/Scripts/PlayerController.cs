@@ -30,8 +30,6 @@ public class PlayerController : MonoBehaviour
     public Image musicToggleImage;
     public Sprite[] musicToggleSprite;
 
-    public GameObject FMODThing;
-    public FMOD.Studio.EventInstance[] instances;
     // instance 0: normal <- town--------------------------good
     // instance 1: small <- town---------------------------bad_small
     // instance 2: large <- town---------------------------bad
@@ -55,110 +53,6 @@ public class PlayerController : MonoBehaviour
         curSanSetup = true;
         AdjustSanity(0);
         dayStartSanity = curSanity;
-        instances = new FMOD.Studio.EventInstance[9];
-        instances[0] = FMODUnity.RuntimeManager.CreateInstance("event:/good");
-        instances[1] = FMODUnity.RuntimeManager.CreateInstance("event:/bad_small");
-        instances[2] = FMODUnity.RuntimeManager.CreateInstance("event:/bad");
-        instances[3] = FMODUnity.RuntimeManager.CreateInstance("event:/bedroom");
-        instances[4] = FMODUnity.RuntimeManager.CreateInstance("event:/bedroom_bad");
-        instances[5] = FMODUnity.RuntimeManager.CreateInstance("event:/peaceful_ending");
-        instances[6] = FMODUnity.RuntimeManager.CreateInstance("event:/doublefaced_ending");
-        instances[7] = FMODUnity.RuntimeManager.CreateInstance("event:/deserter_ending");
-        instances[8] = FMODUnity.RuntimeManager.CreateInstance("event:/evil_ending");
-
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex((int)GameManager.scenes.town))
-        {
-            switch (gm.worldState)
-            {
-                case GameManager.state.normal:
-                    for (int i = 0; i < instances.Length; i++)
-                    {
-                        instances[i].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-                    }
-                    instances[0].start();
-                    break;
-                case GameManager.state.smallEvil:
-                    for (int i = 0; i < instances.Length; i++)
-                    {
-                        instances[i].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-                    }
-                    instances[1].start();
-                    break;
-                case GameManager.state.largeEvil:
-                    for (int i = 0; i < instances.Length; i++)
-                    {
-                        instances[i].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-                    }
-                    instances[2].start();
-                    break;
-                case GameManager.state.terminator:
-                    break;
-                default:
-                    break;
-            }
-        }
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex((int)GameManager.scenes.garden) || SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex((int)GameManager.scenes.shop) || SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex((int)GameManager.scenes.bedroom))
-        {
-            switch (gm.worldState)
-            {
-                case GameManager.state.normal:
-                    for (int i = 0; i < instances.Length; i++)
-                    {
-                        instances[i].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-                    }
-                    instances[3].start();
-                    break;
-                case GameManager.state.smallEvil:
-                case GameManager.state.largeEvil:
-                    for (int i = 0; i < instances.Length; i++)
-                    {
-                        instances[i].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-                    }
-                    instances[4].start();
-                    break;
-                case GameManager.state.terminator:
-                    break;
-                default:
-                    break;
-            }
-        }
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex((int)GameManager.scenes.endScene))
-        {
-            switch (FindObjectOfType<Ending>().currentEnding)
-            {
-                case 0:
-                    for (int i = 0; i < instances.Length; i++)
-                    {
-                        instances[i].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-                    }
-                    instances[5].start();
-                    break;
-                case 1:
-                    for (int i = 0; i < instances.Length; i++)
-                    {
-                        instances[i].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-                    }
-                    instances[6].start();
-                    break;
-                case 2:
-                    for (int i = 0; i < instances.Length; i++)
-                    {
-                        instances[i].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-                    }
-                    instances[7].start();
-                    break;
-                case 3:
-                    for (int i = 0; i < instances.Length; i++)
-                    {
-                        instances[i].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-                    }
-                    instances[8].start();
-                    break;
-                default:
-                    break;
-            }
-
-        }
     }
 
     public void AdjustSanity(int _adjustment)
