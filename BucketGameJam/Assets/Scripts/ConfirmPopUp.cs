@@ -48,7 +48,10 @@ public class ConfirmPopUp : MonoBehaviour
         GameManager.gm.LoadScene(0);
         Destroy(gameObject);
     }
-
+    public void ButtonSound()
+    {
+        AudioManager.am.PlaySFX("event:/click");
+    }
 
     public void NoConfirm()
     {

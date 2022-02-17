@@ -6,10 +6,13 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager am;
     //public FMODUnity.EventReference HappyMusicStateEvent;
-    public FMODUnity.EventReference[] events;
+    public FMODUnity.EventReference[] musicEvents;
+    public FMODUnity.EventReference[] SFXEvents;
 
     //public FMOD.Studio.EventInstance happyMusicState; //town happy
-    public FMOD.Studio.EventInstance[] instance;
+    public FMOD.Studio.EventInstance[] musicInstance;
+    public FMOD.Studio.EventInstance[] SFXInstance;
+
 
     //public int StartingSanity = PlayerController.pc.curSanity;
     int sanityParam;
@@ -17,6 +20,7 @@ public class AudioManager : MonoBehaviour
     public FMOD.Studio.EventDescription sanityEventDescription;
 
     public bool instanceIsSetup = false;
+    // ↓↓↓↓↓↓↓ music instances ↓↓↓↓↓↓↓
     // instance 0: normal <- town--------------------------good
     // instance 1: small <- town---------------------------bad_small
     // instance 2: large <- town---------------------------bad
@@ -27,22 +31,40 @@ public class AudioManager : MonoBehaviour
     // instance 7: ending deserted-------------------------deserter_ending
     // instance 8: ending evil-----------------------------evil_ending
     // instance 9: title-----------------------------------title_music
+    // instance 10: garden---------------------------------garden
+    // instance 11: garden evil----------------------------garden_bad
+    // instance 12: credit---------------------------------credit_music1
+
+    // ↓↓↓↓↓↓↓ sfx instances ↓↓↓↓↓↓↓
+    // 0: buy
+    // 1: click
+    // 2: door
+    // 3: next_day
+    // 4: select
+    // 5: set_plant
 
     private void Awake()
     {
         am = this;
-        instance = new FMOD.Studio.EventInstance[events.Length];
-        for (int i = 0; i < events.Length; i++)
+        musicInstance = new FMOD.Studio.EventInstance[musicEvents.Length];
+        SFXInstance = new FMOD.Studio.EventInstance[SFXEvents.Length];
+        for (int i = 0; i < musicEvents.Length; i++)
         {
-            instance[i] = FMODUnity.RuntimeManager.CreateInstance(events[i]);
-            instance[i].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            musicInstance[i] = FMODUnity.RuntimeManager.CreateInstance(musicEvents[i]);
+            musicInstance[i].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         }
+        for (int i = 0; i < SFXEvents.Length; i++)
+        {
+            SFXInstance[i] = FMODUnity.RuntimeManager.CreateInstance(SFXEvents[i]);
+            SFXInstance[i].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        }
+
         //instance[9].start();
         //happyMusicState = FMODUnity.RuntimeManager.CreateInstance(HappyMusicStateEvent);
         //happyMusicState.start();
         //FMOD.Studio.EventDescription sanityEventDescription;
         //happyMusicState.getDescription(out sanityEventDescription);
-        FMOD.Studio.PARAMETER_DESCRIPTION sanityParameterDescription;
+        //FMOD.Studio.PARAMETER_DESCRIPTION sanityParameterDescription;
         //sanityEventDescription.getParameterDescriptionByName("sanity", out sanityParameterDescription);
         //sanityParameterId = sanityParameterDescription.id;
         instanceIsSetup = true;
@@ -78,22 +100,27 @@ public class AudioManager : MonoBehaviour
 
     public void StartInstance(int _index)
     {
-        instance[_index].start();
+        musicInstance[_index].start();
     }
 
     public void StopInstance(int _index)
     {
-        instance[_index].stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        for (int i = 0; i < events.Length; i++)
+        musicInstance[_index].stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        for (int i = 0; i < musicEvents.Length; i++)
         {
-            instance[i].release();
+            musicInstance[i].release();
         }
     }
 
-    public IEnumerator PlaySound(int _index)
+    public IEnumerator PlayMusic(int _index)
     {
         yield return new WaitUntil(() => instanceIsSetup == true);
         StartInstance(_index);
+    }
+
+    public void PlaySFX(string _eventName)
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(_eventName);
     }
 
 }

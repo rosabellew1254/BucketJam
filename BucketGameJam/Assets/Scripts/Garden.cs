@@ -21,6 +21,7 @@ public class Garden : MonoBehaviour
         }
     }
 
+
     public void PlantPlant(GameManager.plants _plantType, int _position)
     {
         plants[_position] = _plantType;

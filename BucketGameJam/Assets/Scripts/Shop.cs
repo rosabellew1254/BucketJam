@@ -46,6 +46,21 @@ public class Shop : MonoBehaviour
         selectedPlant = GameManager.plants.terminator;
         ShowBuySeedsButton();
         UpdateUiForSanity();
+        switch (gm.worldState)
+        {
+            case GameManager.state.normal:
+                StartCoroutine(AudioManager.am.PlayMusic(3));
+                break;
+            case GameManager.state.smallEvil:
+            case GameManager.state.largeEvil:
+                StartCoroutine(AudioManager.am.PlayMusic(4));
+                break;
+            case GameManager.state.terminator:
+                break;
+            default:
+                break;
+        }
+
     }
 
     public void SelectPlant(int _plantIndex)
@@ -69,7 +84,8 @@ public class Shop : MonoBehaviour
         inventory.AdjustMoney(-selectedPrice);
         inventory.AdjustSeedQuantity(selectedPlant, 1);
         ShowBuySeedsButton();
-        FMODUnity.RuntimeManager.PlayOneShot("event:/buy");
+        AudioManager.am.PlaySFX("event:/buy");
+        
     }
 
     public void SellPlant()
@@ -121,5 +137,34 @@ public class Shop : MonoBehaviour
         }
 
         //goToTownButtonImage.transform.GetChild(0).gameObject.SetActive(isEvil);
+    }
+
+    public void ButtonSound()
+    {
+        AudioManager.am.PlaySFX("event:/click");
+    }
+
+    public void SelectedSound()
+    {
+        AudioManager.am.PlaySFX("event:/select");
+
+    }
+
+    public void StopInstance()
+    {
+        switch (gm.worldState)
+        {
+            case GameManager.state.normal:
+                AudioManager.am.StopInstance(3);
+                break;
+            case GameManager.state.smallEvil:
+            case GameManager.state.largeEvil:
+                AudioManager.am.StopInstance(4);
+                break;
+            case GameManager.state.terminator:
+                break;
+            default:
+                break;
+        }
     }
 }

@@ -176,7 +176,23 @@ public class Ending : MonoBehaviour
         {
             bPageFlip[1].gameObject.SetActive(true);
         }
-
+        switch (currentEnding)
+        {
+            case 0:
+                StartCoroutine(AudioManager.am.PlayMusic(5));
+                break;
+            case 1:
+                StartCoroutine(AudioManager.am.PlayMusic(6));
+                break;
+            case 2:
+                StartCoroutine(AudioManager.am.PlayMusic(7));
+                break;
+            case 3:
+                StartCoroutine(AudioManager.am.PlayMusic(8));
+                break;
+            default:
+                break;
+        }
     }
 
     /*public void HideText()
@@ -265,8 +281,29 @@ public class Ending : MonoBehaviour
         Inventory.inventory.plants = new int[(int)GameManager.plants.terminator];
         PlayerPrefs.SetInt("san", 25);
         //StartCoroutine("pcSetup");
-
+        switch (currentEnding)
+        {
+            case 0:
+                AudioManager.am.StopInstance(5);
+                break;
+            case 1:
+                AudioManager.am.StopInstance(6);
+                break;
+            case 2:
+                AudioManager.am.StopInstance(7);
+                break;
+            case 3:
+                AudioManager.am.StopInstance(8);
+                break;
+            default:
+                break;
+        }
         GameManager.gm.LoadScene(0);
         //GameManager.gm.RestartGameGM();
+    }
+
+    public void ButtonSound()
+    {
+        AudioManager.am.PlaySFX("event:/click");
     }
 }

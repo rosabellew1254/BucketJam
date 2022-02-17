@@ -171,7 +171,6 @@ MonoBehaviour:
   musicToggleSprite:
   - {fileID: 21300000, guid: c662d71e41ea5824cb82b3b309c93a94, type: 3}
   - {fileID: 21300000, guid: 1ca673afd957d2d47992d9e5fefb97bf, type: 3}
-  FMODThing: {fileID: 0}
 --- !u!1 &1612022985
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,6 +518,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1167060740431088935}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: OpenInventory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1607914150}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -879,14 +890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f72918b26c4d0461092e7edac47e1215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HappyMusicStateEvent:
-    Guid:
-      Data1: -1948904998
-      Data2: 1291410268
-      Data3: 327296139
-      Data4: -1354885296
-    Path: event:/good
-  events:
+  musicEvents:
   - Guid:
       Data1: -1948904998
       Data2: 1291410268
@@ -947,6 +951,62 @@ MonoBehaviour:
       Data3: 2004406922
       Data4: 937423514
     Path: event:/title_music
+  - Guid:
+      Data1: -1213498750
+      Data2: 1216618602
+      Data3: 223384219
+      Data4: 1193659500
+    Path: event:/garden
+  - Guid:
+      Data1: -1412789664
+      Data2: 1114969133
+      Data3: 839726008
+      Data4: -1964999164
+    Path: event:/bedroom_bad
+  - Guid:
+      Data1: -566647086
+      Data2: 1176474699
+      Data3: -1978997881
+      Data4: 2004135452
+    Path: event:/credits_music1
+  SFXEvents:
+  - Guid:
+      Data1: 2021359932
+      Data2: 1223274751
+      Data3: -1208455528
+      Data4: 591078060
+    Path: event:/buy
+  - Guid:
+      Data1: -1544927101
+      Data2: 1199554822
+      Data3: -789168737
+      Data4: -2073276770
+    Path: event:/click
+  - Guid:
+      Data1: -1770248891
+      Data2: 1337269409
+      Data3: -981041497
+      Data4: -1961401064
+    Path: event:/door
+  - Guid:
+      Data1: -176915630
+      Data2: 1318928682
+      Data3: 1885874575
+      Data4: -633652946
+    Path: event:/next_day
+  - Guid:
+      Data1: 340687584
+      Data2: 1218800666
+      Data3: -1436484717
+      Data4: -287553238
+    Path: event:/select
+  - Guid:
+      Data1: 1260656536
+      Data2: 1163843969
+      Data3: 1330039448
+      Data4: -1299976102
+    Path: event:/set_plant
+  instanceIsSetup: 0
 --- !u!1 &1119983584449180091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,6 +1769,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1607914150}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1607914150}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

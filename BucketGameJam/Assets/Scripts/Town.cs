@@ -32,19 +32,24 @@ public class Town : MonoBehaviour
         switch (GameManager.gm.worldState)
         {
             case GameManager.state.normal:
-                StartCoroutine(AudioManager.am.PlaySound(0));
+                StartCoroutine(AudioManager.am.PlayMusic(0));
                 break;
             case GameManager.state.smallEvil:
-                StartCoroutine(AudioManager.am.PlaySound(1));
+                StartCoroutine(AudioManager.am.PlayMusic(1));
                 break;
             case GameManager.state.largeEvil:
-                StartCoroutine(AudioManager.am.PlaySound(2));
+                StartCoroutine(AudioManager.am.PlayMusic(2));
                 break;
             case GameManager.state.terminator:
                 break;
             default:
                 break;
         }
+    }
+
+    public void ButtonSound()
+    {
+        AudioManager.am.PlaySFX("event:/click");
     }
 
     public IEnumerator pcSetup()

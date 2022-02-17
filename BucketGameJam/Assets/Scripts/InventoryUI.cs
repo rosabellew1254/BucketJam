@@ -20,7 +20,10 @@ public class InventoryUI : MonoBehaviour
             seeds[i].text = inventory.seeds[i].ToString();
         }
     }
-
+    public void ButtonSound()
+    {
+        AudioManager.am.PlaySFX("event:/click");
+    }
     public void Close()
     {
         Destroy(gameObject);

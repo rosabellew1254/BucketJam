@@ -121,8 +121,13 @@ public class SellPlants : MonoBehaviour
 
         FindObjectOfType<CursorScript>().UpdateSprite();
         FindObjectOfType<Shop>().UpdateUiForSanity();
-
+        AudioManager.am.PlaySFX("event:/buy");
         CloseMenu();
+    }
+
+    public void ButtonSound()
+    {
+        AudioManager.am.PlaySFX("event:/click");
     }
 
     public void CloseMenu()

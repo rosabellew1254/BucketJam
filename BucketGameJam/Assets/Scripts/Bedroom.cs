@@ -91,11 +91,11 @@ public class Bedroom : MonoBehaviour
         switch (gm.worldState)
         {
             case GameManager.state.normal:
-                StartCoroutine(AudioManager.am.PlaySound(3));
+                StartCoroutine(AudioManager.am.PlayMusic(3));
                 break;
             case GameManager.state.smallEvil:
             case GameManager.state.largeEvil:
-                StartCoroutine(AudioManager.am.PlaySound(4));
+                StartCoroutine(AudioManager.am.PlayMusic(4));
                 break;
             case GameManager.state.terminator:
                 break;
@@ -104,7 +104,16 @@ public class Bedroom : MonoBehaviour
         }
     }
 
+    public void ButtonSound()
+    {
+        AudioManager.am.PlaySFX("event:/click");
+    }
 
+    public void DoorSound()
+    {
+        AudioManager.am.PlaySFX("event:/door");
+
+    }
 
     IEnumerator CutScene()
     {

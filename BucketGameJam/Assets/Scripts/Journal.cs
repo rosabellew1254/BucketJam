@@ -272,6 +272,11 @@ public class Journal : MonoBehaviour
         Debug.Log("Journal Entry Index: " + _page);
     }
 
+    public void ButtonSound()
+    {
+        AudioManager.am.PlaySFX("event:/click");
+    }
+
     public void PageFlip(int _change)
     {
         DisplayPage(Mathf.Clamp(currentpage + _change, 0, GameManager.gm.curDay));

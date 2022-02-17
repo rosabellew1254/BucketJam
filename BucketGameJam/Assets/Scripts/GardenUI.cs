@@ -73,8 +73,20 @@ public class GardenUI : MonoBehaviour
         door.GetComponent<Image>().alphaHitTestMinimumThreshold = gm.alphaHitMinValue;
         gm.UpdateButtonSprite(door, spriteDoor[0], spriteDoor[1], spriteDoor[2], spriteDoor[3]);
         StartCoroutine(Setup());
-        StartCoroutine(AudioManager.am.PlaySound(3));
-
+        switch (gm.worldState)
+        {
+            case GameManager.state.normal:
+                StartCoroutine(AudioManager.am.PlayMusic(10));
+                break;
+            case GameManager.state.smallEvil:
+            case GameManager.state.largeEvil:
+                StartCoroutine(AudioManager.am.PlayMusic(11));
+                break;
+            case GameManager.state.terminator:
+                break;
+            default:
+                break;
+        }
     }
 
     IEnumerator Setup()
@@ -160,6 +172,22 @@ public class GardenUI : MonoBehaviour
                 image.sprite = spriteNormalDropdownDisplaysDown[(int)selectedSeed];
             }
         }
+    }
+
+    public void ButtonSound()
+    {
+        AudioManager.am.PlaySFX("event:/click");
+    }
+
+    public void DoorSound()
+    {
+        AudioManager.am.PlaySFX("event:/door");
+
+    }
+
+    public void PlantSound()
+    {
+        AudioManager.am.PlaySFX("event:/set_plant");
     }
 
     public void ClickDropdown()
@@ -258,11 +286,11 @@ public class GardenUI : MonoBehaviour
         switch (gm.worldState)
         {
             case GameManager.state.normal:
-                AudioManager.am.StopInstance(3);
+                AudioManager.am.StopInstance(10);
                 break;
             case GameManager.state.smallEvil:
             case GameManager.state.largeEvil:
-                AudioManager.am.StopInstance(4);
+                AudioManager.am.StopInstance(11);
                 break;
             case GameManager.state.terminator:
                 break;

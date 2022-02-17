@@ -300,7 +300,10 @@ public class Sister : MonoBehaviour
         }
 
     }
-
+    public void ButtonSound()
+    {
+        AudioManager.am.PlaySFX("event:/click");
+    }
 
     /*public void Update()
     {

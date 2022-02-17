@@ -116,6 +116,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void ButtonSound()
+    {
+        AudioManager.am.PlaySFX("event:/click");
+    }
+
     public void OnInventory()
     {
 

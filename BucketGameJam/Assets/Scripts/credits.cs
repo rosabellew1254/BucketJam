@@ -9,6 +9,7 @@ public class credits : MonoBehaviour
     private void Start()
     {
         GameManager.gm.generalHUD.SetActive(false);
+        AudioManager.am.PlayMusic(12);
         if (waitTime != 0)
         {
             Invoke("ExitCredits", waitTime);

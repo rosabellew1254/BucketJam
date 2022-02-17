@@ -15,12 +15,16 @@ public class cMainMenu : MonoBehaviour
         gm = GameManager.gm;
         AudioManager.am.StartInstance(9);
     }
-
+    public void ButtonSound()
+    {
+        AudioManager.am.PlaySFX("event:/click");
+    }
     // Update is called once per frame
     void Update()
     {
         
     }
+
 
     // Loads the into the game's first scene
     public void OnPlayGame()
@@ -39,6 +43,7 @@ public class cMainMenu : MonoBehaviour
     public void OnCredits()
     {
         gm.generalHUD.SetActive(false);
+        AudioManager.am.StopInstance(9);
         gm.LoadScene(6);
     }
 

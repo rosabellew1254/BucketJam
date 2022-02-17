@@ -17,4 +17,14 @@ public class NewGamePopUp : MonoBehaviour
         GameManager.gm.LoadScene(4);
     }
 
+    public void ButtonSound()
+    {
+        AudioManager.am.PlaySFX("event:/click");
+    }
+
+    public void Back()
+    {
+        Destroy(gameObject);
+    }
+
 }

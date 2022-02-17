@@ -1993,6 +1993,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 855638384877300268}
         m_TargetAssemblyTypeName: InventoryUI, Assembly-CSharp
+        m_MethodName: ButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 855638384877300268}
+        m_TargetAssemblyTypeName: InventoryUI, Assembly-CSharp
         m_MethodName: Close
         m_Mode: 1
         m_Arguments:
@@ -2409,3 +2421,5 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a7a3752accfa92d4a8f168276cbcb8fb, type: 3}
   - {fileID: 21300000, guid: 60b66e776234f4e40a27824c867dae5b, type: 3}
   - {fileID: 21300000, guid: 784b404e0b825e3479c0e7b4f970ea22, type: 3}
+  textCases: []
+  textColorHud: []

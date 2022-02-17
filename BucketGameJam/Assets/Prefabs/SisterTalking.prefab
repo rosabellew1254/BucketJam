@@ -290,6 +290,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5201132491924110626}
+        m_TargetAssemblyTypeName: Sister, Assembly-CSharp
+        m_MethodName: ButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1392304721762395706
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,6 +513,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5201132491924110626}
+        m_TargetAssemblyTypeName: Sister, Assembly-CSharp
+        m_MethodName: ButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2288756882841774755
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,6 +622,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: bced2574b4069ce4f90b5fc0cf6a8273, type: 3}
   thirdPhase:
   - {fileID: 21300000, guid: bced2574b4069ce4f90b5fc0cf6a8273, type: 3}
+  textCases: []
+  textColorHud: []
 --- !u!1 &2301000630499599002
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,6 +835,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5201132491924110626}
+        m_TargetAssemblyTypeName: Sister, Assembly-CSharp
+        m_MethodName: ButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2584018475850155997
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,6 +969,18 @@ MonoBehaviour:
       - m_Target: {fileID: 5201132491924110626}
         m_TargetAssemblyTypeName: Sister, Assembly-CSharp
         m_MethodName: ReadDialogBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5201132491924110626}
+        m_TargetAssemblyTypeName: Sister, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1141,6 +1191,18 @@ MonoBehaviour:
       - m_Target: {fileID: 5201132491924110626}
         m_TargetAssemblyTypeName: Sister, Assembly-CSharp
         m_MethodName: ReadDialogNext
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5201132491924110626}
+        m_TargetAssemblyTypeName: Sister, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1419,6 +1481,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5201132491924110626}
+        m_TargetAssemblyTypeName: Sister, Assembly-CSharp
+        m_MethodName: ButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1792,6 +1866,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5201132491924110626}
+        m_TargetAssemblyTypeName: Sister, Assembly-CSharp
+        m_MethodName: ButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5445216824913194801
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,6 +2077,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: bced2574b4069ce4f90b5fc0cf6a8273, type: 3}
   thirdPhase:
   - {fileID: 21300000, guid: bced2574b4069ce4f90b5fc0cf6a8273, type: 3}
+  textCases: []
+  textColorHud: []
 --- !u!1 &5806371820011958536
 GameObject:
   m_ObjectHideFlags: 0
@@ -2594,6 +2682,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5201132491924110626}
+        m_TargetAssemblyTypeName: Sister, Assembly-CSharp
+        m_MethodName: ButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7216520515057323507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2717,6 +2817,18 @@ MonoBehaviour:
       - m_Target: {fileID: 5201132491924110626}
         m_TargetAssemblyTypeName: Sister, Assembly-CSharp
         m_MethodName: ReadTextHello
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5201132491924110626}
+        m_TargetAssemblyTypeName: Sister, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2854,6 +2966,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5201132491924110626}
+        m_TargetAssemblyTypeName: Sister, Assembly-CSharp
+        m_MethodName: ButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3137,6 +3261,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 5201132491924110626}
+        m_TargetAssemblyTypeName: Sister, Assembly-CSharp
+        m_MethodName: ButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 5201132491924110626}
         m_TargetAssemblyTypeName: Sister, Assembly-CSharp
         m_MethodName: Back
