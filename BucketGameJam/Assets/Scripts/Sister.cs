@@ -302,7 +302,7 @@ public class Sister : MonoBehaviour
     }
 
 
-    public void Update()
+    /*public void Update()
     {
         if (textBox.gameObject.activeSelf == false) // if no dialog
         {
@@ -327,6 +327,6 @@ public class Sister : MonoBehaviour
             }
         }
         
-    }
+    }*/
 
 }

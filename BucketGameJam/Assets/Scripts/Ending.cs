@@ -9,11 +9,23 @@ public class Ending : MonoBehaviour
     public Text endingFillerText;
     public Image backgroundImage;
     public Button hideTextButton;
+    public Button[] bPageFlip;
+    public Color[] colorText;
+    public string[] stringEnding;
+    string[] currentArray;
+    public Image dialogBox;
+    public Sprite[] spriteDialogBox;
+    public Sprite[] spritePageFlip; //0: backNormal, 1: nextNormal, 2: backEld, 3: nextEld
 
 
     public string[] endName;
     public string[] endFill;
+    public string[] endingPeaceful;
+    public string[] endingDouble;
+    public string[] endingdeserted;
+    public string[] endingEvil;
     public Sprite[] endPicture;
+    int textCount;
 
 
     public int currentEnding = 0;
@@ -125,22 +137,123 @@ public class Ending : MonoBehaviour
             Debug.Log("Oof");
         }*/
 
+        switch (GameManager.gm.worldState)
+        {
+            case GameManager.state.normal:
+            case GameManager.state.smallEvil:
+
+                bPageFlip[0].image.sprite = spritePageFlip[0];
+                bPageFlip[1].image.sprite = spritePageFlip[1];
+                dialogBox.sprite = spriteDialogBox[0];
+                endingFillerText.color = colorText[0]; // brown
+                endNameText.color = colorText[0]; // brown
+                break;
+            case GameManager.state.largeEvil: // color all pank
+                bPageFlip[0].image.sprite = spritePageFlip[2];
+                bPageFlip[1].image.sprite = spritePageFlip[3];
+                dialogBox.sprite = spriteDialogBox[1];
+                endingFillerText.color = colorText[1];
+                endNameText.color = colorText[1];
+                break;
+            case GameManager.state.terminator:
+                Debug.Log("not gonna work");
+                break;
+            default:
+                break;
+        }
+        //page flip buttons are enabled by default
+        for (int i = 0; i < bPageFlip.Length; i++)
+        {
+            bPageFlip[i].gameObject.SetActive(false);
+        }
         endNameText.text = endName[currentEnding];
-        endingFillerText.text = endFill[currentEnding];
+        //endingFillerText.text = endFill[currentEnding];
         backgroundImage.sprite = endPicture[currentEnding];
 
         GameManager.gm.generalHUD.gameObject.SetActive(false);
-
+        TextInitialization();
+        if (currentArray.Length >= 2)
+        {
+            bPageFlip[1].gameObject.SetActive(true);
+        }
 
     }
 
-    public void HideText()
+    /*public void HideText()
     {
         endingFillerText.gameObject.SetActive(false);
         hideTextButton.gameObject.SetActive(false);
+    }*/
+
+    void TextInitialization()
+    {
+        textCount = 0;
+        switch (currentEnding)
+        {
+            case 0:
+                endingFillerText.text = endingPeaceful[0];
+                currentArray = new string[endingPeaceful.Length];
+                for (int i = 0; i < currentArray.Length; i++)
+                {
+                    currentArray[i] = endingPeaceful[i];
+                }
+                break;
+            case 1:
+                endingFillerText.text = endingDouble[0];
+                currentArray = new string[endingDouble.Length];
+                for (int i = 0; i < currentArray.Length; i++)
+                {
+                    currentArray[i] = endingDouble[i];
+                }
+                break;
+            case 2:
+                endingFillerText.text = endingdeserted[0];
+                currentArray = new string[endingdeserted.Length];
+                for (int i = 0; i < currentArray.Length; i++)
+                {
+                    currentArray[i] = endingdeserted[i];
+                }
+                break;
+            case 3:
+                endingFillerText.text = endingEvil[0];
+                currentArray = new string[endingEvil.Length];
+                for (int i = 0; i < currentArray.Length; i++)
+                {
+                    currentArray[i] = endingEvil[i];
+                }
+                break;
+            default:
+                break;
+        }
     }
 
+    public void ReadDialogBack()
+    {
+        textCount--;
+        Debug.Log("textcount: " + textCount);
+        if (textCount == 0)
+        {
+            bPageFlip[0].gameObject.SetActive(false);
+        }
+        bPageFlip[1].gameObject.SetActive(true);
+        endingFillerText.text = currentArray[textCount];
+    }
+    public void ReadDialogNext() // 0: menu, 1: submenu
+    {
+        textCount++;
+        Debug.Log("textcount: " + textCount);
+        if (textCount == currentArray.Length - 1)
+        {
+            bPageFlip[1].gameObject.SetActive(false);
+            endingFillerText.text = currentArray[textCount];
+        }
+        else
+        {
+            bPageFlip[0].gameObject.SetActive(true);
+            endingFillerText.text = currentArray[textCount];
+        }
 
+    }
     public void RestartGame()
     {
         GameManager.gm.worldState = GameManager.state.normal;
