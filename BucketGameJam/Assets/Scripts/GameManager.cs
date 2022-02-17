@@ -207,7 +207,23 @@ public class GameManager : MonoBehaviour
         daySummarySanityGained.text = "Sanity Gained: " + (pc.curSanity - pc.dayStartSanity);
         pc.dayStartSanity = pc.curSanity;
 
-        daySummaryTownStatus.text = "Town Status: " + worldState;
+        string worldStateName = "_Name";
+        switch (worldState)
+        {
+            case state.normal:
+                worldStateName = "Good";
+                break;
+            case state.smallEvil:
+                worldStateName = "Mysterious";
+                break;
+            case state.largeEvil:
+                worldStateName = "Corrupted";
+                break;
+            default:
+                break;
+        }
+
+        daySummaryTownStatus.text = "Town Status: " + worldStateName;
 
         daySummary.SetActive(true);
     }
