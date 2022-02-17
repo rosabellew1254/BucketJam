@@ -16,7 +16,7 @@ public class Ending : MonoBehaviour
     public Sprite[] endPicture;
 
 
-    int currentEnding = 0;
+    public int currentEnding = 0;
 
 
     private void Start()
