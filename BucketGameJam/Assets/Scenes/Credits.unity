@@ -1015,7 +1015,7 @@ MonoBehaviour:
       Data2: 1176474699
       Data3: -1978997881
       Data4: 2004135452
-    Path: event:/credits_music
+    Path: event:/credits_music1
   Event: 
   PlayEvent: 1
   StopEvent: 2
