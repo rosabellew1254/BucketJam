@@ -319,6 +319,7 @@ GameObject:
   - component: {fileID: 7406143437519992369}
   - component: {fileID: 7406143437519992370}
   - component: {fileID: 7406143437519992366}
+  - component: {fileID: 8057944505606604236}
   m_Layer: 5
   m_Name: Journal
   m_TagString: Untagged
@@ -777,6 +778,7 @@ MonoBehaviour:
   currentpage: 0
   TurnLeftPage: {fileID: 7406143438553005641}
   TurnRightPage: {fileID: 7406143438889649637}
+  close: {fileID: 0}
   bookState:
   - {fileID: 21300000, guid: 4bac3689398cafc4bbc3fd8f8b9cc9c9, type: 3}
   - {fileID: 21300000, guid: 3980dac4fcb88584caf8fe93acbc0d05, type: 3}
@@ -789,6 +791,27 @@ MonoBehaviour:
   textColor:
   - {r: 0.5176471, g: 0.427451, b: 0.3529412, a: 1}
   - {r: 0.4117647, g: 0.34901962, b: 0.5411765, a: 1}
+--- !u!114 &8057944505606604236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7406143437519992371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9355241c91a9be8488793a9e6080acd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sister: 0
+  baseObjects:
+  - {fileID: 7406143438975199923}
+  firstPhase:
+  - {fileID: 21300000, guid: fee46eb2da174314185d7257e82d3aad, type: 3}
+  secondPhase:
+  - {fileID: 21300000, guid: fee46eb2da174314185d7257e82d3aad, type: 3}
+  thirdPhase:
+  - {fileID: 21300000, guid: 784b404e0b825e3479c0e7b4f970ea22, type: 3}
 --- !u!1 &7406143437992899168
 GameObject:
   m_ObjectHideFlags: 0
