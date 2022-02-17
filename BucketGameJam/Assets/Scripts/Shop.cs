@@ -99,6 +99,7 @@ public class Shop : MonoBehaviour
         Image sellPlants = buttonSellPlants.GetComponent<Image>();
         Image buySeeds = buttonBuySeeds.GetComponent<Image>();
         bool isEvil = PlayerController.pc.curSanity < 0;
+        gm.UpdateWorldState();
 
         if (isEvil)
         {

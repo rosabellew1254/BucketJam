@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     public Text daySummarySanityGained;
     public Text daySummaryTownStatus;
     public state worldState;
+    public int intWorldState;
 
     public bool isSiblingAlive = true;
     public sisterStatus mySister;
@@ -68,6 +69,7 @@ public class GameManager : MonoBehaviour
         }
         curDay = PlayerPrefs.GetInt("turn");
         worldState = (state)PlayerPrefs.GetInt("stateHistory" + curDay, 0);
+        intWorldState = (int)worldState;
 
         tempWorldState = gm.worldState;
         date.text = "Date: " + curDay + "/36";
@@ -121,8 +123,9 @@ public class GameManager : MonoBehaviour
             worldState = state.normal;
             Debug.Log("Passed Through Check for Sanity");
         }
+        intWorldState = (int)worldState;
     }
-    
+
     public void AdvanceDay()
     {
         curDay++;
@@ -263,6 +266,7 @@ public class GameManager : MonoBehaviour
     public void RestartGameGM()
     {
         worldState = state.normal;
+        intWorldState = (int)worldState;
         //↓↓↓↓↓need to set the variables to the current playerprefs values↓↓↓↓↓
         isSiblingAlive = true;
         UpdatePlayerPrefs("money", initialMoney, initialMoney);
@@ -357,5 +361,22 @@ public class GameManager : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public void UpdateWorldState()
+    {
+        if (PlayerController.pc.curSanity >= 50)
+        {
+            worldState = state.normal;
+        }
+        else if (PlayerController.pc.curSanity < 50 && PlayerController.pc.curSanity >= 0)
+        {
+            worldState = state.smallEvil;
+        }
+        else
+        {
+            worldState = state.largeEvil;
+        }
+        intWorldState = (int)worldState;
     }
 }
