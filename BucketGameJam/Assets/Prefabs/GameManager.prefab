@@ -156,10 +156,14 @@ MonoBehaviour:
   bInventoryState:
   - {fileID: 21300000, guid: 3b96fff3c870ba44a8feef7e8c5e56a6, type: 3}
   - {fileID: 21300000, guid: 93e799713c09c914f9e49afa2d8ca63f, type: 3}
+  spriteSanBubble:
+  - {fileID: 21300000, guid: caca36da614e8224a8edb511a8b2c060, type: 3}
+  - {fileID: 21300000, guid: a9b7121f34287734592f472f58ef2014, type: 3}
   iDate: {fileID: 1504656863063029667}
   iSpeks: {fileID: 3750302390233241606}
   iSanityText: {fileID: 4225428644029388665}
   iSanitySlider: {fileID: 8252672033032773397}
+  iSanityNumberBubble: {fileID: 232929075493556798}
   bMainMenu: {fileID: 2021610558741577266}
   bInventory: {fileID: 7108048431049974640}
   musicToggle: {fileID: 0}

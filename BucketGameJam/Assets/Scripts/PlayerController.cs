@@ -16,10 +16,12 @@ public class PlayerController : MonoBehaviour
     public Sprite[] sanitySliderState;
     public Sprite[] bMainMenuState;
     public Sprite[] bInventoryState;
+    public Sprite[] spriteSanBubble;
     public Image iDate;
     public Image iSpeks;
     public Image iSanityText;
     public Image iSanitySlider;
+    public Image iSanityNumberBubble;
     public Button bMainMenu;
     public Button bInventory;
 
@@ -64,6 +66,7 @@ public class PlayerController : MonoBehaviour
             iSanitySlider.sprite = sanitySliderState[1];
             bMainMenu.GetComponent<Image>().sprite = bMainMenuState[1];
             bInventory.GetComponent<Image>().sprite = bInventoryState[1];
+            iSanityNumberBubble.sprite = spriteSanBubble[1];
         }
         else
         {
@@ -73,6 +76,7 @@ public class PlayerController : MonoBehaviour
             iSanitySlider.sprite = sanitySliderState[0];
             bMainMenu.GetComponent<Image>().sprite = bMainMenuState[0];
             bInventory.GetComponent<Image>().sprite = bInventoryState[0];
+            iSanityNumberBubble.sprite = spriteSanBubble[0];
         }
     }
 

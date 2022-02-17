@@ -27,6 +27,7 @@ public class Journal : MonoBehaviour
     public int currentpage = 0;
     public Button TurnLeftPage;
     public Button TurnRightPage;
+    public Button close;
     public static GameManager.state[] stateHistory;
 
     public Sprite[] bookState;
