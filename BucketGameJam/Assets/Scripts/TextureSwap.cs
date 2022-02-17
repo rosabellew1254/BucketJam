@@ -12,8 +12,14 @@ public class TextureSwap : MonoBehaviour
     public Sprite[] secondPhase;
     public Sprite[] thirdPhase;
 
+    public Text[] textCases;
+
     int tempInt = 0;
     //bool toLate;
+
+    public Color[] textColorHud;
+
+
 
     private void Start()
     {
@@ -33,6 +39,13 @@ public class TextureSwap : MonoBehaviour
                 else
                 {
                     baseObjects[_index].sprite = firstPhase[_index];
+                    if (textCases != null)
+                    {
+                        for (int i = 0; i < textCases.Length; i++)
+                        {
+                            textCases[i].color = textColorHud[0];
+                        }
+                    }
                 }
                 break;
             case state.smallEvil:
@@ -56,6 +69,13 @@ public class TextureSwap : MonoBehaviour
                 else
                 {
                     baseObjects[_index].sprite = thirdPhase[_index];
+                    if (textCases != null)
+                    {
+                        for (int i = 0; i < textCases.Length; i++)
+                        {
+                            textCases[i].color = textColorHud[1];
+                        }
+                    }
                 }
                 break;
             case state.terminator:
@@ -93,8 +113,9 @@ public class TextureSwap : MonoBehaviour
 
     void Update()
     {
-        if (tempInt == 0)
+        if (tempInt == 0 || gm.uncessessaryButAlsoNessessaryCheck == true)
         {
+            gm.uncessessaryButAlsoNessessaryCheck = false;
             ChangeEachSprite(gm.worldState);
             tempInt++;
         }

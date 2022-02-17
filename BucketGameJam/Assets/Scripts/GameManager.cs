@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
     Action action;
     public Sprite[] journalSketch;
     public bool isNewGame;
+    public bool uncessessaryButAlsoNessessaryCheck = false;
 
     private void Awake()
     {
@@ -378,5 +379,6 @@ public class GameManager : MonoBehaviour
             worldState = state.largeEvil;
         }
         intWorldState = (int)worldState;
+        uncessessaryButAlsoNessessaryCheck = true;
     }
 }
