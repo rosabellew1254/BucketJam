@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: FMODProject/BucketGameJamFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637807051770000000
+  lastModified: 637807053410000000
   FileSizes:
   - Name: Desktop
     Value: 1648
@@ -357,7 +357,7 @@ MonoBehaviour:
   - {fileID: 8801131104293122107}
   StringsBanks:
   - {fileID: -7081221011224677649}
-  cacheTime: 637807051770000000
+  cacheTime: 637807053410000000
   cacheVersion: 10
 --- !u!114 &1158682179746015991
 MonoBehaviour:
@@ -590,7 +590,7 @@ MonoBehaviour:
   Path: FMODProject/BucketGameJamFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637807051770000000
+  lastModified: 637807053410000000
   FileSizes:
   - Name: Desktop
     Value: 10200160
