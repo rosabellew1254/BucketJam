@@ -1027,6 +1027,7 @@ MonoBehaviour:
   daySummarySanityGained: {fileID: 884271484843448026}
   daySummaryTownStatus: {fileID: 1877688262971252183}
   worldState: 0
+  intWorldState: 0
   isSiblingAlive: 1
   mySister: 0
   curDay: 0
@@ -1078,6 +1079,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   isNewGame: 0
+  uncessessaryButAlsoNessessaryCheck: 0
 --- !u!1 &1167060740595847755
 GameObject:
   m_ObjectHideFlags: 0
@@ -2093,6 +2095,18 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4fe069d66671a8447b6dfc582c87809e, type: 3}
   - {fileID: 21300000, guid: 828d6c8c669e5c24bbd40f8ccf65ff10, type: 3}
   - {fileID: 21300000, guid: 4fe069d66671a8447b6dfc582c87809e, type: 3}
+  textCases:
+  - {fileID: 2852359527177061582}
+  - {fileID: 9139966795303231974}
+  - {fileID: 8999107391032061461}
+  - {fileID: 5074271636627345029}
+  - {fileID: 6847164884612655094}
+  - {fileID: 884271484843448026}
+  - {fileID: 1877688262971252183}
+  - {fileID: 7324619153424185754}
+  textColorHud:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.77254903, g: 0.17254902, b: 0.6862745, a: 1}
 --- !u!1 &3513174494585608543
 GameObject:
   m_ObjectHideFlags: 0
