@@ -90,7 +90,7 @@
 	<object class="MixerBusPanner" id="{f48fc4d6-9e30-41f9-8f3b-a22da1ec0d98}" />
 	<object class="SingleSound" id="{dec0f0cb-c41b-4c50-a674-5c769c5014e7}">
 		<property name="length">
-			<value>0.296875</value>
+			<value>0.275390625</value>
 		</property>
 		<property name="pitch">
 			<value>-4.5</value>
@@ -104,7 +104,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{6224fd29-c10d-4351-b98b-f8e68a07050e}">
 		<property name="volume">
-			<value>-15</value>
+			<value>-3.5</value>
 		</property>
 		<property name="name">
 			<value>Audio 2</value>
@@ -137,28 +137,43 @@
 	<object class="MixerBusEffectChain" id="{c8ad4d92-3ba7-4102-8328-9711065273a0}">
 		<relationship name="effects">
 			<destination>{33d27c06-db54-44d4-9d9e-ee6916e46746}</destination>
+			<destination>{038298b4-db0c-47ed-a0e4-0d3fa09fd347}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{be267d21-f03e-490a-9119-e5ae2b6f5709}" />
 	<object class="MixerBusFader" id="{19208982-2f25-45f0-a4ab-854d739c0cae}" />
 	<object class="AutomationPoint" id="{049df894-f184-44ea-92d6-95c370a1415d}">
 		<property name="position">
-			<value>0.0546875</value>
+			<value>0.19140625</value>
 		</property>
 		<property name="value">
 			<value>1</value>
 		</property>
 		<property name="curveShape">
-			<value>0.0793047473</value>
+			<value>-0.0448977239</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{fbdf497e-09d5-4f23-bc20-ecd4e02f2e7d}">
 		<property name="position">
-			<value>0.296875</value>
+			<value>0.275390625</value>
 		</property>
 		<property name="value">
 			<value>0</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{33d27c06-db54-44d4-9d9e-ee6916e46746}" />
+	<object class="SFXReverbEffect" id="{038298b4-db0c-47ed-a0e4-0d3fa09fd347}">
+		<property name="lowShelfFrequency">
+			<value>160</value>
+		</property>
+		<property name="lowShelfGain">
+			<value>2.5</value>
+		</property>
+		<property name="highCut">
+			<value>1050</value>
+		</property>
+		<property name="wetLevel">
+			<value>-20</value>
+		</property>
+	</object>
 </objects>
