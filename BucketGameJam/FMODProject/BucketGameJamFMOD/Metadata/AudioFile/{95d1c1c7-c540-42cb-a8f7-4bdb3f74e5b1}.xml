@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{95d1c1c7-c540-42cb-a8f7-4bdb3f74e5b1}">
+		<property name="assetPath">
+			<value>baddish lil chords.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>16.695666666666668</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{82505715-e88c-4504-b27f-832d272b23d4}</destination>
+		</relationship>
+	</object>
+</objects>

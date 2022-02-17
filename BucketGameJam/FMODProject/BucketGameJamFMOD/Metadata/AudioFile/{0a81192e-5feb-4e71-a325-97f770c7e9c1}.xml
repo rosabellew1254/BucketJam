@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{0a81192e-5feb-4e71-a325-97f770c7e9c1}">
+		<property name="assetPath">
+			<value>baddish guitar 3.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>16.695666666666668</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{82505715-e88c-4504-b27f-832d272b23d4}</destination>
+		</relationship>
+	</object>
+</objects>
