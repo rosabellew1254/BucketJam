@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: FMODProject/BucketGameJamFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637806468910000000
+  lastModified: 637806478830000000
   FileSizes:
   - Name: Desktop
-    Value: 1584
+    Value: 1586
   Exists: 1
 --- !u!114 &-6999705160851726656
 MonoBehaviour:
@@ -155,6 +155,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2787
+--- !u!114 &-5285270239345513467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/credits_music1
+  m_EditorClassIdentifier: 
+  Path: event:/credits_music1
+  Guid:
+    Data1: -566647086
+    Data2: 1176474699
+    Data3: -1978997881
+    Data4: 2004135452
+  Banks:
+  - {fileID: 8801131104293122107}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 92093
 --- !u!114 &-3666232755221039271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,13 +346,13 @@ MonoBehaviour:
   - {fileID: -237269551879539247}
   - {fileID: -3666232755221039271}
   - {fileID: -2635137221657953691}
-  - {fileID: 2159251517462121550}
+  - {fileID: -5285270239345513467}
   EditorParameters: []
   MasterBanks:
   - {fileID: 8801131104293122107}
   StringsBanks:
   - {fileID: -7081221011224677649}
-  cacheTime: 637806468910000000
+  cacheTime: 637806478830000000
   cacheVersion: 10
 --- !u!114 &1158682179746015991
 MonoBehaviour:
@@ -354,33 +381,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 40000
---- !u!114 &2159251517462121550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/credits_music
-  m_EditorClassIdentifier: 
-  Path: event:/credits_music
-  Guid:
-    Data1: -566647086
-    Data2: 1176474699
-    Data3: -1978997881
-    Data4: 2004135452
-  Banks:
-  - {fileID: 8801131104293122107}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 92093
 --- !u!114 &2970228147900236091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,7 +559,7 @@ MonoBehaviour:
   Path: FMODProject/BucketGameJamFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637806468910000000
+  lastModified: 637806478830000000
   FileSizes:
   - Name: Desktop
     Value: 8438752
