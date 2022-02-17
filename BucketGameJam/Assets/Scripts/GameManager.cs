@@ -331,6 +331,7 @@ public class GameManager : MonoBehaviour
             Inventory.inventory.plants[i] = PlayerPrefs.GetInt("plant" + i);
         }
         mySister = (sisterStatus)PlayerPrefs.GetInt("sisterStatus");
+        FindObjectOfType<CursorScript>().UpdateSprite();
     }
 
     public void UpdateButtonSprite(Button _button, Sprite _normalUnselected, Sprite _normalHighlighted, Sprite _eldritchUnselected, Sprite _eldritchHighlighted)

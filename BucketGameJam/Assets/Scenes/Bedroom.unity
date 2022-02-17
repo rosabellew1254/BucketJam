@@ -599,8 +599,6 @@ MonoBehaviour:
   - {fileID: 7803557945383948391, guid: 660813160cc83c84b85be05f5a4b4e09, type: 3}
   - {fileID: -1755174952032855593, guid: d72fdb84f1398f34f8fce7d42f4faef0, type: 3}
   - {fileID: -2555025924041762412, guid: 263c04c207a03c74faef09c1ba5c060e, type: 3}
-  - {fileID: 21300000, guid: 166faaaa20b25c041b61b412a5ef977f, type: 3}
-  - {fileID: 21300000, guid: 064d3c8b49133bd4a8e56437553a2f5f, type: 3}
   spriteButtonEldritch:
   - {fileID: -7347014932714565737, guid: 35e12d4822aaaa040b66ede73018ec3f, type: 3}
   - {fileID: 1415126479838434095, guid: 4f3027c5d87a0904ea00f69bc525e9f4, type: 3}
@@ -614,8 +612,6 @@ MonoBehaviour:
   - {fileID: 7803557945383948391, guid: 660813160cc83c84b85be05f5a4b4e09, type: 3}
   - {fileID: -1755174952032855593, guid: d72fdb84f1398f34f8fce7d42f4faef0, type: 3}
   - {fileID: -2555025924041762412, guid: 263c04c207a03c74faef09c1ba5c060e, type: 3}
-  - {fileID: 21300000, guid: 166faaaa20b25c041b61b412a5ef977f, type: 3}
-  - {fileID: 21300000, guid: 064d3c8b49133bd4a8e56437553a2f5f, type: 3}
   iSisterBed: {fileID: 1982183998}
   spriteSisterBed:
   - {fileID: 21300000, guid: a59d5b8a36945534780d469eb43a8998, type: 3}
@@ -2340,7 +2336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5058824, g: 0.6313726, b: 0.7803922, a: 1}
+  m_Color: {r: 0.50980395, g: 0.41960785, b: 0.34509805, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2349,10 +2345,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: c6fd5a3014eee5941be23c0c334496ed, type: 3}
-    m_FontSize: 50
+    m_FontSize: 47
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 4
     m_MaxSize: 53
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2360,7 +2356,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You're sick and it will cost $$$ to get medicine.
+  m_Text: "During the past year, my sister Clove has started to develop the same
+    symptoms as the disease that took both of our parents from us. The doctor told
+    me that she only has a little under 2 years left before the disease overtakes
+    her, but the problem is that it\u2019s quite expensive."
 --- !u!222 &1146270287
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2910,7 +2909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5058824, g: 0.6313726, b: 0.7803922, a: 1}
+  m_Color: {r: 0.50980395, g: 0.41960785, b: 0.34509805, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
