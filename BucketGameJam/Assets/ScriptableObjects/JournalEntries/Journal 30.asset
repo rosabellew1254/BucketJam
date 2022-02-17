@@ -14,16 +14,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
-  - normal_dead_00
-  - med_cured_00
-  - med_dead_00
-  - low_cured_00
-  - low_dead_00
+  - "The sky was really clear this month so my sleep schedule is a little off from
+    star gazing so much. As much of a morning person as I am, I do really like the
+    quiet during nighttime. I\u2019ll just have to catch up on some sleep during
+    the next few days."
+  - "The sky was really clear this month so my sleep schedule is a little off from
+    star gazing so much. As much of a morning person as I am, I do really like the
+    quiet during nighttime. I\u2019ll just have to catch up on some sleep during
+    the next few days."
+  - "Last month I tried to do some stargazing since the mist had been pretty clear
+    during the night, but I was usually forced to head inside early. I\u2019m not
+    sure why, but there were times where the stars would blink away for several minutes
+    before coming back. Almost as if something was covering the sky\u2026 but that
+    isn\u2019t possible right?"
+  - "Last month I tried to do some stargazing since the mist had been pretty clear
+    during the night, but I was usually forced to head inside early. I\u2019m not
+    sure why, but there were times where the stars would blink away for several minutes
+    before coming back. Almost as if something was covering the sky\u2026 but that
+    isn\u2019t possible right?"
+  - "Another traveler has chosen to visit our town but I can\u2019t say I recognize
+    them. When I spoke to them they said the previous merchant had lost his way.
+    It doesn\u2019t matter to me, this new traveler had much more interesting wares
+    to sell anyway."
+  - "Another traveler has chosen to visit our town but I can\u2019t say I recognize
+    them. When I spoke to them they said the previous merchant had lost his way.
+    It doesn\u2019t matter to me, this new traveler had much more interesting wares
+    to sell anyway."
   sketches:
   - {fileID: 21300000, guid: 8d7251d4c2a7d42489fe820fbb309a81, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: 8d7251d4c2a7d42489fe820fbb309a81, type: 3}
+  - {fileID: 21300000, guid: c5c8aa251450b684bb63a6866dfb7ec7, type: 3}
+  - {fileID: 21300000, guid: c5c8aa251450b684bb63a6866dfb7ec7, type: 3}
+  - {fileID: 21300000, guid: 1358c9532a396ab49b82d63e11df0382, type: 3}
+  - {fileID: 21300000, guid: 1358c9532a396ab49b82d63e11df0382, type: 3}

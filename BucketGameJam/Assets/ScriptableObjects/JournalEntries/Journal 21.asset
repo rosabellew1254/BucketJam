@@ -14,16 +14,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
-  - normal_dead_00
-  - med_cured_00
-  - med_dead_00
-  - low_cured_00
-  - low_dead_00
+  - We visited the well again to play with the other kids this month after the doc
+    gave Clove the all-clear. It was amazing to see her smile like that again, not
+    to mention all the fun we had together!
+  - "Lately I\u2019ve been trying to avoid the well during my walks in town. I\u2019ll
+    stop by and say hi to the other kids soon but\u2026 it\u2019s a bit too painful
+    right now"
+  - "Clove swears the scarecrow has been staring at her the past couple weeks. I\u2019m
+    not sure how it could with buttons for eyes, but I\u2019ve put it in the shed
+    for now. I\u2019ll just figure out a different way to keep the birds away."
+  - "I\u2019m not sure why but it feels like someone has been watching me the past
+    few weeks. Whenever I look around there isn\u2019t anyone aside from myself and
+    the scarecrow but\u2026 it can\u2019t be that right?"
+  - "According to Clove, some of the toys that I bought for her have been moving
+    during the night. Interesting. It would be nice if they\u2019d help around the
+    farm but perhaps I will settle for them entertaining my sister. And if they ever
+    hurt her\u2026 well they\u2019ll just wish they hadn\u2019t."
+  - "A few of Clove\u2019s old things seem to be walking around in the night as if
+    looking for something. I\u2019ve warned them to stay out of my sight if they
+    wish to keep their lives and for now they\u2019ve listened. I don\u2019t wish
+    to see any reminders of her."
   sketches:
   - {fileID: 21300000, guid: db47bb4d730a4ab4ca03ea7bff10bc33, type: 3}
   - {fileID: 21300000, guid: f24770ff644a98247a54c217a49d35cb, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: d3a7c90d11f105840be6a8eb2b689b2d, type: 3}
+  - {fileID: 21300000, guid: d8ad8518481221a44a3e47d7a0b9eb89, type: 3}
+  - {fileID: 21300000, guid: 4294490ecec4da34d9398fda0751140d, type: 3}
+  - {fileID: 21300000, guid: bb23ee431a5886845a7dcfb033ba7b45, type: 3}

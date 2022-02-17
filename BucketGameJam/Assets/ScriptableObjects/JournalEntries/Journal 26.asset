@@ -14,16 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
-  - normal_dead_00
-  - med_cured_00
-  - med_dead_00
-  - low_cured_00
-  - low_dead_00
+  - "This month I tried thinking of different ways to make life easier around the
+    farm. Maybe I can find a way to make watering easier or pulling weeds! Unfortunately
+    I have no idea how to do any of this\u2026 I\u2019ll leave that to future me."
+  - "This month I tried thinking of different ways to make life easier around the
+    farm. Maybe I can find a way to make watering easier or pulling weeds! Unfortunately
+    I have no idea how to do any of this\u2026 I\u2019ll leave that to future me."
+  - "I\u2019ve been keeping an eye on the bushes around the farm during this month
+    since I\u2019ve been finding animal bones scattered around them. Originally I
+    thought something dangerous made its home in them but I haven\u2019t seen anything\u2026
+    I\u2019m not sure what else could be killing those critters."
+  - "I\u2019ve been keeping an eye on the bushes around the farm during this month
+    since I\u2019ve been finding animal bones scattered around them. Originally I
+    thought something dangerous made its home in them but I haven\u2019t seen anything\u2026
+    I\u2019m not sure what else could be killing those critters."
+  - "At the beginning of this past month I\u2019ve made it a habit to walk near the
+    well and greet the creature that now dwells within. In exchange for a bit of
+    my crops it brings up some water from its home so that I may water the fields.
+    A wonderful exchange I\u2019d say."
+  - "At the beginning of this past month I\u2019ve made it a habit to walk near the
+    well and greet the creature that now dwells within. In exchange for a bit of
+    my crops it brings up some water from its home so that I may water the fields.
+    A wonderful exchange I\u2019d say."
   sketches:
   - {fileID: 21300000, guid: 7c208ee661756ba488538512ec75525e, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: 7c208ee661756ba488538512ec75525e, type: 3}
+  - {fileID: 21300000, guid: 241563a313ae5ba4b83643fd2cdd38c2, type: 3}
+  - {fileID: 21300000, guid: 241563a313ae5ba4b83643fd2cdd38c2, type: 3}
+  - {fileID: 21300000, guid: 4bb29c0e605fa184e9d3be11a9bf61b1, type: 3}
+  - {fileID: 21300000, guid: 4bb29c0e605fa184e9d3be11a9bf61b1, type: 3}

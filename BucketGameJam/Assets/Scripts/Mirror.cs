@@ -9,6 +9,7 @@ public class Mirror : MonoBehaviour
     public Sprite normalRefl;
     public Sprite[] smallEvilRefls;
     public Sprite[] bigEvilRefls;
+    public GameObject overlay;
 
     private void Start()
     {
@@ -18,12 +19,15 @@ public class Mirror : MonoBehaviour
         {
             case GameManager.state.normal:
                 gameObject.GetComponent<Image>().sprite = normalRefl;
+                overlay.gameObject.SetActive(false);
                 break;
             case GameManager.state.smallEvil:
                 gameObject.GetComponent<Image>().sprite = smallEvilRefls[randNumSmall];
+                overlay.gameObject.SetActive(false);
                 break;
             case GameManager.state.largeEvil:
                 gameObject.GetComponent<Image>().sprite = bigEvilRefls[randNumBig];
+                overlay.gameObject.SetActive(true);
                 break;
             case GameManager.state.terminator:
                 break;

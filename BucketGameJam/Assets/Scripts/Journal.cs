@@ -27,13 +27,18 @@ public class Journal : MonoBehaviour
     public int currentpage = 0;
     public Button TurnLeftPage;
     public Button TurnRightPage;
+    public Button close;
     public static GameManager.state[] stateHistory;
 
     public Sprite[] bookState;
     public Image sketch;
     public Image journal;
     public Text entry;
+    public Text title;
     public TextAsset textAssetData;
+
+    public GameObject purpleOverlay;
+    public Color[] textColor; // 0: normal, 1: eldritch
 
     GameManager gm;
 
@@ -41,7 +46,24 @@ public class Journal : MonoBehaviour
     {
         gm = GameManager.gm;
         CurBookState();
-
+        switch (gm.worldState)
+        {
+            case GameManager.state.normal:
+            case GameManager.state.smallEvil:
+                purpleOverlay.gameObject.SetActive(false);
+                entry.color = textColor[0];
+                title.color = textColor[0];
+                break;
+            case GameManager.state.largeEvil:
+                purpleOverlay.gameObject.SetActive(true);
+                entry.color = textColor[1];
+                title.color = textColor[1];
+                break;
+            case GameManager.state.terminator:
+                break;
+            default:
+                break;
+        }
         JournalPagesNormalCured = new string[gm.maxDays + 1];
         JournalPagesNormalNotCured = new string[gm.maxDays + 1];
         JournalPagesSmallEvilCured = new string[gm.maxDays + 1];
@@ -156,6 +178,7 @@ public class Journal : MonoBehaviour
         }
     }
 
+
     /*
                 switch (gm.mySister)
                 {
@@ -172,84 +195,70 @@ public class Journal : MonoBehaviour
     public void DisplayPage(int _page)
     {
         currentpage = _page;
+        title.text = tMonth[_page];
+
         GameManager.state state = stateHistory[_page];
         switch (state)
         {
             case GameManager.state.smallEvil:
-                switch (gm.mySister)
+                if (_page < 20)
                 {
-                    case GameManager.sisterStatus.sick:
-                    case GameManager.sisterStatus.cured:
+                    entry.text = JournalPagesSmallEvilCured[_page];
+                    gm.journalSketch[_page] = jSketch_MedCured[_page];
+                }
+                else
+                {
+                    if (gm.mySister == GameManager.sisterStatus.cured)
+                    {
                         entry.text = JournalPagesSmallEvilCured[_page];
                         gm.journalSketch[_page] = jSketch_MedCured[_page];
-                        break;
-                    case GameManager.sisterStatus.dead:
+                    }
+                    else
+                    {
                         entry.text = JournalPagesSmallEvilNotCured[_page];
                         gm.journalSketch[_page] = jSketch_MedNotCured[_page];
-                        break;
-                    default:
-                        break;
-                }
-                /*entry.text = JournalPagesSmallEvilCured[_page];
-                gm.journalSketch[_page] = jSketch_LowCured[_page];
-                if (gm.mySister == GameManager.sisterStatus.dead)
-                {
-                    Debug.Log("SIS DEAD");
-                    if (jSketch_SisDead[_page] != null)
-                    {
-                        gm.journalSketch[_page] = jSketch_SisDead[_page];
                     }
-                }*/
+                }
                 break;
             case GameManager.state.largeEvil:
-                /*entry.text = JournalPagesLargeEvilCured[_page]; 
-                gm.journalSketch[_page] = jSketch_HighCured[_page];
-                if (gm.mySister == GameManager.sisterStatus.dead)
+                if (_page < 20)
                 {
-                    Debug.Log("SIS DEAD");
-                    if (jSketch_SisDead[_page] != null)
+                    entry.text = JournalPagesLargeEvilCured[_page];
+                    gm.journalSketch[_page] = jSketch_LowCured[_page];
+                }
+                else
+                {
+                    if (gm.mySister == GameManager.sisterStatus.cured)
                     {
-                        gm.journalSketch[_page] = jSketch_SisDead[_page];
-                    }
-                }*/
-                switch (gm.mySister)
-                {
-                    case GameManager.sisterStatus.sick:
-                    case GameManager.sisterStatus.cured:
                         entry.text = JournalPagesLargeEvilCured[_page];
                         gm.journalSketch[_page] = jSketch_LowCured[_page];
-                        break;
-                    case GameManager.sisterStatus.dead:
+                    }
+                    else
+                    {
                         entry.text = JournalPagesLargeEvilNotCured[_page];
                         gm.journalSketch[_page] = jSketch_LowNotCured[_page];
-                        break;
-                    default:
-                        break;
+                    }
                 }
                 break;
             default: // normal world state
-                switch (gm.mySister)
+                if (_page < 20)
                 {
-                    case GameManager.sisterStatus.sick:
-                    case GameManager.sisterStatus.cured:
+                    entry.text = JournalPagesNormalCured[_page];
+                    gm.journalSketch[_page] = jSketch_NormCured[_page];
+                }
+                else
+                {
+                    if (gm.mySister == GameManager.sisterStatus.cured)
+                    {
                         entry.text = JournalPagesNormalCured[_page];
                         gm.journalSketch[_page] = jSketch_NormCured[_page];
-                        break;
-                    case GameManager.sisterStatus.dead:
+                    }
+                    else
+                    {
                         entry.text = JournalPagesNormalNotCured[_page];
                         gm.journalSketch[_page] = jSketch_NormNotCured[_page];
-                        break;
-                    default:
-                        break;
-                }
-                /*if (gm.mySister == GameManager.sisterStatus.dead)
-                {
-                    Debug.Log("SIS DEAD");
-                    if (jSketch_SisDead[_page] != null)
-                    {
-                        gm.journalSketch[_page] = jSketch_SisDead[_page];
                     }
-                }*/
+                }
                 break;
         }
 

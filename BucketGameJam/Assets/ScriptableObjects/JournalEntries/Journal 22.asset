@@ -14,16 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
-  - normal_dead_00
-  - med_cured_00
-  - med_dead_00
-  - low_cured_00
-  - low_dead_00
+  - "I\u2019ve been practicing my drawing this month since I\u2019ve had so much
+    fun with doodling lately! I tried out sketching some of my crops and I think
+    it turned out pretty well!"
+  - "I\u2019ve been practicing my drawing this month since I\u2019ve had so much
+    fun with doodling lately! I tried out sketching some of my crops and I think
+    it turned out pretty well!"
+  - "The merchant came into town this month and he seemed\u2026 afraid to say the
+    least. Normally he stays for around a week before leaving but this time he left
+    after a couple days. I wonder what it was that spooked him?"
+  - "The merchant came into town this month and he seemed\u2026 afraid to say the
+    least. Normally he stays for around a week before leaving but this time he left
+    after a couple days. I wonder what it was that spooked him?"
+  - Our ever-seeing Eye has graced my farm with its presence this month. It surveyed
+    the crops and I believe it was happy with what it saw. Perhaps that means my
+    crops will be of extra quality.
+  - Our ever-seeing Eye has graced my farm with its presence this month. It surveyed
+    the crops and I believe it was happy with what it saw. Perhaps that means my
+    crops will be of extra quality.
   sketches:
   - {fileID: 21300000, guid: e92500f76c8b6b345a555f5834e085ac, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: e92500f76c8b6b345a555f5834e085ac, type: 3}
+  - {fileID: 21300000, guid: abe755fae7065db42a8d26a83e869f7e, type: 3}
+  - {fileID: 21300000, guid: abe755fae7065db42a8d26a83e869f7e, type: 3}
+  - {fileID: 21300000, guid: b427ee1170cf9434db338c67f45b1ea1, type: 3}
+  - {fileID: 21300000, guid: b427ee1170cf9434db338c67f45b1ea1, type: 3}

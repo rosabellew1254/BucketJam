@@ -14,16 +14,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
-  - normal_dead_00
-  - med_cured_00
-  - med_dead_00
-  - low_cured_00
-  - low_dead_00
+  - "There was a HUGE storm that lasted for a couple days during this month. I was
+    worried my crops wouldn\u2019t make it! Luckily they all pulled through and I
+    didn\u2019t have to water for a few days, a win-win if you ask me."
+  - "There was a HUGE storm that lasted for a couple days during this month. I was
+    worried my crops wouldn\u2019t make it! Luckily they all pulled through and I
+    didn\u2019t have to water for a few days, a win-win if you ask me."
+  - "There were quite a few storms this month but\u2026 there was something weird
+    about them. After the rain passed there was such a dark sheen to the water rather
+    than the clear drops that I\u2019m used to. It\u2019s hard to place the color
+    but my best guess would be a dark purple? It almost reminds me of the mist that\u2019s
+    been around town lately."
+  - "There were quite a few storms this month but\u2026 there was something weird
+    about them. After the rain passed there was such a dark sheen to the water rather
+    than the clear drops that I\u2019m used to. It\u2019s hard to place the color
+    but my best guess would be a dark purple? It almost reminds me of the mist that\u2019s
+    been around town lately."
+  - "Some of the townspeople came to my house this month asking if they might have
+    some of my crop to offer to the Great Ones. Their cloaks suggested they live
+    under the jurisdiction of the Eye. I turned them towards Pandora as I have for
+    all the others, I don\u2019t play favorites as they do."
+  - "Some of the townspeople came to my house this month asking if they might have
+    some of my crop to offer to the Great Ones. Their cloaks suggested they live
+    under the jurisdiction of the Eye. I turned them towards Pandora as I have for
+    all the others, I don\u2019t play favorites as they do."
   sketches:
   - {fileID: 21300000, guid: f3cd7d51b5e4ff142af1023fabc7e858, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: f3cd7d51b5e4ff142af1023fabc7e858, type: 3}
+  - {fileID: 21300000, guid: 0252f7a1a2a2ecd42a6e1cc92e6f9b6c, type: 3}
+  - {fileID: 21300000, guid: 0252f7a1a2a2ecd42a6e1cc92e6f9b6c, type: 3}
+  - {fileID: 21300000, guid: efa27e1ac48681043995e10f8f4641ec, type: 3}
+  - {fileID: 21300000, guid: efa27e1ac48681043995e10f8f4641ec, type: 3}

@@ -14,16 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
-  - normal_dead_00
-  - med_cured_00
-  - med_dead_00
-  - low_cured_00
-  - low_dead_00
+  - "Clove and I visited the rancher a few times this month to help out with his
+    animals. She absolutely loved it! I really should think about expanding the farm\u2026
+    the cows would definitely bring in some extra income and sis has already promised
+    to take care of them if we do!"
+  - "I found myself helping out the rancher a few times this month. Doing all that
+    hard work made me realize I should probably stick with what I have unless I manage
+    to hire some help. There isn\u2019t really a point in keeping cows anyway\u2026
+    not anymore."
+  - "Clove came running back to the house with tears in her eyes last week and some
+    nasty cuts on her arm, but she wouldn\u2019t tell me where they came from. If
+    I remember correctly she wanted to explore her favorite flower field\u2026 it\u2019s
+    probably best that she doesn\u2019t head over there for a while."
+  - I tried to visit Clove last week but the flowers near her grave gave me quite
+    the fight to reach her. I walked away with more than my fair share of injury
+    but I refuse to be kept from seeing her.
+  - "Last month, Clove went scrounging around in our storage saying she wanted to
+    clean up the place but it wasn\u2019t long before she claimed she was done. I
+    asked her why and she just shook her head and pointed at the photo album with
+    tears in her eyes. I\u2019d throw it out, but she just seemed even more upset
+    when I suggested it. The book is now buried in our storage as a compromise."
+  - "I was purging the storage last month of any\u2026 unfortunate reminders when
+    I stumbled across the photo album. I grew weak and opened it but was surprised
+    to find the images inside distorted past recognition, some even having figures
+    that weren\u2019t there before. I decided to toss it out, but I kept one picture.
+    I can\u2019t even recognize it\u2019s my sister anyway."
   sketches:
   - {fileID: 21300000, guid: 5375c7473bbe69d4bb6b6c362c531d15, type: 3}
   - {fileID: 21300000, guid: fdf024ed5d92590439023a0af7879a1c, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: 2f4e6d2d2ca970a4290914bd3c2a48dd, type: 3}
+  - {fileID: 21300000, guid: f866724c61caf2145abf4cbfae00930a, type: 3}
+  - {fileID: 21300000, guid: 7af4dd11fd74ff64583fb74468116b69, type: 3}
+  - {fileID: 21300000, guid: 2ca08a28f2176ec4da21eb192d76cb0a, type: 3}

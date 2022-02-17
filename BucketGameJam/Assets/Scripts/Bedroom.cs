@@ -127,8 +127,8 @@ public class Bedroom : MonoBehaviour
             yield return null;
             introImage.color = Color.Lerp(Color.black, Color.white, timer / timeBetweenTransitions);
         }
-        speaker.text = "You";
-        dialogue.text = "Don't worry sister, I'll save you with my gardening powers.";
+        speaker.text = "Arum";
+        dialogue.text = "I need to bust my behind to save her, but I swear that I will! I just need to grow my crops and sell them to the shopkeeper Pandora to earn enough speks.";
         dialogueBox.SetActive(true);
         yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
         dialogueBox.SetActive(false);

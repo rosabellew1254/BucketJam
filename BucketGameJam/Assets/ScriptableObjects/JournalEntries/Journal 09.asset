@@ -18,18 +18,18 @@ MonoBehaviour:
     can be so difficult to keep them out of my crops and this month it seemed like
     they had it out for me! It doesn\u2019t matter though, I refuse to let them win
     this battle!"
+  - normal_dead_09
   - During one of my walks last month I came across one of the women I helped with
     getting water from the well and she looked a bit sickly. I referred her to the
     doctor but she insisted she was fine. I hope she really is, those sores looked
     pretty serious.
-  - med_cured_00
   - med_dead_00
   - low_cured_00
   - low_dead_00
   sketches:
   - {fileID: 21300000, guid: 64973c8d8d18fcb45afdb482a6db5188, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: dd6bf28650239194fb805341a6afc298, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
   - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}

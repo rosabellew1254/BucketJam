@@ -14,16 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
-  - normal_dead_00
-  - med_cured_00
-  - med_dead_00
-  - low_cured_00
-  - low_dead_00
+  - Almost had a heart attack when my hoe broke earlier this month! Luckily I found
+    some wood glue buried in the shed and it looks good as new!
+  - Almost had a heart attack when my hoe broke earlier this month! Luckily I found
+    some wood glue buried in the shed and it looks good as new!
+  - "When I was trying to clean out the house this month I came across a few larger
+    pictures, but some of the portraits started to freak me out. I could\u2019ve
+    sworn they were looking at me and I\u2019m pretty sure I remember them being
+    a bit\u2026 cleaner than they are."
+  - "When I was trying to clean out the house this month I came across a few larger
+    pictures, but some of the portraits started to freak me out. I could\u2019ve
+    sworn they were looking at me and I\u2019m pretty sure I remember them being
+    a bit\u2026 cleaner than they are."
+  - "From the decrease in sunlight this month I would take a guess that Pandora has
+    been busy with a higher profile customer. I can\u2019t say I know who exactly,
+    nor has she told me anything about who, but I can guess from the way the shadows
+    have been dancing. Perhaps it would be wise to keep the lights off for the Darkness
+    passing through\u2026"
+  - "From the decrease in sunlight this month I would take a guess that Pandora has
+    been busy with a higher profile customer. I can\u2019t say I know who exactly,
+    nor has she told me anything about who, but I can guess from the way the shadows
+    have been dancing. Perhaps it would be wise to keep the lights off for the Darkness
+    passing through\u2026"
   sketches:
   - {fileID: 21300000, guid: 3ab00d77a102caa499331b29bc9489ad, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: 3ab00d77a102caa499331b29bc9489ad, type: 3}
+  - {fileID: 21300000, guid: a8ac657e5d8c7b749956105206d78056, type: 3}
+  - {fileID: 21300000, guid: a8ac657e5d8c7b749956105206d78056, type: 3}
+  - {fileID: 21300000, guid: 3a639847fc580a440bd8a6c2de55ecbc, type: 3}
+  - {fileID: 21300000, guid: 3a639847fc580a440bd8a6c2de55ecbc, type: 3}

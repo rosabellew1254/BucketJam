@@ -792,7 +792,7 @@ GameObject:
   - component: {fileID: 5115533735751503056}
   - component: {fileID: 3509202138756321813}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ItemBubbleImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1464,7 +1464,7 @@ GameObject:
   - component: {fileID: 7645323198283947603}
   - component: {fileID: 1515061051257048415}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: CounterBubbleImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2265,6 +2265,7 @@ GameObject:
   - component: {fileID: 81929250418244176}
   - component: {fileID: 1671060727095897888}
   - component: {fileID: 855638384877300268}
+  - component: {fileID: 7451081847502357778}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -2375,3 +2376,36 @@ MonoBehaviour:
   - {fileID: 4608690599135826408}
   - {fileID: 4376292800165442354}
   - {fileID: 7841265400917382826}
+--- !u!114 &7451081847502357778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9114729740475252644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9355241c91a9be8488793a9e6080acd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sister: 0
+  baseObjects:
+  - {fileID: 9060880199893988215}
+  - {fileID: 3509202138756321813}
+  - {fileID: 1515061051257048415}
+  - {fileID: 4992114993341773836}
+  firstPhase:
+  - {fileID: 21300000, guid: 6b75b43fad23b334f9dbdfb41abe3ff6, type: 3}
+  - {fileID: 21300000, guid: 857ede9b96195ad4e8a80c0833d8841b, type: 3}
+  - {fileID: 21300000, guid: b2bf4a8d87af7364cba6df4c3faa1126, type: 3}
+  - {fileID: 21300000, guid: fee46eb2da174314185d7257e82d3aad, type: 3}
+  secondPhase:
+  - {fileID: 21300000, guid: 6b75b43fad23b334f9dbdfb41abe3ff6, type: 3}
+  - {fileID: 21300000, guid: 857ede9b96195ad4e8a80c0833d8841b, type: 3}
+  - {fileID: 21300000, guid: b2bf4a8d87af7364cba6df4c3faa1126, type: 3}
+  - {fileID: 21300000, guid: fee46eb2da174314185d7257e82d3aad, type: 3}
+  thirdPhase:
+  - {fileID: 21300000, guid: 1ecc210901419ab4f969432706b3605a, type: 3}
+  - {fileID: 21300000, guid: a7a3752accfa92d4a8f168276cbcb8fb, type: 3}
+  - {fileID: 21300000, guid: 60b66e776234f4e40a27824c867dae5b, type: 3}
+  - {fileID: 21300000, guid: 784b404e0b825e3479c0e7b4f970ea22, type: 3}

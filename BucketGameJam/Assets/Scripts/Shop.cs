@@ -11,6 +11,7 @@ public class Shop : MonoBehaviour
     public Button buttonSellPlants;
     public Button buttonBuySeeds;
     public string[] plantNames;
+    public Color[] textColor;
 
     GameManager.plants selectedPlant;
     int selectedPrice;
@@ -32,7 +33,7 @@ public class Shop : MonoBehaviour
     public Image goToTownButtonImage;
     public Sprite eldritchGeneralButton;
     public Sprite normalGoToTownButton;
-
+    public Text goToTownText;
 
 
 
@@ -40,9 +41,11 @@ public class Shop : MonoBehaviour
     {
         gm = GameManager.gm;
         inventory = Inventory.inventory;
+        goToTownText = goToTownButtonImage.transform.GetChild(0).GetComponent<Text>();
         ShowSellPlantsButton();
         selectedPlant = GameManager.plants.terminator;
         ShowBuySeedsButton();
+        UpdateUiForSanity();
     }
 
     public void SelectPlant(int _plantIndex)
@@ -96,6 +99,7 @@ public class Shop : MonoBehaviour
         Image sellPlants = buttonSellPlants.GetComponent<Image>();
         Image buySeeds = buttonBuySeeds.GetComponent<Image>();
         bool isEvil = PlayerController.pc.curSanity < 0;
+        gm.UpdateWorldState();
 
         if (isEvil)
         {
@@ -104,6 +108,7 @@ public class Shop : MonoBehaviour
             sellPlants.sprite = eldritchSellCropsSprite;
             buySeeds.sprite = eldritchBuySeedsSprite;
             goToTownButtonImage.sprite = eldritchGeneralButton;
+            goToTownText.color = textColor[1];
         }
         else
         {
@@ -112,8 +117,9 @@ public class Shop : MonoBehaviour
             sellPlants.sprite = normalSellCropsSprite;
             buySeeds.sprite = normalBuySeedsSprite;
             goToTownButtonImage.sprite = normalGoToTownButton;
+            goToTownText.color = textColor[0];
         }
 
-        goToTownButtonImage.transform.GetChild(0).gameObject.SetActive(isEvil);
+        //goToTownButtonImage.transform.GetChild(0).gameObject.SetActive(isEvil);
     }
 }

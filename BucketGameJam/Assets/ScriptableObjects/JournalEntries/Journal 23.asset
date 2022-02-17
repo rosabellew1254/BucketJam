@@ -14,16 +14,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   month: 0
   entryTexts:
-  - normal_cured_00
-  - normal_dead_00
-  - med_cured_00
-  - med_dead_00
-  - low_cured_00
-  - low_dead_00
+  - "My sister took a liking to the cat (as I predicted) and has named him Oliver.
+    The little guy is now officially part of the family! He\u2019s been a great help
+    in keeping the mice at bay so it\u2019s the least I can do!"
+  - "I decided to adopt the stray cat for a little more company after my sister\u2019s
+    passing and named him Oliver. He\u2019s been a great help with pest control and
+    cheering me up lately, so I wanted to make it official."
+  - "Clove has decided to name the cat Oliver but she\u2019s been a bit hesitant
+    to approach my little helper. I couldn\u2019t say why, he\u2019s been perfectly
+    nice to me. Maybe Oliver is just shy?"
+  - "I\u2019m a little worried for the cat that\u2019s been helping me with the mice
+    problem. He\u2019s as nice as always but I think something\u2019s been bothering
+    him lately and I can\u2019t tell what. I hope he hasn\u2019t been injured by
+    anything, I don\u2019t think I could bear losing him too."
+  - "Clove\u2019s telling me that she's been seeing a small cat hanging around the
+    house. I told her that it was impossible but I\u2019ve been keeping an eye out
+    for it again. I\u2019d rather not have any other nuisances around, the crops
+    like the mice too much for any kind of competition. "
+  - "While tending to my crops I could\u2019ve sworn I saw that cat hanging around
+    again but that\u2019s impossible. I got rid of that thing months ago. Must\u2019ve
+    been a trick of the light"
   sketches:
   - {fileID: 21300000, guid: 1553ec280f86b7f46bff5a4b09801785, type: 3}
   - {fileID: 21300000, guid: 75c37f07cc44d37458c1e27ed55af076, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
-  - {fileID: 21300000, guid: d0194721ea9a7d64dae5eda25e027a9f, type: 3}
+  - {fileID: 21300000, guid: 86bf7074fb0e69743bd5e6861194ed4c, type: 3}
+  - {fileID: 21300000, guid: 2944eb829b32473429d2397de90548ad, type: 3}
+  - {fileID: 21300000, guid: fbef476c5e9c24b4db7b2205f487dff5, type: 3}
+  - {fileID: 21300000, guid: a7bf66bfb784e8844a121c57ab05ef91, type: 3}
