@@ -37,7 +37,7 @@ public class Inventory : MonoBehaviour
         plants[(int)_plant] += _adjustAmount;
     }
 
-    private void Update()
+    /*private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -59,5 +59,5 @@ public class Inventory : MonoBehaviour
         {
             AdjustSeedQuantity(GameManager.plants.strawberry, 1);
         }
-    }
+    }*/
 }

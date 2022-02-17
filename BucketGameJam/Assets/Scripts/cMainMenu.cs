@@ -13,7 +13,7 @@ public class cMainMenu : MonoBehaviour
     void Start()
     {
         gm = GameManager.gm;
-        AudioManager.am.StartInstance(9);
+        StartCoroutine(AudioManager.am.PlayMusic(9));
     }
     public void ButtonSound()
     {

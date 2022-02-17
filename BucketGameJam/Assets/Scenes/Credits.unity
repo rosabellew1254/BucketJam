@@ -989,6 +989,7 @@ GameObject:
   - component: {fileID: 102462207}
   - component: {fileID: 102462206}
   - component: {fileID: 102462208}
+  - component: {fileID: 102462205}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -996,6 +997,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &102462205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102462204}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -566647086
+      Data2: 1176474699
+      Data3: -1978997881
+      Data4: 2004135452
+    Path: event:/credits_music1
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!20 &102462206
 Camera:
   m_ObjectHideFlags: 0

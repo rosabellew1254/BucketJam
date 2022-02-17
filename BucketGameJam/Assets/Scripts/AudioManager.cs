@@ -46,6 +46,7 @@ public class AudioManager : MonoBehaviour
     private void Awake()
     {
         am = this;
+
         musicInstance = new FMOD.Studio.EventInstance[musicEvents.Length];
         SFXInstance = new FMOD.Studio.EventInstance[SFXEvents.Length];
         for (int i = 0; i < musicEvents.Length; i++)
@@ -74,6 +75,8 @@ public class AudioManager : MonoBehaviour
     {
 
     }
+
+
 
     void SpawnIntoWorld()
     {

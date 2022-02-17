@@ -180,15 +180,19 @@ public class Ending : MonoBehaviour
         {
             case 0:
                 StartCoroutine(AudioManager.am.PlayMusic(5));
+                Debug.Log("ending peaceful");
                 break;
             case 1:
                 StartCoroutine(AudioManager.am.PlayMusic(6));
+                Debug.Log("ending double");
                 break;
             case 2:
                 StartCoroutine(AudioManager.am.PlayMusic(7));
+                Debug.Log("ending desert");
                 break;
             case 3:
                 StartCoroutine(AudioManager.am.PlayMusic(8));
+                Debug.Log("ending evil");
                 break;
             default:
                 break;

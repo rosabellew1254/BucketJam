@@ -129,6 +129,7 @@ public class GameManager : MonoBehaviour
 
     public void AdvanceDay()
     {
+        AudioManager.am.PlaySFX("event:/next_day");
         curDay++;
         date.text = "Date: " + curDay + "/36";
         DayCheck();
@@ -168,6 +169,24 @@ public class GameManager : MonoBehaviour
 
         if (curDay == maxDays + 1)
         {
+            switch (gm.worldState)
+            {
+                case state.normal:
+                    //AudioManager.am.StopInstance(3);
+                    AudioManager.am.musicInstance[3].stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                    Debug.Log("stopped bedroom");
+                    break;
+                case state.smallEvil:
+                case state.largeEvil:
+                    //AudioManager.am.StopInstance(4);
+                    AudioManager.am.musicInstance[4].stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                    Debug.Log("stopped bedroom");
+                    break;
+                case state.terminator:
+                    break;
+                default:
+                    break;
+            }
             LoadScene(5);
         }
         else
