@@ -36,6 +36,11 @@ public class GameManager : MonoBehaviour
     public Text daySummaryMoneyGained;
     public Text daySummarySanityGained;
     public Text daySummaryTownStatus;
+    public Sprite eldritchDropdownSprite;
+    public Sprite normalDropdownSprite;
+    public Sprite eldritchGeneralButtonSprite;
+    public Sprite normalGeneralButtonSprite;
+    public Image continueSummaryButtonImage;
     public state worldState;
     public int intWorldState;
 
@@ -247,8 +252,30 @@ public class GameManager : MonoBehaviour
         }
 
         daySummaryTownStatus.text = "Town Status: " + worldStateName;
-
+        SetSummaryArtAssets();
         daySummary.SetActive(true);
+    }
+
+    void SetSummaryArtAssets()
+    {
+        Color textColor = Color.white;
+        if (worldState == state.largeEvil)
+        {
+            textColor = new Color(214f, 60f, 209f, 255f) / 255f;
+            continueSummaryButtonImage.sprite = eldritchGeneralButtonSprite;
+            daySummary.transform.GetChild(0).GetComponent<Image>().sprite = eldritchDropdownSprite;
+        }
+        else
+        {
+            continueSummaryButtonImage.sprite = normalGeneralButtonSprite;
+            daySummary.transform.GetChild(0).GetComponent<Image>().sprite = normalDropdownSprite;
+        }
+
+        daySummaryMoneyGained.color = textColor;
+        daySummarySanityGained.color = textColor;
+        daySummaryTownStatus.color = textColor;
+        daySummaryDayNum.color = textColor;
+        continueSummaryButtonImage.transform.GetChild(0).GetComponent<Text>().color = textColor;
     }
 
     public void DaySummaryContinue()
