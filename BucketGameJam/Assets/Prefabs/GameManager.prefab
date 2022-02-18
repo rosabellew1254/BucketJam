@@ -1199,6 +1199,11 @@ MonoBehaviour:
   daySummaryMoneyGained: {fileID: 6847164884612655094}
   daySummarySanityGained: {fileID: 884271484843448026}
   daySummaryTownStatus: {fileID: 1877688262971252183}
+  eldritchDropdownSprite: {fileID: 21300000, guid: 828d6c8c669e5c24bbd40f8ccf65ff10, type: 3}
+  normalDropdownSprite: {fileID: 21300000, guid: d89d43a3b9136c046a4cdf456e309dd8, type: 3}
+  eldritchGeneralButtonSprite: {fileID: 21300000, guid: 4fe069d66671a8447b6dfc582c87809e, type: 3}
+  normalGeneralButtonSprite: {fileID: 21300000, guid: 53296420899602e4e90019e285a10067, type: 3}
+  continueSummaryButtonImage: {fileID: 7429100817743793946}
   worldState: 0
   intWorldState: 0
   isSiblingAlive: 1
