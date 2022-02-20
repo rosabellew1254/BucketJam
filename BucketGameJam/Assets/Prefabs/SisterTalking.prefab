@@ -2282,30 +2282,32 @@ MonoBehaviour:
   - Hello Arum, my brother!
   - (The teddy bear is quietly sitting on the bed and staring at me)
   textRoom:
-  - <color=#9d21c4>Bed:</color> Sleeping in the <color=#9d21c4>bed</color> will pass
-    the months and the plants will grow.
+  - <color=#9d21c4>Bed:</color> Sleeping in the <color=#9d21c4>bed</color> will cause
+    a month to pass by and cause the plants to grow.
   - <color=#9d21c4>Journal:</color> Opening up the <color=#9d21c4>journal</color>
-    tells you how your month is going as well as the story.
-  - <color=#9d21c4>Door:</color>  The <color=#9d21c4>door</color> will get you to
-    the garden.
+    tells you how your month is going as well as how the story is progressing.
+  - <color=#9d21c4>Door:</color>  The <color=#9d21c4>door</color> will lead you out
+    to the garden.
   - <color=#9d21c4>Mirror:</color> The <color=#9d21c4>mirror</color> will let you
-    see what you look like, who knows you might change.
+    see what you look like, who knows... you might change.
   textGarden:
-  - "<color=#9d21c4>Go to Town:</color> Takes you to the town. You can come back
-    to the garden or go to the shop when you\u2019re in town."
+  - <color=#9d21c4>Go to Town:</color> This takes you to the town. You can go to
+    the shop when you're in town or head back home to the garden.
   - <color=#9d21c4>Plant:</color> Plant the seed that is currently showing in the
-    dropdown and plant them in the soil you click on.
+    dropdown box and plant them in the soil you click on.
   - <color=#9d21c4>Remove Seed:</color> Removes planted seed. Seeds will be gone
-    after removal, so double check before removing them.
+    after removal, so make sure to double check before removing them.
   - <color=#9d21c4>Select Seed:</color> You can select the seed you have from the
-    dropdown and plant in the soil.
+    dropdown and plant it in the soil.
   textTown:
-  - The look of the <color=#9d21c4>town</color> will change according to your <color=#9d21c4>sanity.</color>
+  - The <color=#9d21c4>town's apperance</color> will change according to your <color=#9d21c4>sanity.</color>
+    Tread carefully.
   textShop:
-  - 'Shop: You buy <color=#9d21c4>seeds</color> and sell <color=#9d21c4>crops.</color>
-    Be careful of what you''re selling. It will affect your <color=#9d21c4>sanity.</color>'
+  - <color=#9d21c4>Shop:</color> Here is where the ever helpful Pandora will <color=#9d21c4>sell
+    seeds</color> and <color=#9d21c4>buy plants.</color> Be careful what you're selling
+    because it will affect your <color=#9d21c4>sanity.</color>
   textSister:
-  - Be sure to talk to me if you need help with anything.
+  - Talk to me to access this information again if you need to!
 --- !u!1 &5806371820580569393
 GameObject:
   m_ObjectHideFlags: 0

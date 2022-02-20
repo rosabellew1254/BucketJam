@@ -26,11 +26,17 @@ public class Sister : MonoBehaviour
 
     [Space]
     [Header("Dialogs")]
+    [TextArea]
     public string[] textMenu;
+    [TextArea]
     public string[] textRoom;
+    [TextArea]
     public string[] textGarden;
+    [TextArea]
     public string[] textTown;
+    [TextArea]
     public string[] textShop;
+    [TextArea]
     public string[] textSister;
 
     string[] currentArray;
@@ -128,8 +134,8 @@ public class Sister : MonoBehaviour
 
     public void ReadTextHello()
     {
-        string sick0 = "Good morning Arum! You ask how I am feeling? Honestly I’m still not doing very well. Hopefully I can be cured soon, I really want to go outside and play with you!";
-        string sick1 = "We need a total of " + GameManager.gm.moneyRequiredToSaveSibling + " Speks and the doctor says we only have "  + (20 - GameManager.gm.curDay) + " months. The medicine costs a lot, but please stay healthy for me.";
+        string sick0 = "Good morning Arum! You want to know how I'm feeling? Honestly I’m still not doing very well. Hopefully I can be cured soon, I really want to go outside and play with you!";
+        string sick1 = "We need a total of " + GameManager.gm.moneyRequiredToSaveSibling + " Speks and the doctor says we only have "  + (20 - GameManager.gm.curDay) + " months left. The medicine costs a lot, but please stay healthy for me.";
         string cured0 = "You still don’t want me to help you plant crops? I feel so much better now after getting the treatment!";
         string cured1 = "I’m excited to move to that city you’ve been telling me about. I wish I could help you earn that " + GameManager.gm.competeMoneyGoal +  " Speks in the last " + (36 - GameManager.gm.curDay) + " days…";
         string dead = "(Memories keep flooding in my head, there is no turning back… The eldritch gods are calling me…)";
