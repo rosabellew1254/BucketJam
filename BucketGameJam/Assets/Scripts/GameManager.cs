@@ -252,7 +252,7 @@ public class GameManager : MonoBehaviour
         }
 
         daySummaryTownStatus.text = "Town Status: " + worldStateName;
-        SetSummaryArtAssets();
+        //SetSummaryArtAssets();
         daySummary.SetActive(true);
     }
 
